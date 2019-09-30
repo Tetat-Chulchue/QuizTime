@@ -52,6 +52,7 @@
             ;
             background-color: blue;
             position: fixed;
+            opacity: 0;
         }
 
         .box-2 {
@@ -66,6 +67,7 @@
             ;
             background-color: rgb(0, 255, 115);
             position: fixed;
+            opacity: 0;
         }
 
         .box-3 {
@@ -80,6 +82,7 @@
             ;
             background-color: rgb(255, 0, 85);
             position: fixed;
+            opacity: 0;
         }
 
         .sector {
@@ -105,11 +108,7 @@
     <section id="3" class="sector" style="background-color: rgba(95, 158, 160, 0)"></section>
     <script>
         window.onload = () => {
-            let y = document.body.scrollTop;
-            let b = document.body.scrollHeight - document.body.clientHeight;
-            box(y/3*2, "box1");
-            box(y/3*2-(b/3), "box2");
-            box(y/3*2-(b/3*2), "box3");
+            myFunction()
         }
 
         function myFunction() {
@@ -127,6 +126,8 @@
             } else if (value > 20) {
                 document.getElementById(boxName).style.opacity = (100-(value))/100;
                 console.log((value-100)/100+"<----"+boxName);
+            } else {
+                document.getElementById(boxName).style.opacity = 0;
             }
             document.getElementById(boxName).style.transform = "translateX(-50%) translateY(-50%) translateZ("+value+"px)";
             console.log(value);
