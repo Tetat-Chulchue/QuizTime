@@ -13,7 +13,6 @@
             margin: 0;
             padding: 0;
             scroll-snap-type: y mandatory;
-            overflow-x: scroll;
             /* overflow: hidden; */
         }
 
@@ -101,9 +100,9 @@
         <div id="box2" class="box-2"></div>
         <div id="box1" class="box-1"></div>
     </div>
-    <section id="1" class="sector" style="background-color: rgba(0, 0, 255, 0.5)"></section>
-    <section id="2" class="sector" style="background-color: rgba(165, 42, 42, 0.5)"></section>
-    <section id="3" class="sector" style="background-color: rgba(95, 158, 160, 0.5)"></section>
+    <section id="1" class="sector" style="background-color: rgba(0, 0, 255, 0)"></section>
+    <section id="2" class="sector" style="background-color: rgba(165, 42, 42, 0)"></section>
+    <section id="3" class="sector" style="background-color: rgba(95, 158, 160, 0)"></section>
     <script>
         window.onload = () => {
             let y = document.body.scrollTop;
@@ -122,7 +121,15 @@
         }
 
         function box(value, boxName) {
+            if (value > -100 && value < 79) {
+                document.getElementById(boxName).style.opacity = (value+100)/100;
+                console.log((value+100)/100+"<----"+boxName);
+            } else if (value > 20) {
+                document.getElementById(boxName).style.opacity = (100-(value))/100;
+                console.log((value-100)/100+"<----"+boxName);
+            }
             document.getElementById(boxName).style.transform = "translateX(-50%) translateY(-50%) translateZ("+value+"px)";
+            console.log(value);
         }
 
         function mouse(e) {
@@ -130,7 +137,7 @@
             var w = window.innerWidth;
             var x = e.clientX-(w/2);
             var y = e.clientY-(h/2);
-            console.log(x, y, h, w);
+            // console.log(x, y, h, w);
             boxMove(30+(x/500), 30+(y/500), "box1");
             boxMove(50+(x/500), 50+(y/500), "box2");
             boxMove(70+(x/500), 70+(y/500), "box3");
