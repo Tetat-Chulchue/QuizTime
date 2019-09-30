@@ -13,11 +13,14 @@
             margin: 0;
             padding: 0;
             scroll-snap-type: y mandatory;
-            /* overflow: hidden; */
+            /* background-color: black; */
         }
 
         nav {
-            width: 100%;
+            top: 50%;
+            right: -8%;
+            transform: rotateZ(90deg);
+            width: 20%;
             height: 15px;
             display: flex;
             position: fixed;
@@ -43,14 +46,14 @@
         .box-1 {
             width: 200px;
             height: 200px;
-            top: 30%;
-            left: 30%;
+            top: 50%;
+            left: 50%;
             transform:
                 translateX(-50%)
                 translateY(-50%)
                 translateZ(0px)
             ;
-            background-color: blue;
+            /* background-color: blue; */
             position: fixed;
             opacity: 0;
         }
@@ -65,7 +68,7 @@
                 translateY(-50%)
                 translateZ(-100px)
             ;
-            background-color: rgb(0, 255, 115);
+            /* background-color: rgb(0, 255, 115); */
             position: fixed;
             opacity: 0;
         }
@@ -73,14 +76,14 @@
         .box-3 {
             width: 200px;
             height: 200px;
-            top: 70%;
-            left: 70%;
+            top: 50%;
+            left: 50%;
             transform:
                 translateX(-50%)
                 translateY(-50%)
                 translateZ(-200px)
             ;
-            background-color: rgb(255, 0, 85);
+            /* background-color: rgb(255, 0, 85); */
             position: fixed;
             opacity: 0;
         }
@@ -89,6 +92,30 @@
             width: 100%;
             height: 100vh;
             /* scroll-snap-align: center; */
+        }
+
+        .background {
+            position: fixed;
+            background-color: rgb(140, 140, 235);
+            width: 100%;
+            height: 100%;
+            z-index: -1000;
+            opacity: 1;
+        }
+
+        h1 {
+            position: fixed;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 100px;
+            border: 2px solid black;
+        }
+
+        .squre {
+            width: 250px;
+            height: 250px;
+            /* background-color: gray; */
         }
     </style>
 </head>
@@ -99,13 +126,37 @@
         <a href="#3">3</a>
     </nav>
     <div class="case">
-        <div id="box3" class="box-3"></div>
-        <div id="box2" class="box-2"></div>
-        <div id="box1" class="box-1"></div>
+        <div class="squre" id="box4" style="top: 30%; left: 30%; position: fixed;"><img src="https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif" alt=""></div>
+        <div class="squre" id="box5" style="top: 70%; left: 40%; position: fixed;"><img src="https://media.giphy.com/media/xUPGcjmCLwc22i1Los/giphy.gif" alt=""></div>
+        <div class="squre" id="box6" style="top: 40%; left: 80%; position: fixed;"><img src="https://media.giphy.com/media/3oKIPf1BaBDILVxbYA/giphy.gif" alt=""></div>
+        <div id="box3" class="box-3">
+            <!-- <div class="squre" style="top: -400px; left: -200px; position: fixed;"></div>
+            <div class="squre" style="top: 100px; left: 500px; position: fixed;"></div>
+            <div class="squre" style="top: 300px; left: -400px; position: fixed;"></div> -->
+            <h1>Tae</h1>
+        </div>
+        <div id="box2" class="box-2">
+            <div class="squre" style="top: -400px; left: -200px; position: fixed;"></div>
+            <div class="squre" style="top: 100px; left: 500px; position: fixed;"></div>
+            <div class="squre" style="top: 300px; left: -400px; position: fixed;"></div>
+            <h1>Jab</h1>
+        </div>
+        <div id="box1" class="box-1">
+            <div class="squre" style="top: -400px; left: -200px; position: fixed;"></div>
+            <div class="squre" style="top: 100px; left: 500px; position: fixed;"></div>
+            <div class="squre" style="top: 300px; left: -400px; position: fixed;"></div>
+            <h1>Tag</h1>
+        </div>
     </div>
-    <section id="1" class="sector" style="background-color: rgba(0, 0, 255, 0)"></section>
-    <section id="2" class="sector" style="background-color: rgba(165, 42, 42, 0)"></section>
-    <section id="3" class="sector" style="background-color: rgba(95, 158, 160, 0)"></section>
+
+    <div class="background" id="background1"></div>
+    <div class="background" id="background2"></div>
+    <div class="background" id="background3"></div>
+
+    <section id="1" class="sector"></section>
+    <section id="2" class="sector"></section>
+    <section id="3" class="sector"></section>
+
     <script>
         window.onload = () => {
             myFunction()
@@ -114,38 +165,50 @@
         function myFunction() {
             let y = document.body.scrollTop;
             let b = document.body.scrollHeight - document.body.clientHeight;
-            box( y/3*2 , "box1");
-            box( y/3*2-(b/3) , "box2");
-            box( y/3*2-(b/3*2) , "box3");
+            box( y/3*2 , "box1", "rgba(140, 140, 235)");
+            box( y/3*2-(b/3) , "box2", "rgba(165, 42, 42)");
+            box( y/3*2-(b/3*2) , "box3", "rgba(95, 158, 160)");
+            box( y/3*2-(b/3*2) , "box4", "rgba(95, 158, 160)");
+            box( y/3*2-(b/3*2) , "box5", "rgba(95, 158, 160)");
+            box( y/3*2-(b/3*2) , "box6", "rgba(95, 158, 160)");
+
+            background( y/3*2, "background1", "rgb(140, 140, 235)");
+            background( y/3*2-(b/3), "background2", "rgb(165, 42, 42)");
+            background( y/3*2-(b/3*2), "background3", "rgb(95, 158, 160)");
         }
 
-        function box(value, boxName) {
+        function box(value, boxName, color) {
             if (value > -100 && value < 79) {
                 document.getElementById(boxName).style.opacity = (value+100)/100;
-                console.log((value+100)/100+"<----"+boxName);
             } else if (value > 20) {
                 document.getElementById(boxName).style.opacity = (100-(value))/100;
-                console.log((value-100)/100+"<----"+boxName);
             } else {
                 document.getElementById(boxName).style.opacity = 0;
             }
             document.getElementById(boxName).style.transform = "translateX(-50%) translateY(-50%) translateZ("+value+"px)";
-            console.log(value);
+        }
+
+        function background(value, backName, color) {
+             if (value > -100 || value < 100) {
+                document.getElementById(backName).style.backgroundColor = color;
+                document.getElementById(backName).style.opacity = (value+100)/100;
+            }
         }
 
         function mouse(e) {
-            var h = window.innerHeight;
-            var w = window.innerWidth;
-            var x = e.clientX-(w/2);
-            var y = e.clientY-(h/2);
-            // console.log(x, y, h, w);
-            boxMove(30+(x/500), 30+(y/500), "box1");
-            boxMove(50+(x/500), 50+(y/500), "box2");
-            boxMove(70+(x/500), 70+(y/500), "box3");
+            var mouseX = e.clientX-(window.innerWidth/2);
+            var mouseY = e.clientY-(window.innerHeight/2);
+            boxMove(50+(mouseX/400), 50+(mouseY/400), (mouseX/500), -(mouseY/500), "box1");
+            boxMove(50+(mouseX/400), 50+(mouseY/400), (mouseX/500), -(mouseY/500), "box2");
+            boxMove(50+(mouseX/400), 50+(mouseY/400), (mouseX/500), -(mouseY/500), "box3");
+            boxMove(30+(mouseX/400), 30+(mouseY/400), (mouseX/500), -(mouseY/500), "box4");
+            boxMove(70+(mouseX/400), 40+(mouseY/400), (mouseX/500), -(mouseY/500), "box5");
+            boxMove(40+(mouseX/400), 80+(mouseY/400), (mouseX/500), -(mouseY/500), "box6");
         }
-        function boxMove(valueX, valueY, boxName) {
-            document.getElementById(boxName).style.left = valueX+"%";
-            document.getElementById(boxName).style.top = valueY+"%";
+        function boxMove(leftX, topY, retateX, retateY, boxName) {
+            document.getElementById(boxName).style.left = leftX+"%";
+            document.getElementById(boxName).style.top = topY+"%";
+            document.getElementById(boxName).style.transform = "translateX(-50%) translateY(-50%) rotateY("+retateX+"deg) rotateX("+retateY+"deg)";
         }
     </script>
 </body>
