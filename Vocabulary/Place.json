@@ -1,0 +1,17 @@
+{
+    "place":"สถานที่",
+    "airport":"สนามบิน",
+    "bank":"ธนาคาร",
+    "bookstore":"ร้านหนังสือ",
+    "cinema":"โรงหนัง",
+    "college":"วิทยาลัย",
+    "department store":"ห้างสรรพสินค้า",
+    "hospital":"โรงพยาบาล",
+    "library":"ห้องสมุด",
+    "market":"ตลาด",
+    "museum":"พิพิธภัณฑ์",
+    "restaurant":"ภัตตาคาร",
+    "school":"โรงเรียน",
+    "supermarket":"ซุปเปอร์มาร์เก็ต",
+    "university":"มหาวิทยาลัย"
+}

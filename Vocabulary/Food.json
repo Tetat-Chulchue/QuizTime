@@ -1,0 +1,22 @@
+{
+    "food":"อาหาร",
+    "dessert":"ของหวาน",
+    "water":"น้ำ",
+    "coffee":"กาแฟ",
+    "juice":"น้ำผลไม้",
+    "lemonade":"น้ำมะนาว",
+    "milk":"นม",
+    "tea":"ชา",
+    "bread":"ขนมปัง",
+    "cheese":"ชีส",
+    "butter":"เนย",
+    "spaghetti":"สปาเก็ตตี้",
+    "burger":"เบอร์เกอร์",
+    "pizza":"พิซซ่า",
+    "cake":"เค้ก",
+    "candy":"ลูกอม",
+    "chocolate":"ช็อกโกแลต",
+    "cookies":"คุกกี้",
+    "popcorn":"ข้าวโพดคั่ว",
+    "doughnut":"โดนัท"
+}
