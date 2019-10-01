@@ -1,0 +1,153 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .case {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            perspective: 1000px;
+            background-color: rgb(0, 255, 255);
+            perspective: 100px;
+        }
+
+        .sector {
+            width: 100%;
+            height: 3000px;
+            /* scroll-snap-align: center; */
+        }
+
+        .page {
+            position: fixed;
+            width: 1270px;
+            height: 720px;
+            transform: 
+                translateX(-50%)
+                translateY(-50%)
+                translateZ(0px)
+            ;
+            /* background-color: rgba(210, 105, 30, 0.384); */
+            perspective: 100px;
+        }
+
+        .linkAble {
+            position: fixed;
+            width: 400px;
+            height: 250px;
+            background-color: chocolate;
+            transform: translateZ(-300px);
+        }
+
+        h1 {
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%) translateZ(-50px);
+            font-size: 300px;
+        }
+    </style>
+</head>
+<body onscroll="page()" onmousemove="mouse(event)" onLoad="pageScroll()">
+    <div class="case">
+            <div class="linkAble" id="page-4-4" style="top: 75%; left: 25%"></div>
+            <div class="linkAble" id="page-4-3" style="top: 75%; left: 75%"></div>
+            <div class="linkAble" id="page-4-2" style="top: 25%; left: 75%"></div>
+            <div class="linkAble" id="page-4-1" style="top: 25%; left: 25%"></div>
+        <div class="page" id="page-4" style="top: 50%; left: 50%"><h1>TESTSTSETT</h1></div>
+            <div class="linkAble" id="page-3-4" style="top: 75%; left: 25%"></div>
+            <div class="linkAble" id="page-3-3" style="top: 75%; left: 75%"></div>
+            <div class="linkAble" id="page-3-2" style="top: 25%; left: 75%"></div>
+            <div class="linkAble" id="page-3-1" style="top: 25%; left: 25%"></div>
+        <div class="page" id="page-3" style="top: 50%; left: 50%"><h1>TESTSTSETT</h1></div>
+            <div class="linkAble" id="page-2-4" style="top: 75%; left: 25%"></div>
+            <div class="linkAble" id="page-2-3" style="top: 75%; left: 75%"></div>
+            <div class="linkAble" id="page-2-2" style="top: 25%; left: 75%"></div>
+            <div class="linkAble" id="page-2-1" style="top: 25%; left: 25%"></div>
+        <div class="page" id="page-2" style="top: 50%; left: 50%"><h1>TESTSTSETT</h1></div>
+            <div class="linkAble" id="page-1-4" style="top: 75%; left: 25%"></div>
+            <div class="linkAble" id="page-1-3" style="top: 75%; left: 75%"></div>
+            <div class="linkAble" id="page-1-2" style="top: 25%; left: 75%"></div>
+            <div class="linkAble" id="page-1-1" style="top: 25%; left: 25%"></div>
+        <div class="page" id="page-1" style="top: 50%; left: 50%"><h1>QuizTime</h1></div>
+    </div>
+    <section id="1" class="sector"></section>
+    <script>
+        window.onload = () => {
+            page()
+        }
+
+        function page() {
+            let y = document.body.scrollTop;
+            let b = document.body.scrollHeight - document.body.clientHeight;
+            let position = -50;
+            let space = 100;
+            // test(y);
+
+            box( y-(space*0)+position-70 , "page-1");
+            box( y-(space)+position , "page-1-1");
+            box( y-(space)+position , "page-1-2");
+            box( y-(space)+position , "page-1-3");
+            box( y-(space)+position , "page-1-4");
+
+            box( y-(space*5)+position , "page-2");
+            box( y-(space*6)+position , "page-2-1");
+            box( y-(space*7)+position , "page-2-2");
+            box( y-(space*8)+position , "page-2-3");
+            box( y-(space*9)+position , "page-2-4");
+
+            box( y-(space*10)+position , "page-3");
+            box( y-(space*11)+position , "page-3-1");
+            box( y-(space*12)+position , "page-3-2");
+            box( y-(space*13)+position , "page-3-3");
+            box( y-(space*14)+position , "page-3-4");
+
+            box( y-(space*15)+position , "page-4");
+            box( y-(space*16)+position , "page-4-1");
+            box( y-(space*17)+position , "page-4-2");
+            box( y-(space*18)+position , "page-4-3");
+            box( y-(space*19)+position , "page-4-4");
+            
+        }
+
+        function box(value, pageId, top, left) {
+            if (value > -400 && value < 79) {
+                document.getElementById(pageId).style.opacity = (value+350)/100;
+            } else {
+                document.getElementById(pageId).style.opacity = 0;
+            }
+            document.getElementById(pageId).style.transform = "translateX(-50%) translateY(-50%) translateZ("+(value)+"px)";
+        }
+
+        function mouse(e) {
+            let mouseX = -(e.clientX-(window.innerWidth/2));
+            let mouseY = -(e.clientY-(window.innerHeight/2));
+            let movement_translate = -300;
+            let movement_rotate = 1200;
+
+            boxMove(50+(mouseX/movement_translate), 50+(mouseY/movement_translate), (mouseX/movement_rotate), -(mouseY/movement_rotate), "page-1", 40);
+            boxMove(25+(mouseX/movement_translate), 25+(mouseY/movement_translate), (mouseX/movement_rotate), -(mouseY/movement_rotate), "page-1-1", 40);
+            boxMove(25+(mouseX/movement_translate), 75+(mouseY/movement_translate), (mouseX/movement_rotate), -(mouseY/movement_rotate), "page-1-2", 40);
+            boxMove(75+(mouseX/movement_translate), 75+(mouseY/movement_translate), (mouseX/movement_rotate), -(mouseY/movement_rotate), "page-1-3", 40);
+            boxMove(75+(mouseX/movement_translate), 25+(mouseY/movement_translate), (mouseX/movement_rotate), -(mouseY/movement_rotate), "page-1-4", 40);
+
+        }
+        function boxMove(leftX, topY, retateX, retateY, boxId, Z) {
+            document.getElementById(boxId).style.left = leftX+"%";
+            document.getElementById(boxId).style.top = topY+"%";
+            // document.getElementById(boxId).style.transform = "translateX(-50%) translateY(-50%) translateZ("+Z+"px) rotateY("+retateX+"deg) rotateX("+retateY+"deg)";
+        }
+    </script>
+</body>
+</html>
