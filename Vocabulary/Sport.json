@@ -1,0 +1,17 @@
+{
+    "sport":"กีฬา",
+    "boxing":"ต่อยมวย",
+    "running":"วิ่งแข่ง",
+    "swimming":"ว่ายน้ำ",
+    "badminton":"แบดมินตัน",
+    "basketball":"บาสเกตบอล",
+    "football":"ฟุตบอล",
+    "golf":"กอล์ฟ",
+    "tennis":"เทนนิส",
+    "table tennis":"ปิงปอง",
+    "volleyball":"วอลเลย์บอล",
+    "fishing":"ตกปลา",
+    "้handball":"แฮนด์บอล",
+    "athletics":"กรีฑา",
+    "cycling":"ปั่นจักรยาน"
+}

@@ -1,0 +1,17 @@
+{
+    "carrer":"อาชีพ",
+    "doctor":"หมอ",
+    "student":"นักเรียน",
+    "teacher":"ครู",
+    "nurse":"พยาบาล",
+    "soldier":"ทหาร",
+    "policeman":"ตำรวจ",
+    "farmer":"ชาวนา",
+    "artist":"ศิลปิน",
+    "actor":"นักแสดงชาย",
+    "actress":"นักแสดงหญิง",
+    "writer":"นักเขียน",
+    "pilot":"นักบิน",
+    "photographer":"ช่างถ่ายรูป",
+    "engineer":"วิศวกร"
+}
