@@ -1,12 +1,17 @@
 function setup() {
-    createCanvas(640, 480);
-    }
+    createCanvas(windowWidth, windowHeight);
+
+}
 
 function draw() {
-    if (mouseIsPressed) {
-        fill(0);
-    } else {
-        fill(255);
+    background(color(150, 100, 255));
+    ellipse(mouseX, mouseY, 50);
+    fill(255, 0, 0);
+
+}
+
+class Tile {
+    constructor(data) {
+        this.data = data;
     }
-    ellipse(mouseX, mouseY, 80, 80);
 }
