@@ -7,11 +7,16 @@
     "soldier":"ทหาร",
     "policeman":"ตำรวจ",
     "farmer":"ชาวนา",
-    "artist":"ศิลปิน",
+    "artist":"จิตรกร",
     "actor":"นักแสดงชาย",
     "actress":"นักแสดงหญิง",
     "writer":"นักเขียน",
     "pilot":"นักบิน",
     "photographer":"ช่างถ่ายรูป",
-    "engineer":"วิศวกร"
+    "engineer":"วิศวกร",
+    "architect":"สถาปนิก",
+    "accountant":"นักบัญชี",
+    "athlete":"นักกีฬา",
+    "carpenter":"ช่างไม้",
+    "chef":"หัวหน้าพ่อครัว"
 }

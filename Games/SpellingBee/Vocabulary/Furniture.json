@@ -1,12 +1,22 @@
 {
+    "furniture":"เฟอร์นิเจอร์",
     "chair":"เก้าอี้",
     "computer":"คอมพิวเตอร์",
     "iron":"เตารีด",
     "telephone":"โทรศัพท์",
     "television":"โทรทัศน์",
-    "bedroom":"ห้องนอน",
+    "bed":"เตียงนอน",
     "blanket":"ผ้าห่ม",
     "curtain":"ผ้าม่าน",
     "pillow":"หมอน",
-    "wardrobe":"ตู้เสื้อผ้า"
+    "wardrobe":"ตู้เสื้อผ้า",
+    "table":"โต๊ะ",
+    "clock":"นาฬิกา",
+    "bookcase":"ตู้หนังสือ",
+    "mirror":"กระจก",
+    "lamp":"โคมไฟ",
+    "radio":"วิทยุ",
+    "carpet":"พรม",
+    "washing machine":"เครื่องซักผ้า",
+    "cupboard":"ตู้ถ้วยชาม"
 }
