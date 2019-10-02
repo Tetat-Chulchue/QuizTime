@@ -13,5 +13,10 @@
     "restaurant":"ภัตตาคาร",
     "school":"โรงเรียน",
     "supermarket":"ซุปเปอร์มาร์เก็ต",
-    "university":"มหาวิทยาลัย"
+    "university":"มหาวิทยาลัย",
+    "temple":"วัด",
+    "church":"โบสถ์",
+    "zoo":"สวนสัตว์",
+    "post office":"ไปรษณีย์",
+    "police station":"สถานีตำรวจ"
 }
