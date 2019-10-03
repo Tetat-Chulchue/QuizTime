@@ -1,6 +1,6 @@
 var json;
 
-let requestURL = 'proposition/Easy.json';
+let requestURL = 'Easy.json';
 let request = new XMLHttpRequest();
 request.onreadystatechange = function () {
     if (request.readyState == 4 && request.status == 200) {
