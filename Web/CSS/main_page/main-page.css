@@ -1,0 +1,94 @@
+html {
+    scroll-behavior: smooth;
+    font-family: 'Questrial', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.case {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    perspective: 1000px;
+    background-color: rgb(0, 255, 255);
+    perspective: 100px;
+}
+
+.top-text {
+    margin: 0;
+    top: 19px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+}
+
+.left-text {
+    margin: 0;
+    top: 50%;
+    left: 18px;
+    transform: translate(-50%, -50%) rotateZ(90deg);
+    position: fixed;
+}
+
+.right-text {
+    margin: 0;
+    top: 50%;
+    right: -30px;
+    transform: translate(-50%, -50%) rotateZ(-90deg);
+    position: fixed;
+}
+
+.bottom-text {
+    margin: 0;
+    bottom: -2px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+}
+
+.sector {
+    width: 100%;
+    height: 2630px;
+}
+
+.page {
+    position: fixed;
+    transform: 
+        translateX(-50%)
+        translateY(-50%)
+        translateZ(0px)
+    ;
+    width: 400px;
+    perspective: 100px;
+    /* transition: transform 1s; */
+}
+
+.linkAble {
+    position: fixed;
+    width: 400px;
+    height: 250px;
+    background-color: chocolate;
+    /* transition: width 1s, height 1s; */
+    /* transition: transform 1s; */
+}
+
+h1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateZ(-50px);
+    font-size: 300px;
+    margin: 0;
+}
+
+.background {
+    position: fixed;
+    background-color: rgb(140, 140, 235);
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+    opacity: 1;
+}
