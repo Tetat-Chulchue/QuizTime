@@ -3,10 +3,6 @@ let pageOn = 0;
 window.addEventListener("load", () => {
     let loadder = document.getElementById("loadder");
     loadder.className += " hidden"
-    if (navigator.userAgent.indexOf("Chrome") == -1) {
-        document.body.style.display = "none";
-        window.location.href = 'BDS.html';
-    }
     page()
     document.body.style.overflow = "initial";
 });
