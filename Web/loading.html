@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            /* background-color: brown; */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-name: test;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            transform-origin: top left;
+        }
+
+        .text span {
+            font: 26px Monaco, MonoSpace;
+            height: 150px;
+            position: absolute;
+            width: 20px;
+            left: 42%;
+            top: -100px;
+            transform-origin: bottom center;
+            /* background-color: brown; */
+        }
+
+        .char1 { 
+            transform: rotate(0deg) ;
+        }
+        .char2 {
+            transform: rotate(45deg) ; 
+        }
+        .char3 { 
+            transform: rotate(90deg) ; 
+        }
+        .char4 { 
+            transform: rotate(135deg) ; 
+        }
+
+        .char5 { 
+            transform: rotate(180deg) ; 
+        }
+        .char6 { 
+            transform: rotate(225deg) ; 
+        }
+        .char7 { 
+            transform: rotate(270deg) ; 
+        }
+        .char8 { 
+            transform: rotate(315deg) ; 
+        }
+
+        .persen {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+        }
+
+        @keyframes test {
+            0% {
+                transform: rotate(0deg) translate(-50%, -50%)
+            }
+            100% {
+                transform: rotate(360deg) translate(-50%, -50%)
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1 class="text">
+            <span class="char1">Q</span>
+            <span class="char2">u</span>
+            <span class="char3">i</span>
+            <span class="char4">z</span>
+    
+            <span class="char5">T</span>
+            <span class="char6">i</span>
+            <span class="char7">m</span>
+            <span class="char8">e</span>
+        </h1>
+    </div>
+    <h1 class="persen">100%</h1>
+</body>
+</html>

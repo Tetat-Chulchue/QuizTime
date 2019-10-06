@@ -1,7 +1,14 @@
 let pageOn = 0;
-window.onload = () => {
+// window.onload = () => {
+//     page()
+// }
+
+window.addEventListener("load", () => {
+    let loadder = document.getElementById("loadder");
+    loadder.className += " hidden"
     page()
-}
+    document.body.style.overflow = "initial";
+});
 
 function page() {
     let y = document.body.scrollTop;
@@ -12,7 +19,7 @@ function page() {
     box( y-(space*0)+position-30 , "page-1");
     box( y-(space)+position , "page-1-1");
     box( y-(space)+position , "page-1-2");
-    box( y-(space)+position , "page-1-3");
+    box( y-(space)+position+15 , "page-1-3");
     box( y-(space)+position , "page-1-4");
 
     box( y-(space*5)+position , "page-2");
@@ -67,7 +74,7 @@ function mouse(e) {
     boxMove( movement_translate_X, movement_translate_Y, "page-1-1", 25, 25);
     boxMove( movement_translate_X, movement_translate_Y, "page-1-2", 25, 75);
     boxMove( movement_translate_X, movement_translate_Y, "page-1-3", 75, 75);
-    boxMove( movement_translate_X, movement_translate_Y, "page-1-4", 75, 25);
+    boxMove( movement_translate_X, movement_translate_Y, "page-1-4", 50, 50);
 
     boxMove( movement_translate_X, movement_translate_Y, "page-2", 50, 50);
     boxMove( movement_translate_X, movement_translate_Y, "page-2-1", 25, 25);
