@@ -1,8 +1,9 @@
 var json;
 
-let requestURL = 'proposition/Easy.json';
+let requestURL = './Easy.json';
 let request = new XMLHttpRequest();
 request.onreadystatechange = function () {
+    console.log(request.readyState, request.status)
     if (request.readyState == 4 && request.status == 200) {
         json = JSON.parse(request.responseText);
         problem();
@@ -18,6 +19,12 @@ var b_1 = 0;
 var b_2 = 0;
 var b_3 = 0;
 var b_4 = 0;
+
+var button_1;
+var button_2;
+var button_3;
+var button_4;
+
 
 function setup() {
     var cnv = createCanvas(windowWidth, windowHeight);
