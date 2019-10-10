@@ -1,10 +1,12 @@
 let pageOn = 0;
 
 window.addEventListener("load", () => {
-    let loadder = document.getElementById("loadder");
-    loadder.className += " hidden"
-    page()
-    document.body.style.overflow = "initial";
+    setTimeout(()=>{
+        let loadder = document.getElementById("loadder");
+        loadder.className += " hidden"
+        page()
+        document.body.style.overflow = "initial";
+    }, 2000);
 });
 
 function page() {
@@ -121,6 +123,7 @@ function popUp(id) {
         document.getElementById(id).style.transform = "translateX(-50%) translateY(-50%) translateZ("+positionZ+"px)";
         document.body.style.overflow = "initial";
         setTimeout(()=>{document.getElementById(id).style.transition = "transform 0s";},1000);
+        for (let i = 1; i <= 12; i++) {document.getElementById("link-page-"+i).style.display = "none";}
     } else if (pageOn == 0) {
         pageOn = 1;
         scrollZ = document.body.scrollTop;
@@ -132,6 +135,7 @@ function popUp(id) {
         document.getElementById(id).style.top = "50%";
         document.getElementById(id).style.transform = "translateZ(0px) translateX(-50%) translateY(-50%)";
         document.body.style.overflow = "hidden";
+        for (let i = 1; i <= 12; i++) {document.getElementById("link-page-"+i).style.display = "initial";}
     }
     for (let i = 1; i < 5; i++) {
         for (let j = 1; j < 5; j++) {
