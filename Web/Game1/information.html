@@ -3,145 +3,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Information</title>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Nanum Gothic', sans-serif;
-        }
-
-        .case {
-            height: 100vh;
-            width: 100vw;
-        }
-
-        .box-left {
-            position: fixed;
-            height: 100vh;
-            width: 50%;
-            /* background-color:blue; */
-        }
-
-        .box-right {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            left: 38%;
-            height: 100vh;
-            width: 50%;
-            /* background-color: rgb(81, 196, 36); */
-        }
-
-        .infor-box {
-            position: relative;
-            width: 100%;
-            /* height: 1200px; */
-            margin: 10px;
-            padding: 10px;
-            /* background-color: rgba(95, 158, 160, 0.418); */
-            border-radius: 0.5em;
-        }
-
-        .logo {
-            height: 60px;
-            text-align: center;
-            /* background-color: aquamarine; */
-        }
-
-        .logo img {
-            height: 100%;
-            /* background-color:rgb(94, 201, 112); */
-        }
-
-        .box {
-            position: relative;
-            width: 100%;
-            margin: 10px;
-            /* background-color: brown; */
-        }
-
-        .box a img:hover {
-            box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.185);
-        }
-
-        .box a img {
-            width: 100%;
-            border-radius: 0.5em;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .box h2 {
-            position: absolute;
-            z-index: 100;
-            top: -20px;
-            left: 20px;
-            /* transform: translate(-50%, -50%); */
-            margin: 0;
-            font-size: 2vw;
-            /* display: none; */
-            opacity: 0;
-            transition: all 0.3s ease-in-out;
-            padding: 2vw;
-            background-color: rgba(165, 42, 42, 0.596);
-            border-radius: 0.3em;
-        }
-
-        .static-box {
-            position: fixed;
-            width: 30%;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-        }
-
-        .link-page {
-            margin: 20 0 20 0;
-            width: 100%;
-            text-align: right;
-        }
-
-        .link-page a {
-            font-size: 19px;
-            color: grey;
-            transition: all 0.2s ease-in-out;
-            text-decoration: none;
-        }
-
-        .link-page a:hover {
-            color: rgb(32, 32, 32);
-        }
-
-        .hardder-text {
-            position: fixed;
-            right: 0;
-            top: -120px;
-        }
-
-
-        /* ------ Text Hover ------- */
-        #box:hover ~ #text {
-            /* display: inline; */
-            top: 20px;
-            opacity: 1;
-        }
-        /* ------ Text Hover ------- */
-
-    </style>
+    <link rel="stylesheet" href="../CSS/Game1/information.css">
 </head>
 <body>
+    <input type="checkbox" name="chk1" id="chk1">
+    <label for="chk1" class="bar-label"></label>
     <div class="case">
+        <div class="navigation-box">
+            <span class="span-bar"></span>
+            <span class="span-bar"></span>
+            <span class="span-bar"></span>
+        </div>
+        <div class="navigation-bar" id="navigation-bar">
+            <div class="title-text">
+                <h1>Spelling Bee</h1>
+            </div>
+            <div class="navi-link-page">
+                <a href="../index.html">Main page</a>
+                <a href="../Game1/howTo.html">How to play</a>
+                <a href="../Game1/game.html">Play game</a>
+                <a href="../Game1/scoreBoard.html">Score board</a>
+            </div>
+        </div>
         <div class="box-left">
             <div class="static-box">
                 <div class="hardder-text">
                     <h1>Spelling Bee</h1>
                 </div>
-                <div class="link-page"><a href="../index.html">Main Page</a></div>
+                <div class="link-page"><a href="../index.html">Main page</a></div>
                 <div class="link-page"><a href="../Game1/howTo.html">How to play</a></div>
                 <div class="link-page"><a href="../Game1/game.html">Play game</a></div>
-                <div class="link-page"><a href="../Game1/scoreBoard.html">Score Board</a></div>
+                <div class="link-page"><a href="../Game1/scoreBoard.html">Score board</a></div>
             </div>
         </div>
         <div class="box-right">
