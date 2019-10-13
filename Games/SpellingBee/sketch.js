@@ -10,7 +10,7 @@
 let vocabularyObj;          // Current vocabulary JSON
 let vocabularyLength;       // Length of current vocabulary JSONz
 let vocabularyKey;          // Array of current vocabulary JSON key
-let vocabulary;
+let vocabulary;             // Array of current vocabulary JSON values
 let word;                   // Current word
 let ans;                    // Current answer
 let checkAnswer = '';       // Store user's answer
