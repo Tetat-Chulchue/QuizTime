@@ -1,24 +1,25 @@
 //      ##########################
 //      #                        #
-//      # {Hand Crafted /w Love} #
-//      #  {Shib@ & FkKasitin}   #
+//      #   {Hand Crafted /w ♥}  #
+//      #   {Shib@ & FkKasitin}  #
 //      #                        #
 //      ##########################
 
 // ------------- Declare Variable ------------
 
-let vocabularyObj;
+let vocabularyObj;          // Current vocabulary JSON
+let vocabularyLength;       // Length of current vocabulary JSONz
+let vocabularyKey;          // Array of current vocabulary JSON key
 let vocabulary;
-let vocabularyLength;
-let word;
-let life;
-let score = 0; //เติม = 0 ไว้นิดนุงกันระเบิด
-let ans;
-let translate;
-let placeholder;
-let placeholderIndex = 1;
-let category = 'Animal'; // for testing purpose, pls remove this line when implement random category #Shib@
-let chkans = ""; // สร้างมาเก็บไว้เช็คคำตอบคร้า~~
+let word;                   // Current word
+let ans;                    // Current answer
+let checkAnswer = '';       // Store user's answer
+let life;                   // Remaining life (Not implements yet)
+let score = 0;              // Current score
+let placeholder;            // String that shown as answer placeholder 
+let placeholderIndex = 1;   // number to keep track of current index of placeholder
+let category = 'Animal';    // for testing purpose, pls remove this line when implement random category #Shib@
+let isLetter = /^[a-z]$/;   // regex for testing input is single English character
 
 
 // ------------- P5's Function ---------------
@@ -32,7 +33,7 @@ function setup() {
     life = 3;
     score = 0;
     vocabulary = Object.values(vocabularyObj);
-    translate = Object.keys(vocabularyObj);
+    vocabularyKey = Object.keys(vocabularyObj);
     vocabularyLength = vocabulary.length - 1;
     randomWord();
     createCanvas(windowWidth, windowHeight);
@@ -52,51 +53,31 @@ function draw() {
 
 function keyPressed() {
     console.log(keyCode, key)
-    if (keyCode === BACKSPACE && placeholderIndex != 1) {
-        placeholderIndex -= 3;
-        placeholder = placeholder.replaceAt(placeholderIndex, '_')
-        // if(chkans != ""){
-        //     chkans = chkans.slice(0, -1);
-        // }else{
-        //     alert("Stop!");
-        // } พยายามจะลบอักษรใน chkans 
-        // ปล.ลบได้แล้วแต่ยังมี bug อยู่นาจา ตรงที่ถ้าลบหมดแล้วดันเอา Backspace มาใช้ใส่ใน chkans แทน
+    if (keyCode === BACKSPACE) {
+        placeholder = answerPlaceholder();
+        checkAnswer = '';
+        placeholderIndex = 1;
     } else if (keyCode === ENTER) {
-        // console.log(chkans);
-        if(chkans === ans){
-            alert("You are pretty good!");
-            score += 1;
-            console.log(score);
-            chkans = "";
-            placeholderIndex = 1;
-            randomWord();
-            //ยังมีบัคตรงที่ word กับ ans หลังgenใหม่ไม่ตรงกัน
-        }else{
-            alert("Nahh");
-        }
-        return 0;
-    } else if (0) {
-        console.log();
-        return 0;
-    } else if (placeholderIndex) {
-        placeholder = placeholder.replaceAt(placeholderIndex, key)
+        submit()
+    } else if (placeholderIndex && isLetter.test(key.toLowerCase())) {
+        placeholder = placeholder.replaceAt(placeholderIndex, key);
         placeholderIndex += 3;
-        chkans += key;
-        console.log(chkans);
+        checkAnswer += key;
+        console.log(checkAnswer);
     }
 }
 
 // -------------- My Function --------------
 
 function randomWord() {
-    let wordIndex = Math.floor(Math.random() * vocabularyLength);
-    let wordDummie = _.remove(vocabulary, function(w) {
-        return w === vocabulary[wordIndex];
-    })
-    ans = translate[wordIndex];
-    word = wordDummie[0];
+    let keyIndex = Math.floor(Math.random() * vocabularyLength);
+    let key = vocabularyKey[keyIndex];
+    word = vocabularyObj[key];
+    ans = (_.invert(vocabularyObj))[word]
+    _.remove(vocabularyKey, (n) => { return n === key });
+    delete vocabularyObj[key];
     console.log(word, ans)
-    vocabularyLength = vocabulary.length;
+    vocabularyLength--;
     placeholder = answerPlaceholder();
 
 }
@@ -109,6 +90,20 @@ function answerPlaceholder() {
     return placeholder;
 }
 
-String.prototype.replaceAt = function(index, replacement) {
-    return this.substr(0, index) + replacement+ this.substr(index + replacement.length);
+function submit() {
+    if(checkAnswer === ans){
+        alert("You are pretty good!"); //Fucking MetalGear Reference
+        score += 100;
+        console.log('Your score is:', score);
+        checkAnswer = "";
+        placeholderIndex = 1;
+        randomWord();
+    }else{
+        alert("Nahh");
+    }
+    return 0;
+}
+
+String.prototype.replaceAt = function(index, replacement) { 
+    return this.substr(0, index) + replacement+ this.substr(index + replacement.length); // Some random function from Stackoverflow, don't bother it.
 }
