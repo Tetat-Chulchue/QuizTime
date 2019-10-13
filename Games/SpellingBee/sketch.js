@@ -8,8 +8,8 @@
 // ------------- Declare Variable ------------
 
 let vocabularyObj;          // Current vocabulary JSON
-let vocabularyLength;       // Length of current vocabulary JSONz
-let vocabularyKey;          // Array of current vocabulary JSON key
+let vocabularyLength;       // Length of current vocabulary JSON
+let vocabularyKey;          // Array of current vocabulary JSON keys
 let vocabulary;             // Array of current vocabulary JSON values
 let word;                   // Current word
 let ans;                    // Current answer
@@ -59,7 +59,7 @@ function keyPressed() {
         placeholderIndex = 1;
     } else if (keyCode === ENTER) {
         submit()
-    } else if (placeholderIndex && isLetter.test(key.toLowerCase())) {
+    } else if (placeholderIndex < (placeholder.length) && isLetter.test(key.toLowerCase())) {
         placeholder = placeholder.replaceAt(placeholderIndex, key);
         placeholderIndex += 3;
         checkAnswer += key;
@@ -70,6 +70,9 @@ function keyPressed() {
 // -------------- My Function --------------
 
 function randomWord() {
+    if (vocabularyKey.length === 0) {
+        return 0;
+    }
     let keyIndex = Math.floor(Math.random() * vocabularyLength);
     let key = vocabularyKey[keyIndex];
     word = vocabularyObj[key];
