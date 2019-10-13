@@ -262,4 +262,18 @@ body {
         justify-content: center;
         flex-wrap: wrap;
     }
+
+    .box a img{
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .box h2 {
+        position: relative;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        text-align: center;
+        border-radius: 0px 0px 10px 10px;
+        font-size: 4vw;
+    }
 }
