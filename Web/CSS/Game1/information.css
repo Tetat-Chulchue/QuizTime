@@ -200,7 +200,7 @@ body {
 
 .title-text h1 {
     margin: 0;
-    font-size: 7vw;
+    font-size: 7vmin;
 }
 
 .navi-link-page {
@@ -220,7 +220,7 @@ body {
     text-align: center;
     text-decoration: none;
     margin: 10 0 10 0;
-    font-size: 5vw;
+    font-size: 5vmin;
     opacity: 0;
     transition: all 0.1s ease-in-out;
     transform: translateY(-20px);
