@@ -12,12 +12,14 @@ let vocabulary;
 let vocabularyLength;
 let word;
 let life;
-let score;
+let score = 0; //เติม = 0 ไว้นิดนุงกันระเบิด
 let ans;
 let translate;
 let placeholder;
 let placeholderIndex = 1;
 let category = 'Animal'; // for testing purpose, pls remove this line when implement random category #Shib@
+let chkans = ""; // สร้างมาเก็บไว้เช็คคำตอบคร้า~~
+
 
 // ------------- P5's Function ---------------
 
@@ -53,8 +55,25 @@ function keyPressed() {
     if (keyCode === BACKSPACE && placeholderIndex != 1) {
         placeholderIndex -= 3;
         placeholder = placeholder.replaceAt(placeholderIndex, '_')
+        // if(chkans != ""){
+        //     chkans = chkans.slice(0, -1);
+        // }else{
+        //     alert("Stop!");
+        // } พยายามจะลบอักษรใน chkans 
+        // ปล.ลบได้แล้วแต่ยังมี bug อยู่นาจา ตรงที่ถ้าลบหมดแล้วดันเอา Backspace มาใช้ใส่ใน chkans แทน
     } else if (keyCode === ENTER) {
-        console.log();
+        // console.log(chkans);
+        if(chkans === ans){
+            alert("You are pretty good!");
+            score += 1;
+            console.log(score);
+            chkans = "";
+            placeholderIndex = 1;
+            randomWord();
+            //ยังมีบัคตรงที่ word กับ ans หลังgenใหม่ไม่ตรงกัน
+        }else{
+            alert("Nahh");
+        }
         return 0;
     } else if (0) {
         console.log();
@@ -62,6 +81,8 @@ function keyPressed() {
     } else if (placeholderIndex) {
         placeholder = placeholder.replaceAt(placeholderIndex, key)
         placeholderIndex += 3;
+        chkans += key;
+        console.log(chkans);
     }
 }
 
