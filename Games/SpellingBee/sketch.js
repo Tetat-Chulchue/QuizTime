@@ -14,18 +14,23 @@ let vocabulary;             // Array of current vocabulary JSON values
 let word;                   // Current word
 let ans;                    // Current answer
 let checkAnswer = '';       // Store user's answer
-let life;                   // Remaining life (Not implements yet)
-let score = 0;              // Current score
+let life;                   // Remaining life
+let score;                  // Current score
 let placeholder;            // String that shown as answer placeholder 
 let placeholderIndex = 1;   // number to keep track of current index of placeholder
-let category = 'Animal';    // for testing purpose, pls remove this line when implement random category #Shib@
 let isLetter = /^[a-z]$/;   // regex for testing input is single English character
+let isEnd = false;          // Store game state
+let category = 'Animal';    // for testing purpose, pls remove this line when implement random category #Shib@
+let correctSound;
+let wrongSound;
 
 
 // ------------- P5's Function ---------------
 
 function preload() {
     let url = './Vocabulary/' + category +'.json'
+    correctSound = loadSound('./asset/correct.wav')
+    wrongSound = loadSound('./asset/wrong.wav')
     vocabularyObj = loadJSON(url);
 }
 
@@ -35,42 +40,43 @@ function setup() {
     vocabulary = Object.values(vocabularyObj);
     vocabularyKey = Object.keys(vocabularyObj);
     vocabularyLength = vocabulary.length - 1;
+    textStyle(BOLD);
     randomWord();
     createCanvas(windowWidth, windowHeight);
-    textAlign(CENTER, CENTER);
-    textStyle(BOLD);
 }
 
 function draw() {
     background(color(150, 100, 255));
-    ellipse(mouseX, mouseY, 50);
     fill(255, 255, 0);
+    textSize(50); 
+    textAlign(RIGHT);
+    text('Score: ' + score, 0, 0, windowWidth, windowHeight * (1/12));
     textSize(128); 
+    textAlign(CENTER, CENTER);
     text(word, 0, 0, windowWidth, windowHeight/2); // word display
     text(placeholder, 0, windowHeight/2, windowWidth, windowHeight/2); // display answer
 
 }
 
 function keyPressed() {
-    console.log(keyCode, key)
-    if (keyCode === BACKSPACE) {
+    if (keyCode === BACKSPACE && !isEnd) {
         placeholder = answerPlaceholder();
         checkAnswer = '';
         placeholderIndex = 1;
-    } else if (keyCode === ENTER) {
+    } else if (keyCode === ENTER && !isEnd) {
         submit()
-    } else if (placeholderIndex < (placeholder.length) && isLetter.test(key.toLowerCase())) {
+    } else if (placeholderIndex < (placeholder.length) && isLetter.test(key.toLowerCase()) && !isEnd) {
         placeholder = placeholder.replaceAt(placeholderIndex, key);
         placeholderIndex += 3;
         checkAnswer += key;
-        console.log(checkAnswer);
     }
 }
 
 // -------------- My Function --------------
 
 function randomWord() {
-    if (vocabularyKey.length === 0) {
+    if (Object.keys(vocabularyObj).length === 0) {
+        endGame();
         return 0;
     }
     let keyIndex = Math.floor(Math.random() * vocabularyLength);
@@ -82,7 +88,6 @@ function randomWord() {
     console.log(word, ans)
     vocabularyLength--;
     placeholder = answerPlaceholder();
-
 }
 
 function answerPlaceholder() {
@@ -94,17 +99,28 @@ function answerPlaceholder() {
 }
 
 function submit() {
-    if(checkAnswer === ans){
-        alert("You are pretty good!"); //Fucking MetalGear Reference
+    if(checkAnswer === ans) {
+        correctSound.play();
         score += 100;
         console.log('Your score is:', score);
         checkAnswer = "";
         placeholderIndex = 1;
         randomWord();
-    }else{
-        alert("Nahh");
+    } else {
+        wrongSound.play();
+        life -= 1
+        if (life <= 0) {
+            endGame()
+            return 0;
+        }
+        randomWord();
     }
-    return 0;
+}
+
+function endGame() {
+    word = 'Congratulations!'
+    placeholder = 'Your score is : ' + score;
+    isEnd = true;
 }
 
 String.prototype.replaceAt = function(index, replacement) { 
