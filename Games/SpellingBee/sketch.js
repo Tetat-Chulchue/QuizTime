@@ -21,8 +21,8 @@ let placeholderIndex = 1;   // number to keep track of current index of placehol
 let isLetter = /^[a-z]$/;   // regex for testing input is single English character
 let isEnd = false;          // Store game state
 let category = 'Animal';    // for testing purpose, pls remove this line when implement random category #Shib@
-let correctSound;
-let wrongSound;
+let correctSound;           // Store correct sfx
+let wrongSound;             // Store worng sfx
 
 
 // ------------- P5's Function ---------------
@@ -120,6 +120,10 @@ function endGame() {
     word = 'Congratulations!'
     placeholder = 'Your score is : ' + score;
     isEnd = true;
+    let data = {};
+    data[name] = score;
+    var blob = new Blob([data], { type: "json" });
+    saveAs(blob, "score.json");
 }
 
 String.prototype.replaceAt = function(index, replacement) { 
