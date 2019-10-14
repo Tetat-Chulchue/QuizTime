@@ -37,7 +37,6 @@ function setup() {
     button_4.mousePressed(checkDivide);
 
     fill(0);
-    textSize(40);
     textStyle(BOLD);
     textAlign(CENTER, CENTER);
 
@@ -74,9 +73,11 @@ function draw() {
     button_4.style('font-weight', 'bold');
     button_4.size(windowWidth / 2, (windowHeight / 2) / 2);
 
-
+    textSize(40);
     text("Life : " + life, 90, 50);
     text("Score : " + score, windowWidth - 120, 50);
+
+    textSize(60);
     text(question, windowWidth / 2, (windowHeight / 2) / 2);
 }
 // -------------------------------------------
@@ -84,11 +85,7 @@ function draw() {
 // -------------- My Function ----------------
 function randomQuestion() {
     questionIndex = Math.floor(Math.random() * questionKey.length);
-    if (questionKey[questionIndex] === null) {
-        randomQuestion();
-    } else {
-        question = questionKey[questionIndex];
-    }
+    question = questionKey[questionIndex];
 }
 
 function checkPlus() {
@@ -99,7 +96,7 @@ function checkPlus() {
         life -= 1;
         wrongSound.play();
     }
-    delete questionKey[questionIndex];
+    questionKey.splice(questionIndex, 1);
     randomQuestion();
 }
 
@@ -111,7 +108,7 @@ function checkMinus() {
         life -= 1;
         wrongSound.play();
     }
-    delete questionKey[questionIndex];
+    questionKey.splice(questionIndex, 1);
     randomQuestion();
 }
 
@@ -123,7 +120,7 @@ function checkMultiply() {
         life -= 1;
         wrongSound.play();
     }
-    delete questionKey[questionIndex];
+    questionKey.splice(questionIndex, 1);
     randomQuestion();
 }
 
@@ -135,7 +132,7 @@ function checkDivide() {
         life -= 1;
         wrongSound.play();
     }
-    delete questionKey[questionIndex];
+    questionKey.splice(questionIndex, 1);
     randomQuestion();
 }
 // -------------------------------------------
