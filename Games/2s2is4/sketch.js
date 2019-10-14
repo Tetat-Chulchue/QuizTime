@@ -1,143 +1,133 @@
-var json;
+// ------------- Declare Variable ------------
+let question;
+let questionKey;
+let questionObj;
+let questionIndex;
+let life;
+let score;
+// -------------------------------------------
 
-let requestURL = './Easy.json';
-let request = new XMLHttpRequest();
-request.onreadystatechange = function () {
-    console.log(request.readyState, request.status)
-    if (request.readyState == 4 && request.status == 200) {
-        json = JSON.parse(request.responseText);
-        problem();
-    }
-};
-request.open("GET", requestURL, true);
-request.send();
-
-var rd;
-var word;
-
-var b_1 = 0;
-var b_2 = 0;
-var b_3 = 0;
-var b_4 = 0;
-
-var button_1;
-var button_2;
-var button_3;
-var button_4;
-
+// ------------- P5's Function ---------------
+function preload() {
+    let url = 'Question.json';
+    questionObj = loadJSON(url);
+}
 
 function setup() {
-    var cnv = createCanvas(windowWidth, windowHeight);
+    life = 3;
+    score = 0;
+
+    let cnv = createCanvas(windowWidth, windowHeight);
     cnv.style('display', 'block');
 
     button_1 = createButton('+');
-    button_1.mousePressed(bt_1);
+    button_1.mousePressed(checkPlus);
 
     button_2 = createButton('-');
-    button_2.mousePressed(bt_2);
+    button_2.mousePressed(checkMinus);
 
     button_3 = createButton('×');
-    button_3.mousePressed(bt_3);
+    button_3.mousePressed(checkMultiply);
 
     button_4 = createButton('÷');
-    button_4.mousePressed(bt_4);
+    button_4.mousePressed(checkDivide);
 
     fill(0);
-    textSize(50);
-    textAlign(CENTER);
+    textSize(40);
+    textStyle(BOLD);
+    textAlign(CENTER, CENTER);
+
+    questionKey = Object.keys(questionObj);
+    randomQuestion();
 }
 
 function draw() {
+    resizeCanvas(windowWidth, windowHeight);
+
     background(155);
 
-    if (b_1 == 1) {
-        b_1 = 0;
-        checkPlus();
-        setTimeout(problem, 3000);
-    } else if (b_2 == 1) {
-        b_2 = 0;
-        checkMinus();
-        setTimeout(problem, 3000);
-    } else if (b_3 == 1) {
-        b_3 = 0;
-        checkMultiply();
-        setTimeout(problem, 3000);
-    } else if (b_4 == 1) {
-        b_4 = 0;
-        checkDivide();
-        setTimeout(problem, 3000);
-    } else {
-        text(word, windowWidth / 2, (windowHeight / 2) / 2);
-    }
-
-    // line(0, windowHeight / 2, windowWidth, windowHeight / 2);
-    // line(0, (windowHeight * 1.5) / 2, windowWidth, (windowHeight * 1.5) / 2);
-    // line(0, (windowHeight * 1.25) / 2, windowWidth, (windowHeight * 1.25) / 2);
-    // line(0, (windowHeight * 1.75) / 2, windowWidth, (windowHeight * 1.75) / 2);
-
-    // line(windowWidth / 2, 0, windowWidth / 2, windowHeight);
-    // line((windowWidth * 0.5) / 2, 0, (windowWidth * 0.5) / 2, windowHeight);
-    // line((windowWidth * 1.5) / 2, 0, (windowWidth * 1.5) / 2, windowHeight);
-
     button_1.position(0, windowHeight / 2);
+    button_1.style('background-color', '#ff4d4d');
+    button_1.style('font-size', '40px');
+    button_1.style('color', 'white');
+    button_1.style('font-weight', 'bold');
+    button_1.size(windowWidth / 2, (windowHeight / 2) / 2);
+
     button_2.position(windowWidth / 2, windowHeight / 2);
+    button_2.style('background-color', '#00ff00');
+    button_2.style('font-size', '40px');
+    button_2.style('color', 'white');
+    button_2.style('font-weight', 'bold');
+    button_2.size(windowWidth / 2, (windowHeight / 2) / 2);
+
     button_3.position(0, (windowHeight * 1.5) / 2);
+    button_3.style('background-color', '#ffff00');
+    button_3.style('font-size', '40px');
+    button_3.style('color', 'white');
+    button_3.style('font-weight', 'bold');
+    button_3.size(windowWidth / 2, (windowHeight / 2) / 2);
+
     button_4.position(windowWidth / 2, (windowHeight * 1.5) / 2);
-}
+    button_4.style('background-color', '#4d4dff');
+    button_4.style('font-size', '40px');
+    button_4.style('color', 'white');
+    button_4.style('font-weight', 'bold');
+    button_4.size(windowWidth / 2, (windowHeight / 2) / 2);
 
-function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
-}
 
-function problem() {
-    rd = Math.floor(Math.random() * 6);
-    word = json[rd].a[0];
+    text("Life : " + life, 90, 50);
+    text("Score : " + score, windowWidth - 120, 50);
+    text(question, windowWidth / 2, (windowHeight / 2) / 2);
 }
+// -------------------------------------------
 
-function bt_1() {
-    b_1 = 1;
-}
-
-function bt_2() {
-    b_2 = 1;
-}
-
-function bt_3() {
-    b_3 = 1;
-}
-
-function bt_4() {
-    b_4 = 1;
+// -------------- My Function ----------------
+function randomQuestion() {
+    questionIndex = Math.floor(Math.random() * questionKey.length);
+    if (questionKey[questionIndex] == null) {
+        randomQuestion();
+    } else {
+        question = questionKey[questionIndex];
+    }
 }
 
 function checkPlus() {
-    if (json[rd].a[1] == '+') {
-        word = 'Correct';
+    if (questionObj[question] == "+") {
+        score += 1;
     } else {
-        word = 'Incorrect';
+        life -= 1;
     }
+    delete questionKey[questionIndex];
+    randomQuestion();
 }
 
 function checkMinus() {
-    if (json[rd].a[1] == '-') {
-        word = 'Correct';
+    if (questionObj[question] == "-") {
+        score += 1;
     } else {
-        word = 'Incorrect';
+        life -= 1;
     }
+    delete questionKey[questionIndex];
+    randomQuestion();
 }
 
 function checkMultiply() {
-    if (json[rd].a[1] == '*') {
-        word = 'Correct';
+    if (questionObj[question] == "*") {
+        score += 1;
     } else {
-        word = 'Incorrect';
+        life -= 1;
     }
+    delete questionKey[questionIndex];
+    randomQuestion();
 }
 
 function checkDivide() {
-    if (json[rd].a[1] == '/') {
-        word = 'Correct';
+    if (questionObj[question] == "/") {
+        score += 1;
     } else {
-        word = 'Incorrect';
+        life -= 1;
     }
+    delete questionKey[questionIndex];
+    randomQuestion();
 }
+// -------------------------------------------
