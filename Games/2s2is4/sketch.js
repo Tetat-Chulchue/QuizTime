@@ -84,7 +84,7 @@ function draw() {
 // -------------- My Function ----------------
 function randomQuestion() {
     questionIndex = Math.floor(Math.random() * questionKey.length);
-    if (questionKey[questionIndex] == null) {
+    if (questionKey[questionIndex] === null) {
         randomQuestion();
     } else {
         question = questionKey[questionIndex];
@@ -92,7 +92,7 @@ function randomQuestion() {
 }
 
 function checkPlus() {
-    if (questionObj[question] == "+") {
+    if (questionObj[question] === "+") {
         score += 1;
         correctSound.play();
     } else {
@@ -104,7 +104,7 @@ function checkPlus() {
 }
 
 function checkMinus() {
-    if (questionObj[question] == "-") {
+    if (questionObj[question] === "-") {
         score += 1;
         correctSound.play();
     } else {
@@ -116,7 +116,7 @@ function checkMinus() {
 }
 
 function checkMultiply() {
-    if (questionObj[question] == "*") {
+    if (questionObj[question] === "*") {
         score += 1;
         correctSound.play();
     } else {
@@ -128,7 +128,7 @@ function checkMultiply() {
 }
 
 function checkDivide() {
-    if (questionObj[question] == "/") {
+    if (questionObj[question] === "/") {
         score += 1;
         correctSound.play();
     } else {
