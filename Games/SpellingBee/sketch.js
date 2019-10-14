@@ -103,9 +103,6 @@ function submit() {
         correctSound.play();
         score += 100;
         console.log('Your score is:', score);
-        checkAnswer = "";
-        placeholderIndex = 1;
-        randomWord();
     } else {
         wrongSound.play();
         life -= 1
@@ -113,8 +110,10 @@ function submit() {
             endGame()
             return 0;
         }
-        randomWord();
     }
+    checkAnswer = "";
+    placeholderIndex = 1;
+    randomWord();
 }
 
 function endGame() {
