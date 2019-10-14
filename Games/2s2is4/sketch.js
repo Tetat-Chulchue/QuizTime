@@ -5,12 +5,16 @@ let questionObj;
 let questionIndex;
 let life;
 let score;
+let correctSound;
+let wrongSound;
 // -------------------------------------------
 
 // ------------- P5's Function ---------------
 function preload() {
     let url = 'Question.json';
     questionObj = loadJSON(url);
+    correctSound = loadSound('./asset/correct.wav');
+    wrongSound = loadSound('./asset/wrong.wav');
 }
 
 function setup() {
@@ -49,28 +53,24 @@ function draw() {
     button_1.position(0, windowHeight / 2);
     button_1.style('background-color', '#ff4d4d');
     button_1.style('font-size', '40px');
-    button_1.style('color', 'white');
     button_1.style('font-weight', 'bold');
     button_1.size(windowWidth / 2, (windowHeight / 2) / 2);
 
     button_2.position(windowWidth / 2, windowHeight / 2);
     button_2.style('background-color', '#00ff00');
     button_2.style('font-size', '40px');
-    button_2.style('color', 'white');
     button_2.style('font-weight', 'bold');
     button_2.size(windowWidth / 2, (windowHeight / 2) / 2);
 
     button_3.position(0, (windowHeight * 1.5) / 2);
     button_3.style('background-color', '#ffff00');
     button_3.style('font-size', '40px');
-    button_3.style('color', 'white');
     button_3.style('font-weight', 'bold');
     button_3.size(windowWidth / 2, (windowHeight / 2) / 2);
 
     button_4.position(windowWidth / 2, (windowHeight * 1.5) / 2);
-    button_4.style('background-color', '#4d4dff');
+    button_4.style('background-color', '#6666ff');
     button_4.style('font-size', '40px');
-    button_4.style('color', 'white');
     button_4.style('font-weight', 'bold');
     button_4.size(windowWidth / 2, (windowHeight / 2) / 2);
 
@@ -94,8 +94,10 @@ function randomQuestion() {
 function checkPlus() {
     if (questionObj[question] == "+") {
         score += 1;
+        correctSound.play();
     } else {
         life -= 1;
+        wrongSound.play();
     }
     delete questionKey[questionIndex];
     randomQuestion();
@@ -104,8 +106,10 @@ function checkPlus() {
 function checkMinus() {
     if (questionObj[question] == "-") {
         score += 1;
+        correctSound.play();
     } else {
         life -= 1;
+        wrongSound.play();
     }
     delete questionKey[questionIndex];
     randomQuestion();
@@ -114,8 +118,10 @@ function checkMinus() {
 function checkMultiply() {
     if (questionObj[question] == "*") {
         score += 1;
+        correctSound.play();
     } else {
         life -= 1;
+        wrongSound.play();
     }
     delete questionKey[questionIndex];
     randomQuestion();
@@ -124,8 +130,10 @@ function checkMultiply() {
 function checkDivide() {
     if (questionObj[question] == "/") {
         score += 1;
+        correctSound.play();
     } else {
         life -= 1;
+        wrongSound.play();
     }
     delete questionKey[questionIndex];
     randomQuestion();
