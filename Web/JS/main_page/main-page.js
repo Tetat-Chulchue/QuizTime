@@ -22,21 +22,21 @@ function page() {
     box( y-(space)+position , "page-1-4");
 
     box( y-(space*5)+position , "page-2");
-    box( y-(space*6)+position , "page-2-1");
-    box( y-(space*7)+position , "page-2-2");
-    box( y-(space*8)+position , "page-2-3");
+    box( y-(space*6)+position-20 , "page-2-1");
+    box( y-(space*7)+position-40 , "page-2-2");
+    box( y-(space*8)+position-60 , "page-2-3");
     box( y-(space*9)+position , "page-2-4");
 
     box( y-(space*10)+position , "page-3");
-    box( y-(space*11)+position , "page-3-1");
-    box( y-(space*12)+position , "page-3-2");
-    box( y-(space*13)+position , "page-3-3");
+    box( y-(space*11)+position-20 , "page-3-1");
+    box( y-(space*12)+position-40 , "page-3-2");
+    box( y-(space*13)+position-60 , "page-3-3");
     box( y-(space*14)+position , "page-3-4");
 
     box( y-(space*15)+position , "page-4");
-    box( y-(space*16)+position , "page-4-1");
-    box( y-(space*17)+position , "page-4-2");
-    box( y-(space*18)+position , "page-4-3");
+    box( y-(space*16)+position-20 , "page-4-1");
+    box( y-(space*17)+position-40 , "page-4-2");
+    box( y-(space*18)+position-60 , "page-4-3");
     box( y-(space*19)+position , "page-4-4");
 
     background( y-(space*3)+position, "background1", "rgb(140, 140, 235)");
