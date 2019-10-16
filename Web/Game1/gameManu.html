@@ -23,8 +23,8 @@
             <div class="navi-link-page">
                 <a href="../index.html">Main page</a>
                 <a href="../Game1/howTo.html">How to play</a>
-                <a href="../Game1/gameManu.html">Play game</a>
-                <a href="../Game1/scoreBoard.html">Score board</a>
+                <a href="../Game1/information.html">Information</a>
+                <!-- <a href="../Game1/scoreBoard.html">Score board</a> -->
             </div>
         </div>
         <div class="box-left">
@@ -34,8 +34,8 @@
                 </div>
                 <div class="link-page"><a href="../index.html">Main page</a></div>
                 <div class="link-page"><a href="../Game1/howTo.html">How to play</a></div>
-                <div class="link-page"><a href="../Game1/gameManu.html">Play game</a></div>
-                <div class="link-page"><a href="../Game1/scoreBoard.html">Score board</a></div>
+                <div class="link-page"><a href="../Game1/information.html">Information</a></div>
+                <!-- <div class="link-page"><a href="../Game1/scoreBoard.html">Score board</a></div> -->
             </div>
         </div>
         <div class="box-right">
@@ -45,78 +45,83 @@
                         <img src="../assets/logo2.png" alt="">
                     </a>
                 </div>
-                <h2> What is Spelling Bee?</h2>
-                <p>
+                <h2 style="text-align: center;">Choose the category you want to play!!.</h2>
+                <!-- <p>
                     Piedmont, or mountain, glaciers are found in many parts of the world. In North America they are distributed along the mountain ranges of the Pacific Coast from central California northward. They abound in the Andes range in South America and are familiar and greatly admired spectacles in the Alps, the Pyrenees, the Caucasus Mountains and the mountains of Scandanavia. Rivers of ice flow down the valleys of various Asian mountain ranges, including the Himalayas, the Hindu Kush, and the Karakoram and Kunlun ranges. They are also a feature of the Southern Alps of New Zealand and are found in the lofty mountains of New Guinea. The largest piedmont glaciers are the Malaspina and Bering glaciers, both in Alaska. [Sample]
-                </p>
+                </p> -->
             </div>
             <div class="box">
-                <a href="../Game1/vocab/animal.html" id="box">
+                <a style="cursor: pointer;" onclick="send('animal')" id="box">
                     <img src="../assets/Game1/animal.jpg" alt="">
                 </a>
                 <h2 id="text">Animal</h2>
             </div>
             <div class="box">
-                <a href="../Game1/vocab/food.html" id="box">
+                <a style="cursor: pointer;" onclick="send('food')" id="box">
                     <img src="../assets/Game1/food.jpg" alt="">
                 </a>
                 <h2 id="text">Food</h2>
             </div>
             <div class="box">
-                <a href="../Game1/vocab/funiture.html" id="box">
+                <a style="cursor: pointer;" onclick="send('furniture')" id="box">
                     <img src="../assets/Game1/furniture.jpg" alt="">
                 </a>
                 <h2 id="text">Furniture</h2>
             </div>
             <div class="box">
-                <a href="../Game1/vocab/job.html" id="box">
+                <a style="cursor: pointer;" onclick="send('job')" id="box">
                     <img src="../assets/Game1/job.jpg" alt="">
                 </a>
-                <h2 id="text">Job</h2>
+                <h2 id="text">job</h2>
             </div>
             <div class="box">
-                <a href="../Game1/vocab/nature.html" id="box">
+                <a style="cursor: pointer;" onclick="send('nature')" id="box">
                     <img src="../assets/Game1/nature.jpg" alt="">
                 </a>
                 <h2 id="text">Nature</h2>
             </div>
             <div class="box">
-                <a href="../Game1/vocab/place.html" id="box">
+                <a style="cursor: pointer;" onclick="send('place')" id="box">
                     <img src="../assets/Game1/place.jpg" alt="">
                 </a>
                 <h2 id="text">Place</h2>
             </div>
             <div class="box">
-                <a href="../Game1/vocab/sport.html" id="box">
+                <a style="cursor: pointer;" onclick="send('sport')" id="box">
                     <img src="../assets/Game1/sport.jpg" alt="">
                 </a>
                 <h2 id="text">Sport</h2>
             </div>
             <div class="box">
-                <a href="../Game1/vocab/subject.html" id="box">
+                <a style="cursor: pointer;" onclick="send('subject')" id="box">
                     <img src="../assets/Game1/subject.jpg" alt="">
                 </a>
                 <h2 id="text">Subject</h2>
             </div>
             <div class="box">
-                <a href="../Game1/vocab/time.html" id="box">
+                <a style="cursor: pointer;" onclick="send('time')" id="box">
                     <img src="../assets/Game1/time.jpg" alt="">
                 </a>
                 <h2 id="text">Time</h2>
             </div>
             <div class="box">
-                <a href="../Game1/vocab/vegetable.html" id="box">
+                <a style="cursor: pointer;" onclick="send('vagetables')" id="box">
                     <img src="../assets/Game1/vage.jpg" alt="">
                 </a>
                 <h2 id="text">Vagetables</h2>
             </div>
             <div class="box">
-                <a href="../Game1/vocab/vehicle.html" id="box">
+                <a style="cursor: pointer;" onclick="send('vehicle')" id="box">
                     <img src="../assets/Game1/vehicle.jpeg" alt="">
                 </a>
                 <h2 id="text">Vehicle</h2>
             </div>
         </div>
     </div>
+    <script>
+        function send(vocabNName) {
+            window.document.location = './game.html'+'?vocabName='+vocabNName;
+        }
+    </script>
 </body>
 </html>
