@@ -3,8 +3,9 @@ let question;
 let questionKey;
 let questionObj;
 let questionIndex;
-let life;
-let score;
+let life = 3;
+let score = 0;
+let count = 0;
 let correctSound;
 let wrongSound;
 // -------------------------------------------
@@ -18,30 +19,30 @@ function preload() {
 }
 
 function setup() {
-    life = 3;
-    score = 0;
-
     let cnv = createCanvas(windowWidth, windowHeight);
     cnv.style('display', 'block');
 
-    button_1 = createButton('+');
-    button_1.mousePressed(checkPlus);
+    if (count === 0) {
+        questionKey = Object.keys(questionObj);
+    }
 
-    button_2 = createButton('-');
-    button_2.mousePressed(checkMinus);
+    randomQuestion();
 
-    button_3 = createButton('×');
-    button_3.mousePressed(checkMultiply);
+    button_1 = createButton(questionObj[question][0].choice[0]);
+    button_1.mousePressed(check_0);
 
-    button_4 = createButton('÷');
-    button_4.mousePressed(checkDivide);
+    button_2 = createButton(questionObj[question][0].choice[1]);
+    button_2.mousePressed(check_1);
+
+    button_3 = createButton(questionObj[question][0].choice[2]);
+    button_3.mousePressed(check_2);
+
+    button_4 = createButton(questionObj[question][0].choice[3]);
+    button_4.mousePressed(check_3);
 
     fill(0);
     textStyle(BOLD);
     textAlign(CENTER, CENTER);
-
-    questionKey = Object.keys(questionObj);
-    randomQuestion();
 }
 
 function draw() {
@@ -49,7 +50,7 @@ function draw() {
 
     background(155);
 
-    if (life === 0) {
+    if (life === 0 || count === 10) {
         button_1.remove();
         button_2.remove();
         button_3.remove();
@@ -99,51 +100,71 @@ function randomQuestion() {
     question = questionKey[questionIndex];
 }
 
-function checkPlus() {
-    if (questionObj[question] === "+") {
-        score += 1;
+function check_0() {
+    if (questionObj[question][0].choice[0] === questionObj[question][1].chack) {
+        score += 10;
         correctSound.play();
     } else {
         life -= 1;
         wrongSound.play();
     }
+    count += 1;
     questionKey.splice(questionIndex, 1);
-    randomQuestion();
+    button_1.remove();
+    button_2.remove();
+    button_3.remove();
+    button_4.remove();
+    setup();
 }
 
-function checkMinus() {
-    if (questionObj[question] === "-") {
-        score += 1;
+function check_1() {
+    if (questionObj[question][0].choice[1] === questionObj[question][1].chack) {
+        score += 10;
         correctSound.play();
     } else {
         life -= 1;
         wrongSound.play();
     }
+    count += 1;
     questionKey.splice(questionIndex, 1);
-    randomQuestion();
+    button_1.remove();
+    button_2.remove();
+    button_3.remove();
+    button_4.remove();
+    setup();
 }
 
-function checkMultiply() {
-    if (questionObj[question] === "*") {
-        score += 1;
+function check_2() {
+    if (questionObj[question][0].choice[2] === questionObj[question][1].chack) {
+        score += 10;
         correctSound.play();
     } else {
         life -= 1;
         wrongSound.play();
     }
+    count += 1;
     questionKey.splice(questionIndex, 1);
-    randomQuestion();
+    button_1.remove();
+    button_2.remove();
+    button_3.remove();
+    button_4.remove();
+    setup();
 }
 
-function checkDivide() {
-    if (questionObj[question] === "/") {
-        score += 1;
+function check_3() {
+    if (questionObj[question][0].choice[3] === questionObj[question][1].chack) {
+        score += 10;
         correctSound.play();
     } else {
         life -= 1;
         wrongSound.play();
     }
+    count += 1;
     questionKey.splice(questionIndex, 1);
-    randomQuestion();
+    button_1.remove();
+    button_2.remove();
+    button_3.remove();
+    button_4.remove();
+    setup();
 }
 // -------------------------------------------
