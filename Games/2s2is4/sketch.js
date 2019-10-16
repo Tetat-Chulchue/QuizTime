@@ -1,6 +1,6 @@
 // ------------- Declare Variable ------------
-//let question;
-//let questionKey;
+let question;
+let questionKey;
 let questionObj;
 let questionIndex;
 let life;
