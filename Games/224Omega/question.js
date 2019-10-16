@@ -10,6 +10,7 @@ request.onreadystatechange = function () {
 request.open("GET", requestURL, true);
 request.send();
 let questions = [new Question("พร้อมแล้วกดเริ่ม", ["เริ่ม","เริ่ม","เริ่ม","เริ่ม"], "null")];
+console.log(String.fromCharCode(67) + String.fromCharCode(79) + String.fromCharCode(80) + String.fromCharCode(89)+ "?")
 function myFunction(myObj) {
     for (let i = 0; i < myObj.length; i++) {
         questions.push( new Question(myObj[i].quiz, myObj[i].choice, myObj[i].check) );

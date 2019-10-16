@@ -1,5 +1,30 @@
-table,
-td,th {
+th {
+    border-collapse: collapse;
     border: 1px solid #333;
+}
+#style1{
+    border: solid rgb(0, 132, 255);
+    border-radius: 50px/50px;
+    width: 80%; 
+    position: relative; 
+    top: 5%;
+    left: 10%; 
+}
+#style2{
+    border: solid rgb(0, 132, 255);
+    border-radius: 50px/50px;
+    width: 90%; 
+    position: relative; 
+    top: 5%;
+    left: 5%; 
+}
+#style3{
+    background-color: aqua;
+    border: solid aqua;
+    border-radius: 50px/50px;
+    width: 90%; 
+    position: relative; 
+    top: 5%;
+    left: 5%;
 }
 
