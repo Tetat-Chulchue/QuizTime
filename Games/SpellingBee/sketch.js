@@ -22,7 +22,7 @@ let isLetter = /^[a-z]$/;   // regex for testing input is single English charact
 let isEnd = false;          // Store game state
 let category = 'Animal';    // for testing purpose, pls remove this line when implement random category #Shib@
 let correctSound;           // Store correct sfx
-let wrongSound;             // Store wrong sfx
+let wrongSound;             // Store worng sfx
 
 let path = window.location.search;
 
@@ -121,6 +121,10 @@ function endGame() {
     word = 'Congratulations!'
     placeholder = 'Your score is : ' + score;
     isEnd = true;
+    let data = {};
+    data[name] = score;
+    var blob = new Blob([data], { type: "json" });
+    saveAs(blob, "score.json");
 }
 
 String.prototype.replaceAt = function(index, replacement) { 
