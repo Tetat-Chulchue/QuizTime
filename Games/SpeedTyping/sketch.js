@@ -20,7 +20,7 @@ function draw() {
     text('Time: ', width / 2, height / 2);
     textAlign(LEFT, CENTER)
     text(timer, width / 2, height / 2);
-    if ((frameCount % 60 == 0 && timer > 0) && !end === true) {
+    if ((frameCount % 60 == 0 && timer > 0) && !end) {
         timer++;
         console.log(timer);
     }
@@ -43,7 +43,7 @@ function keyPressed() {
         }
     }
     paragraphIndex++;
-    if (paragraphIndex + 1 === paragraph.length) {
+    if (paragraphIndex + 1 > paragraph.length) {
         endGame();
     }
 }
