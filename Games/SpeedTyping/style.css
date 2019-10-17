@@ -1,7 +1,11 @@
-.correct {
+p{
+    color: black;
+    font-size: 30px;
+}
+#correct {
     background-color: lightgreen;
 }
 
-.wrong {
+#wrong {
     background-color: lightsalmon;
 }

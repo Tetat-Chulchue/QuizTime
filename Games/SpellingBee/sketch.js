@@ -49,13 +49,13 @@ function setup() {
 function draw() {
     background(color(150, 100, 255));
     fill(255, 255, 0);
-    textSize(50); 
+    textSize(50);
     textAlign(RIGHT);
-    text('Score: ' + score, 0, 0, windowWidth, windowHeight * (1/12));
-    textSize(128); 
+    text('Score: ' + score, 0, 0, windowWidth, windowHeight * (1 / 12));
+    textSize(128);
     textAlign(CENTER, CENTER);
-    text(word, 0, 0, windowWidth, windowHeight/2); // word display
-    text(placeholder, 0, windowHeight/2, windowWidth, windowHeight/2); // display answer
+    text(word, 0, 0, windowWidth, windowHeight / 2); // word display
+    text(placeholder, 0, windowHeight / 2, windowWidth, windowHeight / 2); // display answer
 
 }
 
@@ -86,7 +86,6 @@ function randomWord() {
     ans = (_.invert(vocabularyObj))[word]
     _.remove(vocabularyKey, (n) => { return n === key });
     delete vocabularyObj[key];
-    console.log(word, ans)
     vocabularyLength--;
     placeholder = answerPlaceholder();
 }
@@ -100,10 +99,9 @@ function answerPlaceholder() {
 }
 
 function submit() {
-    if(checkAnswer === ans) {
+    if (checkAnswer === ans) {
         correctSound.play();
         score += 100;
-        console.log('Your score is:', score);
     } else {
         wrongSound.play();
         life -= 1
@@ -127,6 +125,6 @@ function endGame() {
     saveAs(blob, "score.json");
 }
 
-String.prototype.replaceAt = function(index, replacement) { 
-    return this.substr(0, index) + replacement+ this.substr(index + replacement.length); // Some random function from Stackoverflow, don't bother it.
+String.prototype.replaceAt = function (index, replacement) {
+    return this.substr(0, index) + replacement + this.substr(index + replacement.length); // Some random function from Stackoverflow, don't bother it.
 }
