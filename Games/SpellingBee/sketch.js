@@ -86,7 +86,6 @@ function randomWord() {
     ans = (_.invert(vocabularyObj))[word]
     _.remove(vocabularyKey, (n) => { return n === key });
     delete vocabularyObj[key];
-    console.log(word, ans)
     vocabularyLength--;
     placeholder = answerPlaceholder();
 }
@@ -103,7 +102,6 @@ function submit() {
     if(checkAnswer === ans) {
         correctSound.play();
         score += 100;
-        console.log('Your score is:', score);
     } else {
         wrongSound.play();
         life -= 1
