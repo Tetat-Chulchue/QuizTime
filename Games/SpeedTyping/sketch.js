@@ -1,5 +1,8 @@
 let txt;
 let paragraph;
+let paragraphIndex = 0;
+let isLetter = /^[a-z]$/;
+let charArray;
 
 function preload() {
     txt = loadStrings('./test.txt');
@@ -8,6 +11,7 @@ function preload() {
 function setup() {
     paragraph = txt[0].toLowerCase();
     console.log(paragraph);
+    charArray = document.getElementsByTagName('span');
     write();
 }
 
@@ -20,4 +24,13 @@ function write() {
         main.appendChild(span);
     }
     document.body.appendChild(main);
+}
+
+function keyPressed() {
+    if (key.toLowerCase() === charArray[paragraphIndex].innerHTML) {
+        charArray[paragraphIndex].id = 'correct';
+    } else {
+        charArray[paragraphIndex].id = 'wrong';
+    }
+    paragraphIndex++;
 }

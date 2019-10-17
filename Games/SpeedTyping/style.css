@@ -1,7 +1,7 @@
-.correct {
+#correct {
     background-color: lightgreen;
 }
 
-.wrong {
+#wrong {
     background-color: lightsalmon;
 }
