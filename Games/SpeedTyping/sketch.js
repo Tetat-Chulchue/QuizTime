@@ -51,7 +51,7 @@ function draw() {
 function setup() {
     // createCanvas(1500, 775);
     createCanvas(200, 60);
-    paragraph = txt[0].toLowerCase();
+    paragraph = txt[1].toLowerCase();
     console.log(paragraph);
     charArray = document.getElementsByTagName('span');
     write();
