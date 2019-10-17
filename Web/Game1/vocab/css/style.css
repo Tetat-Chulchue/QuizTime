@@ -1,14 +1,24 @@
+html{
+    font-family: 'Sriracha', cursive;
+}
 th {
     border-collapse: collapse;
     border: 1px solid #333;
+    width: 30%;
+}
+td{
+    border-style: none none solid none;
+    position: relative;
+    text-align: center;
+    font-size: 25px;
 }
 #style1{
     border: solid rgb(0, 132, 255);
     border-radius: 50px/50px;
-    width: 80%; 
+    width: 60%; 
     position: relative; 
     top: 5%;
-    left: 10%; 
+    left: 20%; 
 }
 #style2{
     border: solid rgb(0, 132, 255);
