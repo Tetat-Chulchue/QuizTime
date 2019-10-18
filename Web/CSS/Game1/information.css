@@ -106,19 +106,20 @@ body {
 
 .link-page a {
     font-size: 19px;
-    color: grey;
+    color: aqua;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
 }
 
 .link-page a:hover {
-    color: rgb(32, 32, 32);
+    color: rgb(53, 142, 165);
 }
 
 .hardder-text {
     position: fixed;
     right: 0;
     top: -120px;
+    color: rgb(71, 246, 65);
 }
 
 
@@ -283,7 +284,7 @@ body {
     }
 
     .bar-label {
-        display: inline;s
+        display: inline;
     }
 
     .infor-box p {
