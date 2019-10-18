@@ -28,6 +28,15 @@ function preload() {
     txt = loadStrings('./test.txt');
 }
 
+function setup() {
+    // createCanvas(1500, 775);
+    createCanvas(200, 60);
+    paragraph = txt[0].toLowerCase();
+    console.log(paragraph);
+    write();
+    charArray = document.getElementsByTagName('span');
+}
+
 function draw() {
     background(150);
     textAlign(RIGHT, CENTER);
@@ -46,16 +55,6 @@ function draw() {
     text(txt1, 70, 600);
     text(container1, 880, 300);
     text(container2, 910, 600);
-}
-
-function setup() {
-    // createCanvas(1500, 775);
-    createCanvas(200, 60);
-    paragraph = txt[1].toLowerCase();
-    console.log(paragraph);
-    charArray = document.getElementsByTagName('span');
-    write();
-    
 }
 
 function keyPressed() {
