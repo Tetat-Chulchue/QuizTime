@@ -2,10 +2,7 @@ let pageOn = 0;
 
 window.addEventListener("load", () => {
     setTimeout(()=>{
-        let loadder = document.getElementById("loadder");
-        loadder.className += " hidden"
         page()
-        document.body.style.overflow = "initial";
     }, 2000);
 });
 

@@ -23,7 +23,7 @@
     transform-origin: top left;
 }
 
-.box {
+.loading-box {
     position: fixed;
     width: 1000px;
     height: 1000px;
