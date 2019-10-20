@@ -5,47 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>How to play</title>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/Game1/information.css">
+    <link rel="stylesheet" href="../CSS/Game1/howTo.css">
     <link rel="stylesheet" href="../CSS/Game1/bg-animation.css">
     <link rel="stylesheet" href="../CSS/main_page/loading.css">
     <script src="../JS/Game1/loading.js"></script>
     <link rel="icon" href="../assets/logo2.png" type="image/png" sizes="200x200">
     <style>
-        .howTo-img-L {
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 60%;
-            height: 40%;
-            background-color: aqua;
+        .img-infor-container-L {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
-        .howTo-paragraph-L {
-            position: relative;
-            top: 50%;
-            left: 140%;
-            transform:  translate(-50%, -50%);
-            background-color: rgba(137, 43, 226, 0.301);
-            font-size: 1.6vmin;
+        .img-infor-container-R {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: row-reverse;
         }
 
-        .howTo-img-R {
+        .img-infor-container-R .how-infor-box  {
             position: relative;
-            top: 50%;
-            left: 84%;
-            transform: translate(-50%, -50%);
-            width: 60%;
-            height: 40%;
-            background-color: aqua;
+            width: 49%;
+            background-color: rgba(204, 204, 204, 0.486);
+            border-radius: 0.5em;
+            margin-left: 0%;
+            margin-right: 1%;
         }
 
-        .howTo-paragraph-R {
+        .how-img-box {
             position: relative;
-            top: 50%;
-            left: -40%;
-            transform:  translate(-50%, -50%);
-            background-color: rgba(137, 43, 226, 0.301);
-            font-size: 1.6vmin;
+            width: 50%;
+        }
+        
+        .how-img-box img {
+            position: relative;
+            width: 100%;
+            border-radius: 0.5em;
+        }
+
+        .how-infor-box {
+            position: relative;
+            width: 49%;
+            background-color: rgba(204, 204, 204, 0.486);
+            margin-left: 1%;
+            border-radius: 0.5em;
+        }
+
+        .how-infor-box p {
+            font-size: 2vmin;
+            margin: 10px;
+        }
+
+        @media screen and (max-width: 800px) {
+            .img-infor-container-R .how-infor-box  {
+                position: relative;
+                width: 100%;
+                background-color: rgba(204, 204, 204, 0.486);
+                border-radius: 0.5em;
+                margin-left: 0%;
+                margin-right: 0%;
+            }
+
+            .how-img-box {
+                position: relative;
+                width: 100%;
+            }
+            
+            .how-img-box img {
+                position: relative;
+                width: 100%;
+                border-radius: 0.5em;
+            }
+
+            .how-infor-box {
+                position: relative;
+                width: 100%;
+                background-color: rgba(204, 204, 204, 0.486);
+                margin-top: 10px;
+                border-radius: 0.5em;
+                margin-left: 0%;
+            }
+
+            .how-infor-box p {
+                font-size: 2vmin;
+                margin: 10px;
+            }
         }
     </style>
 </head>
@@ -108,9 +153,11 @@
                 </p>
             </div>
             <div class="box">
-                <div class="howTo-img-L">
-                    <img src="" alt="">
-                    <div class="howTo-paragraph-L">
+                <div class="img-infor-container-L">
+                    <div class="how-img-box">
+                        <img src="../assets/book.jpg" alt="">
+                    </div>
+                    <div class="how-infor-box">
                         <p>
                             Piedmont, or mountain, glaciers are found in many parts of the world. In North America they are distributed along the mountain ranges of the Pacific Coast from central California northward. They abound in the Andes range in South America and are familiar and greatly admired spectacles in the Alps, the Pyrenees, the Caucasus Mountains and the mountains of Scandanavia. Rivers of ice flow down the valleys of various Asian mountain ranges, including the Himalayas, the Hindu Kush, and the Karakoram and Kunlun ranges. They are also a feature of the Southern Alps of New Zealand and are found in the lofty mountains of New Guinea. The largest piedmont glaciers are the Malaspina and Bering glaciers, both in Alaska. [Sample]
                         </p>
@@ -118,9 +165,11 @@
                 </div>
             </div>
             <div class="box">
-                <div class="howTo-img-R">
-                    <img src="" alt="">
-                    <div class="howTo-paragraph-R">
+                <div class="img-infor-container-R">
+                    <div class="how-img-box">
+                        <img src="../assets/book.jpg" alt="">
+                    </div>
+                    <div class="how-infor-box">
                         <p>
                             Piedmont, or mountain, glaciers are found in many parts of the world. In North America they are distributed along the mountain ranges of the Pacific Coast from central California northward. They abound in the Andes range in South America and are familiar and greatly admired spectacles in the Alps, the Pyrenees, the Caucasus Mountains and the mountains of Scandanavia. Rivers of ice flow down the valleys of various Asian mountain ranges, including the Himalayas, the Hindu Kush, and the Karakoram and Kunlun ranges. They are also a feature of the Southern Alps of New Zealand and are found in the lofty mountains of New Guinea. The largest piedmont glaciers are the Malaspina and Bering glaciers, both in Alaska. [Sample]
                         </p>
@@ -128,19 +177,11 @@
                 </div>
             </div>
             <div class="box">
-                <div class="howTo-img-L">
-                    <img src="" alt="">
-                    <div class="howTo-paragraph-L">
-                        <p>
-                            Piedmont, or mountain, glaciers are found in many parts of the world. In North America they are distributed along the mountain ranges of the Pacific Coast from central California northward. They abound in the Andes range in South America and are familiar and greatly admired spectacles in the Alps, the Pyrenees, the Caucasus Mountains and the mountains of Scandanavia. Rivers of ice flow down the valleys of various Asian mountain ranges, including the Himalayas, the Hindu Kush, and the Karakoram and Kunlun ranges. They are also a feature of the Southern Alps of New Zealand and are found in the lofty mountains of New Guinea. The largest piedmont glaciers are the Malaspina and Bering glaciers, both in Alaska. [Sample]
-                        </p>
+                <div class="img-infor-container-L">
+                    <div class="how-img-box">
+                        <img src="../assets/book.jpg" alt="">
                     </div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="howTo-img-R">
-                    <img src="" alt="">
-                    <div class="howTo-paragraph-R">
+                    <div class="how-infor-box">
                         <p>
                             Piedmont, or mountain, glaciers are found in many parts of the world. In North America they are distributed along the mountain ranges of the Pacific Coast from central California northward. They abound in the Andes range in South America and are familiar and greatly admired spectacles in the Alps, the Pyrenees, the Caucasus Mountains and the mountains of Scandanavia. Rivers of ice flow down the valleys of various Asian mountain ranges, including the Himalayas, the Hindu Kush, and the Karakoram and Kunlun ranges. They are also a feature of the Southern Alps of New Zealand and are found in the lofty mountains of New Guinea. The largest piedmont glaciers are the Malaspina and Bering glaciers, both in Alaska. [Sample]
                         </p>
