@@ -3,7 +3,7 @@ let vocabularyKeys;
 let vocabularyValues;
 
 function preload() {
-    vocabularyObj = loadJSON('../../../Games/SpellingBee/Vocabulary/time.json');
+    vocabularyObj = loadJSON('../../../Games/SpellingBee/Vocabulary/Time.json');
 }
 
 function setup() {
