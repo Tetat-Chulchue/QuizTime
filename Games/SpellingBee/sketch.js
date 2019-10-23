@@ -31,7 +31,7 @@ function preload() {
     path = window.location.search
     category = path.split('=')[1]
     console.log(category)
-    let url = './Vocabulary/' + category +'.json'
+    let url = 'https://tetat-chulchue.github.io/QuizTime/Games/SpellingBee/Vocabulary/' + category + '.json';
     vocabularyObj = loadJSON(url);
     correctSound = loadSound('./asset/correct.wav')
     wrongSound = loadSound('./asset/wrong.wav')
