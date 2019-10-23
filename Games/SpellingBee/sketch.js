@@ -30,6 +30,7 @@ let path = window.location.search
 
 function preload() {
     category = path.split('=')[1]
+    console.log(category)
     let url = './Vocabulary/' + category +'.json'
     vocabularyObj = loadJSON(url);
     correctSound = loadSound('./asset/correct.wav')
