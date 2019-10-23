@@ -24,7 +24,8 @@ let category = 'Animal';    // for testing purpose, pls remove this line when im
 let correctSound;           // Store correct sfx
 let wrongSound;             // Store worng sfx
 
-let path = window.location.search;
+let path = window.location.search
+console.log(path);
 
 // ------------- P5's Function ---------------
 
@@ -33,6 +34,7 @@ function preload() {
     vocabularyObj = loadJSON(url);
     correctSound = loadSound('./asset/correct.wav')
     wrongSound = loadSound('./asset/wrong.wav')
+    console.log(path)
 }
 
 function setup() {
