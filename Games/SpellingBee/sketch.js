@@ -23,19 +23,18 @@ let isEnd = false;          // Store game state
 let category;               // for testing purpose, pls remove this line when implement random category #Shib@
 let correctSound;           // Store correct sfx
 let wrongSound;             // Store worng sfx
-
-let path = window.location.search
+let path;
 
 // ------------- P5's Function ---------------
 
 function preload() {
+    path = window.location.search
     category = path.split('=')[1]
     console.log(category)
     let url = './Vocabulary/' + category +'.json'
     vocabularyObj = loadJSON(url);
     correctSound = loadSound('./asset/correct.wav')
     wrongSound = loadSound('./asset/wrong.wav')
-    console.log(path)
 }
 
 function setup() {
