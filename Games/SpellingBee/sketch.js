@@ -20,16 +20,16 @@ let placeholder;            // String that shown as answer placeholder
 let placeholderIndex = 1;   // number to keep track of current index of placeholder
 let isLetter = /^[a-z]$/;   // regex for testing input is single English character
 let isEnd = false;          // Store game state
-let category = 'Animal';    // for testing purpose, pls remove this line when implement random category #Shib@
+let category;               // for testing purpose, pls remove this line when implement random category #Shib@
 let correctSound;           // Store correct sfx
 let wrongSound;             // Store worng sfx
 
 let path = window.location.search
-console.log(path);
 
 // ------------- P5's Function ---------------
 
 function preload() {
+    category = path.split('=')[1]
     let url = './Vocabulary/' + category +'.json'
     vocabularyObj = loadJSON(url);
     correctSound = loadSound('./asset/correct.wav')
