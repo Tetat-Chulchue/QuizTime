@@ -8,7 +8,8 @@ window.addEventListener("load", () => {
 
 function page() {
     let y = document.body.scrollTop;
-    let b = document.body.clientHeight;
+    let b = document.body.scrollHeight - document.body.clientHeight;
+    let j = document.body.clientHeight;
     let position = -50;
     let space = 100;
 
@@ -38,8 +39,9 @@ function page() {
     
     box( y-(space*20)+position , "page-5-1");
 
-    console.log((space*20)+position,  y-(space*20)+position);
-    document.getElementById("top").style.height = 3000;
+    // console.log( b-(space*20)+position-(j-802) );
+    // document.getElementById("top").style.height = 3000;
+    //470
 
     background( y-(space*3)+position, "background1", "rgb(140, 140, 235)");
     background( y-(space*8)+position, "background2", "rgb(165, 42, 42)");
