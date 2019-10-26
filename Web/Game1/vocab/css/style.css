@@ -1,48 +1,57 @@
 html{
     font-family: 'Sriracha', cursive;
-    background-color: rgb(255, 255, 255);
+    background-color: #A8DCD8;
 }
-table{
+table { 
     position: relative;
     width: 100%;
-    border: solid black;
-    border-radius: 50px/50px;
-    background-color: rgb(155, 252, 252);
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
 }
-table { border-collapse: separate; }
 th {
     width: 30%;
     font-size: 25px;
-    /* background-color: rgb(2, 177, 177); */
+    background-color: #3A8D95;
+    color: #ffffff;
 }
-/* tr{
-    background-color: rgb(2, 177, 177);
-}
-thead{
-    background-color: rgb(2, 177, 177);
-} */
 td{
     position: relative;
     text-align: center;
     font-size: 25px;
 }
-#style1{
+tr{
+    background-color: #DAE3E7;
+}
+.header{
+    position: fixed;
+    height: 80px;
+    background-color: #13919E;
+    z-index: 1;
+    width: 100%;
+    color: #ffffff;
+}
+.style-main-content{
     width: 60%; 
     position: relative; 
-    top: 5%;
+    top: 110px;
     left: 20%; 
 }
-#style2{
-    border: solid rgb(0, 132, 255);
+.style-class{
+    border: solid #3A8D95;
     border-radius: 50px/50px;
     width: 90%; 
     position: relative; 
     top: 5%;
     left: 5%; 
 }
-#style3{
+.style-table{
     width: 90%; 
     position: relative; 
     top: 5%;
     left: 5%;
+}
+tr:hover {
+    background-color: rgb(48, 98, 104);
+    color: #ffffff;
 }
