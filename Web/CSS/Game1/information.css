@@ -442,4 +442,8 @@ body {
     .box-right2 {
         visibility: hidden;
     }
+
+    .bar-label2 {
+        display: none;
+    }
 }
