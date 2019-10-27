@@ -48,11 +48,9 @@ body {
 
 .bar-label2 {
     background-color: rgb(143, 143, 143);
-    /* width: 100px;
-    height: 100px; */
     position: fixed;
     right: -45px;
-    top: 45%;
+    top: 39%;
     z-index: 9999;
     padding: 5px;
     border-radius: 1vmin;
@@ -61,6 +59,7 @@ body {
 
 .bar-label2 p {
     margin: 0px 0px 50px 0px;
+    font-size: 2vmin;
 }
 
 #chk2 {
@@ -161,6 +160,16 @@ body {
     padding: 10px;
     /* background-color: rgba(95, 158, 160, 0.418); */
     border-radius: 0.5em;
+}
+
+.infor-box img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.infor-box p {
+    font-size: 2vmin;
 }
 
 .logo {
