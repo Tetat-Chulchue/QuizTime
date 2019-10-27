@@ -55,6 +55,7 @@ body {
     padding: 5px;
     border-radius: 1vmin;
     transform: rotateZ(-90deg) translateX(-50%);
+    transition: 0.5s;
 }
 
 .bar-label2 p {
