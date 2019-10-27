@@ -74,6 +74,7 @@ body {
 
 #chk2:checked ~ .bar-label2 {
     right: -60px;
+    background-color: rgb(226, 87, 87);
 }
 
 #chk2:checked ~ .case .box-right {
