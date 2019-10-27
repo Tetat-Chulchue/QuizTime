@@ -1,5 +1,6 @@
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -16,20 +17,136 @@ body {
 .box-left {
     position: fixed;
     height: 100vh;
-    width: 50%;
-    /* background-color:blue; */
+    width: 20%;
+    border-right: gray 2px solid;
+    background-image: linear-gradient(to top, #053378, #00569d, #007bc1, #00a1e1, #00c8ff);
 }
 
 .box-right {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    left: 38%;
+    /* left: 50%; */
+    left: 60%;
+    width: 60%;
     height: 100vh;
-    width: 50%;
     transition: all 0.3s ease-in-out;
     filter: blur(0px);
+    transform: translateX(-50%);
+}
+
+.box-right2 {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 20%;
+    height: 100vh;
+    /* border-left: gray 2px solid; */
+    transition: 0.8s;
+}
+
+.bar-label2 {
+    background-color: rgb(143, 143, 143);
+    /* width: 100px;
+    height: 100px; */
+    position: fixed;
+    right: -45px;
+    top: 45%;
+    z-index: 9999;
+    padding: 5px;
+    border-radius: 1vmin;
+    transform: rotateZ(-90deg) translateX(-50%);
+}
+
+.bar-label2 p {
+    margin: 0px 0px 50px 0px;
+}
+
+#chk2 {
+    position: absolute;
+    visibility: hidden;
+}
+
+#chk2:checked ~ .box-right2 {
+    right: 0;
+}
+
+#chk2:checked ~ .bar-label2 {
+    right: -60px;
+}
+
+#chk2:checked ~ .case .box-right {
+    left: 50%;
+}
+
+.right2-container {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 96%;
+    top: 2%;
+    background-color: #adadad66;
+    box-shadow: 5px 5px 14px 1px rgba(00,00,00,0.2);
+    border-radius: 1vmin;
+}
+
+.right2-header-text {
+    position: relative;
+    height: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+.right2-box-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.right2-box-container a {
+    text-decoration: none;
+    color: moccasin;
+}
+
+.rigth2-box {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 20%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 1vmin;
+    box-shadow: 5px 5px 14px 1px rgba(00,00,00,0.2);
+    background-color: lightslategray;
+    transition: 0.5s;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rigth2-box:hover {
+    width: 83%;
+    height: 23%;
+    box-shadow: 5px 5px 14px 1px rgba(00,00,00,0.5);
+}
+
+.rigth2-box h3 {
+    position: relative;
+    top: 7%;
+    left: 7%;
+    font-size: 3vmin;
+}
+
+.right2-header-text h2 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    font-size: 3vmin;
 }
 
 #chk1:checked ~ .case .box-right {
@@ -40,27 +157,31 @@ body {
     position: relative;
     width: 100%;
     /* height: 1200px; */
-    margin: 10px;
+    margin: 15px;
     padding: 10px;
     /* background-color: rgba(95, 158, 160, 0.418); */
     border-radius: 0.5em;
 }
 
 .logo {
-    height: 60px;
+    position: relative;
+    height: 6vh;
     text-align: center;
+    top: 10%;
     /* background-color: aquamarine; */
 }
 
 .logo img {
     height: 100%;
-    /* background-color:rgb(94, 201, 112); */
+    background-color:rgba(247, 247, 247, 0.35);
+    border-radius: 100em;
+    padding: 2%;
 }
 
 .box {
     position: relative;
     width: 100%;
-    margin: 10px;
+    margin: 15px 15px 0px 15px;
     /* background-color: brown; */
 }
 
@@ -91,24 +212,38 @@ body {
 }
 
 .static-box {
-    position: fixed;
-    width: 30%;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+    position: relative;
+    width: 100%;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .link-page {
-    margin: 20 0 20 0;
-    width: 100%;
-    text-align: right;
+    position: relative;
+    margin: 4vh 0 4vh 0;
+    width: 70%;
+    text-align: center;
+    background-color: #053378;
+    border-radius: 3em;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2%;
+    transition: 0.5s;
+    box-shadow: 10px 10px 14px 1px rgba(00,00,00,0.2);
+}
+
+.link-page:hover {
+    width: 60%;
+    border: #042961 3px solid;
 }
 
 .link-page a {
-    font-size: 19px;
+    font-size: 2vmin;
     color: aqua;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
+    padding: 1vh;
 }
 
 .link-page a:hover {
@@ -116,10 +251,12 @@ body {
 }
 
 .hardder-text {
-    position: fixed;
-    right: 0;
-    top: -120px;
-    color: rgb(71, 246, 65);
+    position: absolute;
+    width: 100%;
+    top: 19%;
+    color: rgb(96, 204, 149);
+    text-align: center;
+    font-size: 2vmin;
 }
 
 
@@ -289,5 +426,9 @@ body {
 
     .infor-box p {
         font-size: 4vw;
+    }
+
+    .box-right2 {
+        visibility: hidden;
     }
 }
