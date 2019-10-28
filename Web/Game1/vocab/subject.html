@@ -8,34 +8,55 @@
     <script src="./script/subject.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="../../CSS/Game1/back-to-manu.css">
     <link rel="icon" href="../../assets/logo2.png" type="image/png" sizes="200x200">
-    <title>Document</title>
+    <title>Subject</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="../../CSS/Game1/bg-animation.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="back-to-gameManu">
-        <a href="../information.html#1">
-            <img src="../../assets/arrow.png" alt="">
-        </a> 
-        <p>Back to manu</p>
+    <div class="bg-animation" id="test">
+        <span class="bg-circle" id="CC-1"></span>
+        <span class="bg-circle" id="CC-3"></span>
+        <span class="bg-circle" id="CC-4"></span>
+        <span class="bg-circle" id="CC-2"></span>
+        <span class="bg-circle" id="CC-6"></span>
+        <span class="bg-circle" id="CC-7"></span>
+        <span class="bg-circle" id="CC-8"></span>
     </div>
-    <div id="style1">
-        <center><h1>Vocab</h1></center>
-        <div id="style2">
-        <center><h2>Subject (วิชา)</h2></center>    
+    <div class="title-img">
+        <div><img style="height: 10vmin; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(237, 100, 157, 0.418); border-radius: 5em; padding: 5px;" src="../../assets/logo2.png" alt=""></div>
+        <div></div>
+    </div>
+    <div class="header-bar">
+        <div class="box_1">
+            <div class="botton-container" style="left: 5%;">
+                <div style="text-align: center; position: relative; top: 50%; transform: translateY(-50%);" class="fix-media"><a href="../information.html" id="link"><p>Back to manu.</p></a></div>
+                <div style="position: fixed; top: 50%; height: 80%; transform: translateY(-50%);"><img id="arrow-img" style="transform: rotateZ(180deg);height: 100%;" src="../../assets/arrow.png" alt=""></div>
+            </div>
         </div>
-        <br>
-        <div id="style3">
-            <table id="mytable" style="position: relative; width: 90%; left: 5%;">
-                <thead>
-                    <tr>
-                        <th>Vocabname</th>
-                        <th>คำแปล</th>
-                    </tr>
-                </thead>
-            </table>
+        <div class="box_2">
+            <div><h3>Subject(วิชา)</h3></div>
         </div>
-        <br>
+        <div class="box_3">
+            <div class="botton-container" style="float: right; margin-right: 5%;">
+                <div style="text-align: center; position: relative; top: 50%; transform: translateY(-50%);"><a href="../../index.html" id="link"><p>Main page.</p></a></div>
+                <div style="position: fixed; top: 50%; transform: translateY(-50%); height: 80%; right: 0;"><img id="arrow-img" style="height: 100%; position: relative;" src="../../assets/arrow.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div class="table-container">
+        <table id="mytable" class="table table-hover">
+            <thead >
+                <tr>
+                    <th>No.</th>
+                    <th>Vocabname</th>
+                    <th>คำแปล</th>
+                </tr>
+            </thead>
+        </table>
     </div>
     
 </body>
