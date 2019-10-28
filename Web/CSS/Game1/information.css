@@ -56,12 +56,6 @@
 
 @media screen and (max-width: 600px) {
 
-    .navigation-box {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
     .box a img{
         border-radius: 10px 10px 0px 0px;
     }
@@ -75,11 +69,6 @@
         border-radius: 0px 0px 10px 10px;
         font-size: 4vw;
     }
-
-    .bar-label {
-        display: inline;
-    }
-
     .infor-box p {
         font-size: 4vw;
     }
