@@ -1,4 +1,11 @@
 /* ------ Information container ------- */
+.infor-box h2 {
+    background-color: rgba(109, 193, 226, 0.562);
+    padding: 20px;
+    border-radius: 0.5em;
+    font-size: 4vmin;
+}
+
 .infor-box {
     position: relative;
     width: 100%;
@@ -9,21 +16,39 @@
     border-radius: 0.5em;
 }
 
+.infor-box-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+}
+.infor-box-col {
+    width: 50%;
+}
+
 .box {
     position: relative;
-    width: 100%;
+    width: 98%;
     margin: 10px;
     /* background-color: brown; */
 }
 
 .box a img:hover {
     box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.185);
+    filter: blur(1.5px);
 }
 
 .box a img {
     width: 100%;
     border-radius: 0.5em;
     transition: all 0.3s ease-in-out;
+}
+
+.infor-box-img {
+    position: relative;
+    height: 40vmin;
+    width: 100%;
+    background-color: indigo;
 }
 
 .box h2 {
@@ -33,11 +58,11 @@
     left: 20px;
     /* transform: translate(-50%, -50%); */
     margin: 0;
-    font-size: 2vw;
+    font-size: 3vmin;
     /* display: none; */
     opacity: 0;
     transition: all 0.3s ease-in-out;
-    padding: 2vw;
+    padding: 3vmin;
     background-color: rgba(165, 42, 42, 0.596);
     border-radius: 0.3em;
 }
@@ -64,5 +89,13 @@
         text-align: center;
         border-radius: 0px 0px 10px 10px;
         font-size: 4vw;
+    }
+
+    .infor-box-img {
+        width: 100%;
+    }
+
+    .infor-box-col {
+        width: 100%;
     }
 }

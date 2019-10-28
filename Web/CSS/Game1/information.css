@@ -10,9 +10,27 @@
     border-radius: 0.5em;
 }
 
+.infor-box-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+}
+.infor-box-col {
+    width: 50%;
+}
+
+.infor-box img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 800px;
+    border-radius: 5em;
+}
+
 .box {
     position: relative;
-    width: 100%;
+    width: 98%;
     margin: 15px 15px 0px 15px;
     /* background-color: brown; */
 }
@@ -71,5 +89,8 @@
     }
     .infor-box p {
         font-size: 4vw;
+    }
+    .infor-box-col {
+        width: 100%;
     }
 }

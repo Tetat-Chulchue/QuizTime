@@ -12,13 +12,13 @@
 }
 
 #CC-1 {
-    width: 150vmin;
-    height: 150vmin;
-    top: 50%;
+    width: 100vmin;
+    height: 100vmin;
+    top: 100%;
     left: 0%;
     background: linear-gradient(18deg, rgba(2,0,36,1) 0%, rgba(38,38,145,1) 50%, rgba(0,212,255,1) 100%);
-    opacity: 0.3;
-    animation-name: cc-1;
+    opacity: 0.7;
+    /* animation-name: cc-1; */
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     animation-duration: 3s;
@@ -50,13 +50,13 @@
 }
 
 #CC-3 {
-    width: 140vmin;
-    height: 140vmin;
-    top: 50%;
+    width: 110vmin;
+    height: 110vmin;
+    top: 100%;
     left: 0%;
     background: linear-gradient(18deg, rgba(2,0,36,1) 0%, rgba(38,38,145,1) 50%, rgba(0,212,255,1) 100%);
     opacity: 0.6;
-    animation-name: cc-3;
+    /* animation-name: cc-3; */
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     animation-duration: 3s;
@@ -79,13 +79,13 @@
 }
 
 #CC-4 {
-    width: 130vmin;
-    height: 130vmin;
-    top: 50%;
+    width: 120vmin;
+    height: 120vmin;
+    top: 100%;
     left: 0%;
     background: linear-gradient(18deg, rgba(2,0,36,1) 0%, rgba(38,38,145,1) 50%, rgba(0,212,255,1) 100%);
-    opacity: 0.9;
-    animation-name: cc-4;
+    opacity: 0.3;
+    /* animation-name: cc-4; */
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     animation-duration: 3s;

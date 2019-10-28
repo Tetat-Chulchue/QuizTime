@@ -31,9 +31,9 @@
 
     <!-- ------------------------ Background ainmation zone ------------------------ -->
     <div class="bg-animation" id="test">
-        <!-- <span class="bg-circle" id="CC-1"></span>
+        <span class="bg-circle" id="CC-1"></span>
         <span class="bg-circle" id="CC-3"></span>
-        <span class="bg-circle" id="CC-4"></span> -->
+        <span class="bg-circle" id="CC-4"></span>
 
         <span class="bg-circle" id="CC-2"></span>
         <span class="bg-circle" id="CC-6"></span>
@@ -78,7 +78,10 @@
                     <div class="link-page"><a href="../Game1/howTo.html" >How to play</a></div>
                     <div class="link-page"><a href="../Game1/information.html" >Information</a></div>
                     <!-- <div class="link-page"><a href="../Game1/scoreBoard.html">Score board</a></div> -->
-                    <div class="link-page"><a href="#1" >Vocabulary</a></div>
+                    <div class="link-page"><a href="../Game1/information.html#1" >Vocabulary</a></div>
+                </div>
+                <div class="left-footer">
+                    <p>Copyright © 2019 IT KMITL</p>
                 </div>
             </div>
         </div>
@@ -86,81 +89,84 @@
         <div class="box-right">
             <!-- ------------------------ conten zone ------------------------ -->
             <div class="infor-box">
-                <div class="logo">
+                <!-- <div class="logo">
                     <a href="../index.html">
                         <img src="../assets/logo2.png" alt="">
                     </a>
-                </div>
+                </div> -->
                 <h2 style="text-align: center;">Choose the category you want to play!!.</h2>
-                <!-- <p>
-                    Piedmont, or mountain, glaciers are found in many parts of the world. In North America they are distributed along the mountain ranges of the Pacific Coast from central California northward. They abound in the Andes range in South America and are familiar and greatly admired spectacles in the Alps, the Pyrenees, the Caucasus Mountains and the mountains of Scandanavia. Rivers of ice flow down the valleys of various Asian mountain ranges, including the Himalayas, the Hindu Kush, and the Karakoram and Kunlun ranges. They are also a feature of the Southern Alps of New Zealand and are found in the lofty mountains of New Guinea. The largest piedmont glaciers are the Malaspina and Bering glaciers, both in Alaska. [Sample]
-                </p> -->
             </div>
-            <div class="box">
-                <a style="cursor: pointer;" onclick="send('Animal')" id="box">
-                    <img src="../assets/Game1/animal.jpg" alt="">
-                </a>
-                <h2 id="text">Animal</h2>
-            </div>
-            <div class="box">
-                <a style="cursor: pointer;" onclick="send('Food')" id="box">
-                    <img src="../assets/Game1/food.jpg" alt="">
-                </a>
-                <h2 id="text">Food</h2>
-            </div>
-            <div class="box">
-                <a style="cursor: pointer;" onclick="send('Furniture')" id="box">
-                    <img src="../assets/Game1/furniture.jpg" alt="">
-                </a>
-                <h2 id="text">Furniture</h2>
-            </div>
-            <div class="box">
-                <a style="cursor: pointer;" onclick="send('Job')" id="box">
-                    <img src="../assets/Game1/job.jpg" alt="">
-                </a>
-                <h2 id="text">job</h2>
-            </div>
-            <div class="box">
-                <a style="cursor: pointer;" onclick="send('Nature')" id="box">
-                    <img src="../assets/Game1/nature.jpg" alt="">
-                </a>
-                <h2 id="text">Nature</h2>
-            </div>
-            <div class="box">
-                <a style="cursor: pointer;" onclick="send('Place')" id="box">
-                    <img src="../assets/Game1/place.jpg" alt="">
-                </a>
-                <h2 id="text">Place</h2>
-            </div>
-            <div class="box">
-                <a style="cursor: pointer;" onclick="send('Sport')" id="box">
-                    <img src="../assets/Game1/sport.jpg" alt="">
-                </a>
-                <h2 id="text">Sport</h2>
-            </div>
-            <div class="box">
-                <a style="cursor: pointer;" onclick="send('Subject')" id="box">
-                    <img src="../assets/Game1/subject.jpg" alt="">
-                </a>
-                <h2 id="text">Subject</h2>
-            </div>
-            <div class="box">
-                <a style="cursor: pointer;" onclick="send('Time')" id="box">
-                    <img src="../assets/Game1/time.jpg" alt="">
-                </a>
-                <h2 id="text">Time</h2>
-            </div>
-            <div class="box">
-                <a style="cursor: pointer;" onclick="send('Vagetables')" id="box">
-                    <img src="../assets/Game1/vage.jpg" alt="">
-                </a>
-                <h2 id="text">Vagetables</h2>
-            </div>
-            <div class="box">
-                <a style="cursor: pointer;" onclick="send('Vehicle')" id="box">
-                    <img src="../assets/Game1/vehicle.jpeg" alt="">
-                </a>
-                <h2 id="text">Vehicle</h2>
+            <div class="infor-box-row">
+                <div class="infor-box-col">
+                     <div class="box">
+                        <a style="cursor: pointer; background-image: url('../assets/Game1/animal.jpg');" onclick="send('Animal')" id="box">
+                            <img src="../assets/Game1/animal.jpg" alt="">
+                        </a>
+                        <h2 id="text">Animal</h2>
+                    </div>
+                    <div class="box">
+                        <a style="cursor: pointer;" onclick="send('Food')" id="box">
+                            <img src="../assets/Game1/food.jpg" alt="">
+                        </a>
+                        <h2 id="text">Food</h2>
+                    </div>
+                    <div class="box">
+                        <a style="cursor: pointer;" onclick="send('Furniture')" id="box">
+                            <img src="../assets/Game1/furniture.jpg" alt="">
+                        </a>
+                        <h2 id="text">Furniture</h2>
+                    </div>
+                    <div class="box">
+                        <a style="cursor: pointer;" onclick="send('Job')" id="box">
+                            <img src="../assets/Game1/job.jpg" alt="">
+                        </a>
+                        <h2 id="text">job</h2>
+                    </div>
+                    <div class="box">
+                        <a style="cursor: pointer;" onclick="send('Nature')" id="box">
+                            <img src="../assets/Game1/nature.jpg" alt="">
+                        </a>
+                        <h2 id="text">Nature</h2>
+                    </div>
+                </div>
+                <div class="infor-box-col">
+                    <div class="box">
+                        <a style="cursor: pointer;" onclick="send('Place')" id="box">
+                            <img src="../assets/Game1/place.jpg" alt="">
+                        </a>
+                        <h2 id="text">Place</h2>
+                    </div>
+                    <div class="box">
+                        <a style="cursor: pointer;" onclick="send('Sport')" id="box">
+                            <img src="../assets/Game1/sport.jpg" alt="">
+                        </a>
+                        <h2 id="text">Sport</h2>
+                    </div>
+                    <div class="box">
+                        <a style="cursor: pointer;" onclick="send('Subject')" id="box">
+                            <img src="../assets/Game1/subject.jpg" alt="">
+                        </a>
+                        <h2 id="text">Subject</h2>
+                    </div>
+                    <div class="box">
+                        <a style="cursor: pointer;" onclick="send('Time')" id="box">
+                            <img src="../assets/Game1/time.jpg" alt="">
+                        </a>
+                        <h2 id="text">Time</h2>
+                    </div>
+                    <div class="box">
+                        <a style="cursor: pointer;" onclick="send('Vagetables')" id="box">
+                            <img src="../assets/Game1/vage.jpg" alt="">
+                        </a>
+                        <h2 id="text">Vagetables</h2>
+                    </div>
+                    <div class="box">
+                        <a style="cursor: pointer;" onclick="send('Vehicle')" id="box">
+                            <img src="../assets/Game1/vehicle.jpeg" alt="">
+                        </a>
+                        <h2 id="text">Vehicle</h2>
+                    </div>
+                </div>
             </div>
             <!-- ------------------------ conten zone ------------------------ -->
         </div>
@@ -173,11 +179,12 @@
                 <h2>Other game.</h2>
             </div> -->
             <div class="right2-box-container" id="right-animation">
-                <div class="rigth2-box" style="background-image: url('../assets/gif_2/1.gif');"><h3>2s2is4</h3></div>
-                <div class="right2-underline"></div>
-                <!-- <a href="../Game3/information.html">
+                <a href="../Game2/information.html">
+                    <div class="rigth2-box" style="background-image: url('../assets/gif_2/1.gif');"><h3>2s2is4</h3></div>
+                </a>
+                <a href="../Game3/information.html">
                     <div class="rigth2-box" style="background-image: url('../assets/gif_3/1.gif');"><h3>SpeedTyping</h3></div>
-                </a> -->
+                </a>
             </div>
         </div>
     </div>

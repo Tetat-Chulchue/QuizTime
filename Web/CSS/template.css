@@ -23,10 +23,6 @@ body {
     position: fixed;
     height: 100vh;
     width: 20%;
-    border-right: gray 3px solid;
-    /* background-color: rgba(170, 170, 170, 0.5); */
-    background-image: linear-gradient(to top, #053378, #00569d, #007bc1, #00a1e1, #00c8ff);
-    /* border-radius: 0px 10px 10px 0px; */
 }
 
 .box-left-container {
@@ -36,9 +32,10 @@ body {
     transform: translate(-50%, -50%);
     width: 90%;
     height: 96%;
-    /* background-image: linear-gradient(to top, #053378, #00569d, #007bc1, #00a1e1, #00c8ff); */
-    /* box-shadow: 5px 5px 14px 1px rgba(00,00,00,0.2); */
+    background-image: linear-gradient(to top, #053378, #00569d, #007bc1, #00a1e1, #00c8ff);
+    box-shadow: 5px 5px 14px 1px rgba(00,00,00,0.4);
     border-radius: 1vmin;
+    /* border: gray 2px solid; */
 }
 
 .logo {
@@ -102,6 +99,17 @@ body {
 
 .link-page a:hover {
     color: rgb(53, 142, 165);
+}
+
+.left-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 0px 0px 1vmin 1vmin;
+    background-color: rgba(136, 136, 136, 0.452);
+    color: rgba(235, 235, 235, 0.473);
+    font-size: 1vmin;
 }
 
 /* ------ Container left ------- */
@@ -248,6 +256,7 @@ body {
 
 #chk2:checked ~ .bar-label2 {
     right: -60px;
+    background-color: crimson;
 }
 
 #chk2:checked ~ .case .box-right {

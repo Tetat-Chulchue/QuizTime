@@ -8,91 +8,9 @@
     <link rel="stylesheet" href="../CSS/Game1/howTo.css">
     <link rel="stylesheet" href="../CSS/Game1/bg-animation.css">
     <link rel="stylesheet" href="../CSS/main_page/loading.css">
+    <link rel="stylesheet" href="../CSS/template.css">
     <script src="../JS/Game1/loading.js"></script>
     <link rel="icon" href="../assets/logo2.png" type="image/png" sizes="200x200">
-    <style>
-        .img-infor-container-L {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .img-infor-container-R {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            flex-direction: row-reverse;
-        }
-
-        .img-infor-container-R .how-infor-box  {
-            position: relative;
-            width: 49%;
-            background-color: rgba(204, 204, 204, 0.486);
-            border-radius: 0.5em;
-            margin-left: 0%;
-            margin-right: 1%;
-        }
-
-        .how-img-box {
-            position: relative;
-            width: 50%;
-        }
-        
-        .how-img-box img {
-            position: relative;
-            width: 100%;
-            border-radius: 0.5em;
-        }
-
-        .how-infor-box {
-            position: relative;
-            width: 49%;
-            background-color: rgba(204, 204, 204, 0.486);
-            margin-left: 1%;
-            border-radius: 0.5em;
-        }
-
-        .how-infor-box p {
-            font-size: 2vmin;
-            margin: 10px;
-        }
-
-        @media screen and (max-width: 800px) {
-            .img-infor-container-R .how-infor-box  {
-                position: relative;
-                width: 100%;
-                background-color: rgba(204, 204, 204, 0.486);
-                border-radius: 0.5em;
-                margin-left: 0%;
-                margin-right: 0%;
-            }
-
-            .how-img-box {
-                position: relative;
-                width: 100%;
-            }
-            
-            .how-img-box img {
-                position: relative;
-                width: 100%;
-                border-radius: 0.5em;
-            }
-
-            .how-infor-box {
-                position: relative;
-                width: 100%;
-                background-color: rgba(204, 204, 204, 0.486);
-                margin-top: 10px;
-                border-radius: 0.5em;
-                margin-left: 0%;
-            }
-
-            .how-infor-box p {
-                font-size: 2vmin;
-                margin: 10px;
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="loadder" id="loadder">
@@ -100,6 +18,15 @@
             <img src="../assets/loader.gif" alt="" class="loader-img">
         </div>
     </div>
+
+    <!-- ------------------------ Input and label zone ------------------------ -->
+    <input type="checkbox" name="chk1" id="chk1"> <!-- input for navi bar-->
+    <label for="chk1" class="bar-label"></label> <!-- input for navi bar-->
+
+    <input type="checkbox" name="chk2" id="chk2"> <!-- input for navi bar-->
+    <label for="chk2" class="bar-label2"><p>Hyper link</p></label> <!-- input for navi bar-->
+    <!-- ------------------------ Input and label zone ------------------------ -->
+
     <div class="bg-animation" id="test">
         <span class="bg-circle" id="CC-1"></span>
         <span class="bg-circle" id="CC-3"></span>
@@ -110,8 +37,6 @@
         <span class="bg-circle" id="CC-7"></span>
         <span class="bg-circle" id="CC-8"></span>
     </div>
-    <input type="checkbox" name="chk1" id="chk1">
-    <label for="chk1" class="bar-label"></label>
     <div class="case">
         <div class="navigation-box">
             <span class="span-bar"></span>
@@ -129,24 +54,39 @@
                 <a href="../Game1/gameManu.html">Play game</a>
             </div>
         </div>
+        
+        <!-- ------------------------ Box left zone ------------------------ -->
         <div class="box-left">
-            <div class="static-box">
-                <div class="hardder-text">
-                    <h1>Spelling Bee</h1>
+                <div class="box-left-container">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <img src="../assets/logo2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="hardder-text">
+                        <h1>Spelling Bee</h1>
+                    </div>
+                    <div class="static-box">
+                        <div class="link-page"><a href="../index.html" >Main page</a></div>
+                        <div class="link-page"><a href="../Game1/information.html#1" >Vocabulary</a></div>
+                        <div class="link-page"><a href="../Game1/information.html" >Information</a></div>
+                        <!-- <div class="link-page"><a href="../Game1/scoreBoard.html">Score board</a></div> -->
+                        <div class="link-page"><a href="../Game1/gameManu.html" >Play game</a></div>
+                    </div>
+                    <div class="left-footer">
+                        <p>Copyright © 2019 IT KMITL</p>
+                    </div>
                 </div>
-                <div class="link-page"><a href="../index.html">Main page</a></div>
-                <div class="link-page"><a href="../Game1/information.html#1">Vocabulary</a></div>
-                <div class="link-page"><a href="../Game1/information.html">Information</a></div>
-                <div class="link-page"><a href="../Game1/gameManu.html">Play game</a></div>
             </div>
-        </div>
+            <!-- ------------------------ Box left zone ------------------------ -->
+
         <div class="box-right">
             <div class="infor-box">
-                <div class="logo">
+                <!-- <div class="logo">
                     <a href="../index.html">
                         <img src="../assets/logo2.png" alt="">
                     </a>
-                </div>
+                </div> -->
                 <h2 style="text-align: center;">How to play this game.</h2>
                 <p>
                     คําศัพท์ภาษาไทย ในเกมจะมาจากการที่คุณเลือกจากหน้าต่างก่อนเข้าเกม และ ในเกมจะมีปุ่มกดดังนี้
@@ -159,7 +99,7 @@
             </div>
             <div class="box">
                 <div class="img-infor-container-L">
-                    <div class="how-img-box">
+                    <div class="how-img-box-L">
                         <img src="../assets/Game1/howTo/1.jpg" alt="">
                     </div>
                     <div class="how-infor-box">
@@ -171,7 +111,7 @@
             </div>
             <div class="box">
                 <div class="img-infor-container-R">
-                    <div class="how-img-box">
+                    <div class="how-img-box-R">
                         <img src="../assets/Game1/howTo/2.jpg" alt="">
                     </div>
                     <div class="how-infor-box">
@@ -183,7 +123,7 @@
             </div>
             <div class="box">
                 <div class="img-infor-container-L">
-                    <div class="how-img-box">
+                    <div class="how-img-box-L">
                         <img src="../assets/Game1/howTo/3.jpg" alt="">
                     </div>
                     <div class="how-infor-box">
@@ -195,7 +135,7 @@
             </div>
             <div class="box">
                 <div class="img-infor-container-R">
-                    <div class="how-img-box">
+                    <div class="how-img-box-R">
                         <img src="../assets/Game1/howTo/4.jpg" alt="">
                     </div>
                     <div class="how-infor-box">
@@ -206,6 +146,25 @@
                 </div>
             </div>
         </div>
+
     </div>
+
+    <!-- ------------------------ Hyper link zone ------------------------ -->
+    <div class="box-right2">
+        <div class="right2-container">
+            <!-- <div class="right2-header-text">
+                <h2>Other game.</h2>
+            </div> -->
+            <div class="right2-box-container" id="right-animation">
+                <a href="../Game2/information.html">
+                    <div class="rigth2-box" style="background-image: url('../assets/gif_2/1.gif');"><h3>2s2is4</h3></div>
+                </a>
+                <a href="../Game3/information.html">
+                    <div class="rigth2-box" style="background-image: url('../assets/gif_3/1.gif');"><h3>SpeedTyping</h3></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------ Hyper link zone ------------------------ -->
 </body>
 </html>
