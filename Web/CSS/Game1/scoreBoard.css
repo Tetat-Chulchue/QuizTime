@@ -1,0 +1,39 @@
+/* .box-right {
+    background-color: chocolate;
+    padding: 10px;
+} */
+
+.center-conten-top3 {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: cornsilk;
+    width: 100%;
+    /* height: 50%; */
+    /* margin-top: 5%; */
+}
+
+
+.center-conten-table {
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border-radius: 0.5em;
+    overflow: hidden;
+    background-color: #e0e0e05c;
+}
+
+table thead {
+    background-color: coral;
+}
+
+@media screen and (max-width: 600px) {
+
+}
