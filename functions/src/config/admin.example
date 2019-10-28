@@ -1,0 +1,12 @@
+README : Create "admin.js" in this directoty and then copy content of this file to that file
+         and change serviceAccount directoty
+
+const admin = require("firebase-admin");
+const serviceAccount = require("path/to/serviceAccountKey.json");
+
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: "https://itec-websession.firebaseio.com"
+});
+
+module.exports = admin;
