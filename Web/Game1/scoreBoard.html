@@ -165,7 +165,7 @@
             document.getElementById("fliterImgLoader").style.visibility = "unset";
             axios({
                 method: "GET",
-                url: "http://localhost:5001/itec-websession/us-central1/spellingBee/scoreboard/"+categoryName
+                url: "https://us-central1-itec-websession.cloudfunctions.net/spellingBee/scoreboard/"+categoryName
             })
             .then(data => {
                 leader = data.data;
