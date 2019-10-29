@@ -1,0 +1,80 @@
+[debug] [2019-10-29T05:43:02.672Z] ----------------------------------------------------------------------
+[debug] [2019-10-29T05:43:02.675Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js serve --only functions
+[debug] [2019-10-29T05:43:02.676Z] CLI Version:   7.6.1
+[debug] [2019-10-29T05:43:02.676Z] Platform:      win32
+[debug] [2019-10-29T05:43:02.676Z] Node Version:  v12.9.1
+[debug] [2019-10-29T05:43:02.683Z] Time:          Tue Oct 29 2019 12:43:02 GMT+0700 (Indochina Time)
+[debug] [2019-10-29T05:43:02.683Z] ----------------------------------------------------------------------
+[debug] [2019-10-29T05:43:02.683Z] 
+[debug] [2019-10-29T05:43:02.707Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-29T05:43:02.708Z] > authorizing via signed-in user
+[debug] [2019-10-29T05:43:02.708Z] [iam] checking project itec-websession for permissions ["firebase.projects.get"]
+[debug] [2019-10-29T05:43:02.715Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/itec-websession:testIamPermissions  
+
+[debug] [2019-10-29T05:43:04.631Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-29T05:43:04.639Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/itec-websession  
+ 
+[debug] [2019-10-29T05:43:05.486Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "12"
+[info] +  functions: Emulator started at http://localhost:5000
+[info] i  functions: Watching "C:\Users\JOBJAB\Desktop\Project\QuizTime\functions" for Cloud Functions...
+[debug] [2019-10-29T05:43:09.333Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions","node_version":"12.9.1"}
+[debug] [2019-10-29T05:43:09.335Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-29T05:43:09.353Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-29T05:43:09.361Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-29T05:43:09.364Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] +  functions[spellingBee]: http function initialized (http://localhost:5000/itec-websession/us-central1/spellingBee).
+[debug] [2019-10-29T05:43:13.308Z] Accepted request GET /itec-websession/us-central1/spellingBee/scoreboard/animal --> spellingBee
+[debug] [2019-10-29T05:43:14.522Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions","node_version":"12.9.1"}
+[info] i  functions: Beginning execution of "spellingBee"
+[debug] [2019-10-29T05:43:14.524Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-29T05:43:14.530Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-29T05:43:14.534Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-29T05:43:14.536Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-29T05:43:15.292Z] [runtime-status] Trigger "spellingBee" has been found, beginning invocation! {}
+[debug] [2019-10-29T05:43:15.293Z] [runtime-status]  {"httpsTrigger":{},"name":"spellingBee","entryPoint":"spellingBee"}
+[debug] [2019-10-29T05:43:15.293Z] [runtime-status] Running spellingBee in mode HTTPS {}
+[debug] [2019-10-29T05:43:15.326Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\7240"}
+[debug] [2019-10-29T05:43:15.333Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\7240"}
+[debug] [2019-10-29T05:43:15.359Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-29T05:43:16.420Z] [runtime-status] Ephemeral server survived. {}
+[info] >  Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[info] >      at ServerResponse.setHeader (_http_outgoing.js:485:11)
+[info] >      at ServerResponse.header (C:\Users\JOBJAB\Desktop\Project\QuizTime\functions\node_modules\express\lib\response.js:771:10)
+[info] >      at ServerResponse.send (C:\Users\JOBJAB\Desktop\Project\QuizTime\functions\node_modules\express\lib\response.js:170:12)
+[info] >      at ServerResponse.json (C:\Users\JOBJAB\Desktop\Project\QuizTime\functions\node_modules\express\lib\response.js:267:15)
+[info] >      at ServerResponse.send (C:\Users\JOBJAB\Desktop\Project\QuizTime\functions\node_modules\express\lib\response.js:158:21)
+[info] >      at C:\Users\JOBJAB\Desktop\Project\QuizTime\functions\src\controller\SpellingBeeController.js:46:29
+[info] >      at processTicksAndRejections (internal/process/task_queues.js:85:5)
+[info] >  (node:7240) UnhandledPromiseRejectionWarning: Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+[info] >      at ServerResponse.setHeader (_http_outgoing.js:485:11)
+[info] >      at ServerResponse.header (C:\Users\JOBJAB\Desktop\Project\QuizTime\functions\node_modules\express\lib\response.js:771:10)
+[info] >      at ServerResponse.contentType (C:\Users\JOBJAB\Desktop\Project\QuizTime\functions\node_modules\express\lib\response.js:599:15)
+[info] >      at ServerResponse.sendStatus (C:\Users\JOBJAB\Desktop\Project\QuizTime\functions\node_modules\express\lib\response.js:357:8)
+[info] >      at C:\Users\JOBJAB\Desktop\Project\QuizTime\functions\src\controller\SpellingBeeController.js:49:13
+[info] >      at processTicksAndRejections (internal/process/task_queues.js:85:5)
+[info] >  (node:7240) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+[info] >  (node:7240) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[info] i  functions: Finished "spellingBee" in ~3s
+[debug] [2019-10-29T05:43:37.840Z] File C:\Users\JOBJAB\Desktop\Project\QuizTime\functions\src\controller\SpellingBeeController.js changed, reloading triggers
+[debug] [2019-10-29T05:43:38.657Z] File C:\Users\JOBJAB\Desktop\Project\QuizTime\functions\src\controller\SpellingBeeController.js changed, reloading triggers
+[debug] [2019-10-29T05:43:40.998Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions","node_version":"12.9.1"}
+[debug] [2019-10-29T05:43:40.999Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-29T05:43:41.006Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-29T05:43:41.012Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-29T05:43:41.014Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-29T05:43:43.323Z] Accepted request GET /itec-websession/us-central1/spellingBee/scoreboard/animal --> spellingBee
+[debug] [2019-10-29T05:43:44.097Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions","node_version":"12.9.1"}
+[info] i  functions: Beginning execution of "spellingBee"
+[debug] [2019-10-29T05:43:44.116Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-29T05:43:44.117Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-29T05:43:44.117Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-29T05:43:44.117Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-29T05:43:44.735Z] [runtime-status] Trigger "spellingBee" has been found, beginning invocation! {}
+[debug] [2019-10-29T05:43:44.736Z] [runtime-status]  {"httpsTrigger":{},"name":"spellingBee","entryPoint":"spellingBee"}
+[debug] [2019-10-29T05:43:44.736Z] [runtime-status] Running spellingBee in mode HTTPS {}
+[debug] [2019-10-29T05:43:44.756Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\2136"}
+[debug] [2019-10-29T05:43:44.760Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\2136"}
+[debug] [2019-10-29T05:43:44.804Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-29T05:43:45.589Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "spellingBee" in ~2s
