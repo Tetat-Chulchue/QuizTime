@@ -83,7 +83,7 @@
                     <div class="link-page"><a href="../index.html" >Main page</a></div>
                     <div class="link-page"><a href="../Game1/howTo.html" >How to play</a></div>
                     <div class="link-page"><a href="../Game1/gameManu.html" >Play game</a></div>
-                    <!-- <div class="link-page"><a href="../Game1/scoreBoard.html">Score board</a></div> -->
+                    <div class="link-page"><a href="../Game1/information.html">Information</a></div>
                     <div class="link-page"><a href="#1" >Vocabulary</a></div>
                 </div>
                 <div class="left-footer">
@@ -99,6 +99,27 @@
                 <h2>Score board</h2>
             </div>
             <div class="center-conten-table">
+                <div class="conten-filter-container">
+                    <div class="filter-box" onclick="preloader()">
+                        <p>Refresh</p>
+                    </div>
+                    <div class="filter-loader">
+                        <img src="../assets/loader.gif" alt="" id="fliterImgLoader">
+                    </div>
+                    <select id="category" name="category" class="filter-box" style="right: 0; padding-left: 10px;">
+                        <option value="animal">Animal</option>
+                        <option value="food">Food</option>
+                        <option value="furnture">Furnture</option>
+                        <option value="job">Job</option>
+                        <option value="nature">Nature</option>
+                        <option value="place">Place</option>
+                        <option value="sport">Sport</option>
+                        <option value="subject">Subject</option>
+                        <option value="time">Time</option>
+                        <option value="vegetable">Vegetable</option>
+                        <option value="vehicle">Vehicle</option>
+                    </select>
+                </div>
                 <table id="mytable" >
                     <thead>
                         <tr>
@@ -135,43 +156,54 @@
     <!-- ------------------------ Hyper link zone ------------------------ -->
 
     <script>
-        let leader = [
-        ];
+        let leader = {};
+
+        let counter = 1;
 
         function preloader() {
+            categoryName = document.getElementById('category').value;
+            document.getElementById("fliterImgLoader").style.visibility = "unset";
             axios({
                 method: "GET",
-                url: "http://localhost:5001/itec-websession/us-central1/spellingBee/animal"
+                url: "http://localhost:5001/itec-websession/us-central1/spellingBee/scoreboard/"+categoryName
             })
             .then(data => {
-                console.log(data);
+                leader = data.data;
+                render(categoryName)
+
             })
             .catch(err => {
                 console.log(err);
             });
         }
 
-        function render() {
+        function render(categoryName) {
             let table = document.getElementById("mytable");
             let tbody = document.createElement('tbody');
+            if (table.rows.length > 1) {
+                for (const i in leader) {
+                    table.deleteRow(-1);
+                }
+                counter = 1;
+            }
             for (const i in leader) {
-                console.log(leader[i]);
                 let row = tbody.insertRow(-1);
                 let cell0 = row.insertCell(0);
                 let cell1 = row.insertCell(1);
                 let cell2 = row.insertCell(2);
                 let cell3 = row.insertCell();
-                cell0.innerHTML = `<p>${Number(i) + 1}</p>`;
-                cell1.innerHTML = `<p>${leader[i].name}</p>`;
-                cell2.innerHTML = `<p>${leader[i].vocab}</p>`;
-                cell3.innerHTML = `<p>${leader[i].score}</p>`;
+                cell0.innerHTML = `<p>${counter++}</p>`;
+                cell1.innerHTML = `<p>${i}</p>`;
+                cell2.innerHTML = `<p>${categoryName}</p>`;
+                cell3.innerHTML = `<p>${leader[i]}</p>`;
                 table.append(tbody);
             }
+            document.getElementById("fliterImgLoader").style.visibility = "hidden";
         }
 
-        window.onload = () => {
-            preloader();
-            // render();
+        window.onload = async () => {
+            await preloader();
+            // await render();
         }
     </script>
 </body>

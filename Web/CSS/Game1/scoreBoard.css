@@ -8,7 +8,7 @@
     height: 10vh;
     background-color: rgba(0, 255, 255, 0.479);
     margin-top: 2vh;
-    margin-bottom: 5vh;
+    /* margin-bottom: 5vh; */
     border-radius: 0.5em;
     text-align: center;
 }
@@ -31,6 +31,55 @@
     /* margin-top: 5%; */
 }
 
+.conten-filter-container {
+    position: relative;
+    width: 100%;
+    height: 3vh;
+    /* background-color: brown; */
+    margin: 4vh 0vh 1vh 0vh;
+}
+
+.filter-box {
+    position: absolute;
+    height: 98%;
+    width: 33%;
+    background-color: burlywood;
+    border-radius: 100em;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: 0.5s;
+}
+
+.filter-box:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 14px 1px rgba(00,00,00,0.4);
+}
+
+.filter-box p {
+    position: relative;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2vmin;
+}
+
+.filter-loader {
+    position: absolute;
+    width: 33%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.filter-loader img {
+    height: 400%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
 
 .center-conten-table {
     position: relative;
