@@ -81,10 +81,10 @@
                 </div>
                 <div class="static-box">
                     <div class="link-page"><a href="../index.html" >Main page</a></div>
+                    <div class="link-page"><a href="../Game1/information.html">Information</a></div>
+                    <div class="link-page"><a href="../Game1/information.html#1" >Vocabulary</a></div>
                     <div class="link-page"><a href="../Game1/howTo.html" >How to play</a></div>
                     <div class="link-page"><a href="../Game1/gameManu.html" >Play game</a></div>
-                    <div class="link-page"><a href="../Game1/information.html">Information</a></div>
-                    <div class="link-page"><a href="#1" >Vocabulary</a></div>
                 </div>
                 <div class="left-footer">
                     <p>Copyright © 2019 IT KMITL</p>
@@ -105,11 +105,12 @@
                     </div>
                     <div class="filter-loader">
                         <img src="../assets/loader.gif" alt="" id="fliterImgLoader">
+                        <p id="res-error"></p>
                     </div>
-                    <select id="category" name="category" class="filter-box" style="right: 0; padding-left: 10px;">
+                    <select id="category" name="category" class="filter-box" style="right: 0; padding-left: 10px;" onchange="preloader()">
                         <option value="animal">Animal</option>
                         <option value="food">Food</option>
-                        <option value="furnture">Furnture</option>
+                        <option value="furniture">Furniture</option>
                         <option value="job">Job</option>
                         <option value="nature">Nature</option>
                         <option value="place">Place</option>
@@ -157,18 +158,22 @@
 
     <script>
         let leader = {};
-
         let counter = 1;
+        let error_text = document.getElementById("res-error");
+        let table = document.getElementById("mytable");
+        let tbody = document.createElement('tbody');
 
         function preloader() {
             categoryName = document.getElementById('category').value;
             document.getElementById("fliterImgLoader").style.visibility = "unset";
+            error_text.innerHTML = "";
             axios({
                 method: "GET",
                 url: "https://us-central1-itec-websession.cloudfunctions.net/spellingBee/scoreboard/"+categoryName
             })
             .then(data => {
                 leader = data.data;
+                console.log(leader);
                 render(categoryName)
 
             })
@@ -178,13 +183,16 @@
         }
 
         function render(categoryName) {
-            let table = document.getElementById("mytable");
-            let tbody = document.createElement('tbody');
-            if (table.rows.length > 1) {
-                for (const i in leader) {
-                    table.deleteRow(-1);
+            if (table.rows.length > 1 && leader != [] && table.rows.length != 2 ) {
+                for (let i = 1; i <= table.rows.length+1; i++) {
+                    table.deleteRow(1);
                 }
                 counter = 1;
+            } else if (table.rows.length == 2 && leader != []) {
+                table.deleteRow(-1);
+                counter = 1;
+            } else if (leader == []) {
+                error_text.innerHTML = "Not found!!";
             }
             for (const i in leader) {
                 let row = tbody.insertRow(-1);
@@ -203,7 +211,6 @@
 
         window.onload = async () => {
             await preloader();
-            // await render();
         }
     </script>
 </body>

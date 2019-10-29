@@ -63,8 +63,9 @@
     opacity: 0;
     transition: all 0.3s ease-in-out;
     padding: 3vmin;
-    background-color: rgba(165, 42, 42, 0.596);
+    background-color: rgba(38, 38, 145, 0.726);
     border-radius: 0.3em;
+    color: rgb(255, 255, 255);
 }
 /* ------ Information container ------- */
 

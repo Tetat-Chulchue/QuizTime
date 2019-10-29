@@ -51,6 +51,7 @@ li {
 
 .box a img:hover {
     box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.185);
+    filter: blur(2px);
 }
 
 .box a img {
