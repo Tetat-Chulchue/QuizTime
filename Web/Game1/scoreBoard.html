@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="../CSS/Game1/scoreBoard.css">
     <link rel="stylesheet" href="../CSS/Game1/bg-animation.css">
     <link rel="stylesheet" href="../CSS/main_page/loading.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="../../CSS/Game1/bg-animation.css">
     <link rel="stylesheet" href="../CSS/template.css">
     <script src="../JS/Game1/loading.js"></script>
@@ -98,10 +96,10 @@
         <div class="box-right" style="display: block;">
             <!-- ------------------------ conten zone ------------------------ -->
             <div class="center-haeder-text">
-
+                <h2>Score board</h2>
             </div>
             <div class="center-conten-table">
-                <table id="mytable" class="table table-hover">
+                <table id="mytable" >
                     <thead>
                         <tr>
                             <th>No.</th>
@@ -111,30 +109,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Tae</td>
-                            <td>Animal</td>
-                            <td>99999</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Tae</td>
-                            <td>Animal</td>
-                            <td>99999</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Tae</td>
-                            <td>Animal</td>
-                            <td>99999</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Tae</td>
-                            <td>Animal</td>
-                            <td>99999</td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -161,8 +135,43 @@
     <!-- ------------------------ Hyper link zone ------------------------ -->
 
     <script>
-        for (let i = 0; i < 2; i++) {
-            document.getElementById("right-animation").
+        let leader = [
+        ];
+
+        function preloader() {
+            axios({
+                method: "GET",
+                url: "http://localhost:5000/itec-websession/us-central1/spellingBee/scoreboard/animal"
+            })
+            .then(data => {
+                console.log(data);
+            })
+            .catch(err => {
+                console.log(err);
+            });
+        }
+
+        function render() {
+            let table = document.getElementById("mytable");
+            let tbody = document.createElement('tbody');
+            for (const i in leader) {
+                console.log(leader[i]);
+                let row = tbody.insertRow(-1);
+                let cell0 = row.insertCell(0);
+                let cell1 = row.insertCell(1);
+                let cell2 = row.insertCell(2);
+                let cell3 = row.insertCell();
+                cell0.innerHTML = `<p>${Number(i) + 1}</p>`;
+                cell1.innerHTML = `<p>${leader[i].name}</p>`;
+                cell2.innerHTML = `<p>${leader[i].vocab}</p>`;
+                cell3.innerHTML = `<p>${leader[i].score}</p>`;
+                table.append(tbody);
+            }
+        }
+
+        window.onload = () => {
+            preloader();
+            // render();
         }
     </script>
 </body>
