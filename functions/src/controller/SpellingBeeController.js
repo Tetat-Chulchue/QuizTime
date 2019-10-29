@@ -3,6 +3,7 @@
 const express = require("express");
 const cors = require("cors");
 const admin = require("../config/admin");
+const _ = require('lodash');
 
 // setup
 
@@ -14,9 +15,9 @@ spellingBee.use(cors({ origin: true}));
 spellingBee.post('/record', async (req, res) => {
     try {
         let {user, score, category} = req.body;
-        let reference = firestore.collection('SpellingBee').doc(user);
+        let reference = firestore.collection('SpellingBee').doc(category.toLowerCase());
         let payload = {};
-        payload[category] = score;
+        payload[user.toLowerCase()] = score;
         await reference.set(payload, {merge: true}).then(() => {
             res.sendStatus(200);
         },
@@ -26,9 +27,27 @@ spellingBee.post('/record', async (req, res) => {
 
     } catch (e) {
         console.log(e);
-        res.send(500);
+        res.sendStatus(500);
     }
 
+})
+
+spellingBee.get('/scoreboard/:category', async (req,res) => {
+    try {
+        let {category} = req.params;
+        let reference = firestore.collection('SpellingBee').doc(category);
+        let scoreboard = await reference.get().then((snapshot) => {
+            return snapshot.data();
+        },
+        () => {
+            res.sendStatus(404);
+        });
+        _.mapValues(_.invert(_.invert(scoreboard)),parseInt); // sort object by values
+        res.sendStatus(200).send(scoreboard);
+    } catch (e) {
+        console.log(e);
+        res.sendStatus(500)
+    }
 })
 
 module.exports = spellingBee;
