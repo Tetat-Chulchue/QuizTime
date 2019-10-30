@@ -15,6 +15,7 @@ spellingBee.use(cors({ origin: true}));
 spellingBee.post('/record', async (req, res) => {
     try {
         let {user, score, category} = req.body;
+        console.log(user, score, category);
         let reference = firestore.collection('SpellingBee').doc(category.toLowerCase());
         let payload = {};
         payload[user.toLowerCase()] = score;

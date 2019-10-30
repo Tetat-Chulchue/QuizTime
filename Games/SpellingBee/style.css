@@ -2,3 +2,74 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+
+.game-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+.back-to-gameManu {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    background-color: aqua;
+    border-radius: 3em;
+    width: 35px;
+    height: 35px;
+}
+
+.back-to-gameManu p {
+    margin: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 260%;
+    width: 100px;
+}
+
+.back-to-gameManu a img {
+    position: relative;
+    transform: translate(-50%, -50%) rotateY(180deg);
+    top: 50%;
+    left: 45%;
+    width: 80%;
+    height: 80%;
+}
+
+/* ----------------Sweet alert---------------- */
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    border-color: #dc3545;
+    border-radius: .25em;
+    color: #fff;
+    font-size: 1.0625em;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    font-size: 1.0625em;
+    border: none;
+    color: #fff;
+    border-radius: .25em;
+}
+
+.btn {
+    margin: 10px;
+    padding: 10px;
+}
+
+/* ----------------Sweet alert---------------- */

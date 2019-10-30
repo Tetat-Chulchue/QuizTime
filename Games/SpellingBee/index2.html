@@ -5,14 +5,87 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        .btn-danger {
+            background-color: #dc3545;
+            border: none;
+            border-color: #dc3545;
+            border-radius: .25em;
+            color: #fff;
+            font-size: 1.0625em;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            border-color: #28a745;
+            font-size: 1.0625em;
+            border: none;
+            color: #fff;
+            border-radius: .25em;
+        }
+
+        .btn {
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+
 </head>
 <body>
      <div style="position: absolute; top: 8%; left: 50%;">
-        <button onclick="tae_test()" style="background-color: blue;">Test</button>
+        <button onclick="popUp(60000, 'animal')" style="background-color: blue;">Test</button>
     </div>
 
     <script>
-        function tae_test() {
+        function push(name, score, category) {
+            axios({
+                method: 'POST',
+                url: 'http://localhost:5001/itec-websession/us-central1/spellingBee/record',
+                data: {
+                    user: name,
+                    score: score,
+                    category: category
+                }
+            })
+            .then(function (response) {
+                done();
+            })
+            .catch(function (error) {
+                fail(error)
+            });
+        }
+
+        function done() {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000
+            })
+
+            Toast.fire({
+                type: 'success',
+                title: 'Save successfully.'
+            })
+        }
+
+        function fail(error) {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 4000
+            })
+
+            Toast.fire({
+                type: 'error',
+                title: 'Save fail.',
+                text: error
+            })
+        }
+
+        function popUp(score, category) {
             const swalWithBootstrapButtons = Swal.mixin({
                 customClass: {
                     confirmButton: 'btn btn-success',
@@ -28,11 +101,10 @@
                 showCancelButton: true,
                 confirmButtonText: 'Yes, do it!',
                 cancelButtonText: 'No, cancel!',
-                reverseButtons: true
             
             }).then(async (result) => {
                 if (result.value) {
-                    const { value: text } = await Swal.fire({
+                    const { value: name } = await Swal.fire({
                         title: 'Input your name',
                         input: 'text',
                         inputPlaceholder: 'Enter your name',
@@ -42,25 +114,16 @@
                             }
                         }
                     })
-                    if (text) {
+                    if (name) {
                         Swal.fire({
-                            title: 'Entered name: ' + text,
-                            text: 'Your score: ' + 6000
-                        }).then(async () => {
-                            const Toast = Swal.mixin({
-                                toast: true,
-                                position: 'top-end',
-                                showConfirmButton: false,
-                                timer: 2500
-                            })
-
-                            Toast.fire({
-                                type: 'success',
-                                title: 'Save successfully'
-                            })
+                            title: 'Entered name: ' + name,
+                            text: 'Your score: ' + score,
+                            showLoaderOnConfirm: true,
+                            preConfirm: async (login) => {
+                                return push(name, score, category).then();
+                            },
+                            allowOutsideClick: () => !Swal.isLoading()
                         })
-                    } else {
-                        console.log("gght");
                     }
                 } else if ( result.dismiss === Swal.DismissReason.cancel ) {
                     swalWithBootstrapButtons.fire(

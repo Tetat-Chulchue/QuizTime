@@ -7,116 +7,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
     <link rel="stylesheet" href="./style.css">
     <script src="sketch.js"></script>
+    <script src="popUp.js"></script>
     <script src="../lib/p5.clickable.js"></script>
     <script src="../lib/p5.sound.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4/lodash.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Spelling Bee</title>
     <link rel="icon" href="../../Web/assets/logo2.png" type="image/png" sizes="200x200">
-    <style>
-        body {
-            margin: 0;
-            overflow-x: hidden;
-            overflow-y: hidden;
-            font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
-        }
-
-        .game-container {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-        }
-
-        /* .back-to-gameManu {
-            position: fixed;
-            top: 30px;
-            left: 30px;
-            background-color: aqua;
-            border-radius: 3em;
-            width: 35px;
-            height: 35px;
-        }
-
-        .back-to-gameManu p {
-            margin: 0;
-            position: absolute;
-            transform: translate(-50%, -50%);
-            top: 50%;
-            left: 260%;
-            width: 100px;
-        }
-
-        .back-to-gameManu a img {
-            position: relative;
-            transform: translate(-50%, -50%) rotateY(180deg);
-            top: 50%;
-            left: 45%;
-            width: 80%;
-            height: 80%;
-        } */
-
-    </style>
 </head>
 <body>
-    <!-- <div class="back-to-gameManu">
+    <div class="back-to-gameManu">
         <a href="../../Web/Game1/gameManu.html">
             <img src="../../Web/assets/arrow.png" alt="">
         </a> 
         <p>Back to manu</p>
-    </div> -->
-
-    <div style="position: absolute; top: 8%; left: 50%;">
-        <button onclick="tae_test()" style="background-color: blue;">Test</button>
     </div>
-
-    <script>
-        function tae_test() {
-            const swalWithBootstrapButtons = Swal.mixin({
-                customClass: {
-                    confirmButton: 'btn btn-success',
-                    cancelButton: 'btn btn-danger'
-                },
-                buttonsStyling: false
-            })
-
-            swalWithBootstrapButtons.fire({
-                title: 'Are you sure?',
-                text: "You won't be able to revert this!",
-                type: 'question',
-                showCancelButton: true,
-                confirmButtonText: 'Yes, delete it!',
-                cancelButtonText: 'No, cancel!',
-                reverseButtons: true
-            
-            }).then((result) => {
-                if (result.value) {
-                    swalWithBootstrapButtons.fire(
-                    'Deleted!',
-                    'Your file has been deleted.',
-                    'success'
-                    )
-                    .then(() => {
-                        const Toast = Swal.mixin({
-                            toast: true,
-                            position: 'top-end',
-                            showConfirmButton: false,
-                            timer: 3000
-                        })
-                        Toast.fire({
-                            type: 'success',
-                            title: 'Signed in successfully'
-                        })
-                    })
-                } else if ( result.dismiss === Swal.DismissReason.cancel ) {
-                    swalWithBootstrapButtons.fire(
-                    'Thank you'
-                    )
-                }
-            })
-        }
-    </script>
 </body>
 </html>

@@ -125,6 +125,11 @@ function endGame() {
     let data = {};
     data[name] = score;
     var blob = new Blob([data], { type: "json" });
+    console.log('done');
+    path = window.location.search
+    category = path.split('=')[1]
+    category = _.capitalize(category);
+    sweetUI(score, category);
     saveAs(blob, "score.json");
 }
 

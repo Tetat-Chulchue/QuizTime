@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Information</title>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/Game1/information.css">
+    <link rel="stylesheet" href="../CSS/Game1/scoreBoard.css">
     <link rel="stylesheet" href="../CSS/Game1/bg-animation.css">
-    <link rel="stylesheet" href="../CSS/template.css">
     <link rel="stylesheet" href="../CSS/main_page/loading.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../../CSS/Game1/bg-animation.css">
+    <link rel="stylesheet" href="../CSS/template.css">
     <script src="../JS/Game1/loading.js"></script>
 
     <link rel="icon" href="../assets/logo2.png" type="image/png" sizes="200x200">
@@ -54,7 +56,7 @@
         </div>
         <div class="navigation-bar" id="navigation-bar">
             <div class="title-text">
-                <h1>Spelling Bee</h1>
+                <h1>SpeedTyping</h1>
             </div>
             <div class="navi-link-page">
                 <a href="../index.html">Main page</a>
@@ -75,14 +77,14 @@
                     </a>
                 </div>
                 <div class="hardder-text">
-                    <h1>SpeedTyping</h1>
+                    <h1>Spelling Bee</h1>
                 </div>
                 <div class="static-box">
                     <div class="link-page"><a href="../index.html" >Main page</a></div>
+                    <div class="link-page"><a href="../Game3/information.html">Information</a></div>
                     <!-- <div class="link-page"><a href="../Game1/information.html#1" >Vocabulary</a></div> -->
-                    <div class="link-page"><a href="../Game3/information.html" >Information</a></div>
                     <div class="link-page"><a href="../Game3/howTo.html" >How to play</a></div>
-                    <div class="link-page"><a href="../Game3/scoreBoard.html">Score board</a></div>
+                    <div class="link-page"><a href="../Game3/gameManu.html" >Play game</a></div>
                 </div>
                 <div class="left-footer">
                     <p>Copyright © 2019 IT KMITL</p>
@@ -91,9 +93,47 @@
         </div>
         <!-- ------------------------ Box left zone ------------------------ -->
 
-        <div class="box-right">
+        <div class="box-right" style="display: block;">
             <!-- ------------------------ conten zone ------------------------ -->
-            
+            <div class="center-haeder-text">
+                <h2>Score board</h2>
+            </div>
+            <div class="center-conten-table">
+                <div class="conten-filter-container">
+                    <div class="filter-box" onclick="preloader()">
+                        <p>Refresh</p>
+                    </div>
+                    <div class="filter-loader">
+                        <img src="../assets/loader.gif" alt="" id="fliterImgLoader">
+                        <p id="res-error"></p>
+                    </div>
+                    <select id="category" name="category" class="filter-box" style="right: 0; padding-left: 10px;" onchange="preloader()">
+                        <option value="animal">Animal</option>
+                        <option value="food">Food</option>
+                        <option value="furniture">Furniture</option>
+                        <option value="job">Job</option>
+                        <option value="nature">Nature</option>
+                        <option value="place">Place</option>
+                        <option value="sport">Sport</option>
+                        <option value="subject">Subject</option>
+                        <option value="time">Time</option>
+                        <option value="vegetable">Vegetable</option>
+                        <option value="vehicle">Vehicle</option>
+                    </select>
+                </div>
+                <table id="mytable" >
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>ชื่อ</th>
+                            <th>หมวด</th>
+                            <th>คะแนน</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
             <!-- ------------------------ conten zone ------------------------ -->
         </div>
     </div>
@@ -117,8 +157,67 @@
     <!-- ------------------------ Hyper link zone ------------------------ -->
 
     <script>
-        for (let i = 0; i < 2; i++) {
-            document.getElementById("right-animation").
+        let leader = {};
+        let counter = 1;
+        let error_text = document.getElementById("res-error");
+        let table = document.getElementById("mytable");
+        let tbody = document.createElement('tbody');
+
+        function preloader() {
+            categoryName = document.getElementById('category').value;
+            document.getElementById("fliterImgLoader").style.visibility = "unset";
+            error_text.innerHTML = "";
+            axios({
+                method: "GET",
+                url: "https://us-central1-itec-websession.cloudfunctions.net/spellingBee/scoreboard/"+categoryName
+            })
+            .then(data => {
+                leader = data.data;
+                render(categoryName)
+
+            })
+            .catch(err => {
+                console.log(err);
+                error_text.innerHTML = err;
+            });
+        }
+
+        function render(categoryName) {
+            if (table.rows.length > 1 && leader != [] && table.rows.length != 2 ) {
+                refresh()
+                function refresh() {
+                    table.deleteRow(1);
+                    if (table.rows.length >= 2 && refresh() != false) {
+                        console.log('tse');
+                        refresh()
+                    } else {
+                        return false;
+                    }
+                }
+                counter = 1;
+            } else if (table.rows.length == 2 && leader != []) {
+                table.deleteRow(-1);
+                counter = 1;
+            } else if (leader == []) {
+                error_text.innerHTML = "Not found!!";
+            }
+            for (const i in leader) {
+                let row = tbody.insertRow(-1);
+                let cell0 = row.insertCell(0);
+                let cell1 = row.insertCell(1);
+                let cell2 = row.insertCell(2);
+                let cell3 = row.insertCell();
+                cell0.innerHTML = `<p>${counter++}</p>`;
+                cell1.innerHTML = `<p>${i}</p>`;
+                cell2.innerHTML = `<p>${categoryName}</p>`;
+                cell3.innerHTML = `<p>${leader[i]}</p>`;
+                table.append(tbody);
+            }
+            document.getElementById("fliterImgLoader").style.visibility = "hidden";
+        }
+
+        window.onload = async () => {
+            await preloader();
         }
     </script>
 </body>

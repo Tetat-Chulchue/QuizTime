@@ -1,0 +1,256 @@
+[debug] [2019-10-30T19:23:56.530Z] ----------------------------------------------------------------------
+[debug] [2019-10-30T19:23:56.532Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js serve --port 5001 --only functions
+[debug] [2019-10-30T19:23:56.532Z] CLI Version:   7.6.1
+[debug] [2019-10-30T19:23:56.533Z] Platform:      win32
+[debug] [2019-10-30T19:23:56.533Z] Node Version:  v11.7.0
+[debug] [2019-10-30T19:23:56.534Z] Time:          Thu Oct 31 2019 02:23:56 GMT+0700 (Indochina Time)
+[debug] [2019-10-30T19:23:56.534Z] ----------------------------------------------------------------------
+[debug] [2019-10-30T19:23:56.534Z] 
+[debug] [2019-10-30T19:23:56.544Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-30T19:23:56.544Z] > authorizing via signed-in user
+[debug] [2019-10-30T19:23:56.544Z] [iam] checking project itec-websession for permissions ["firebase.projects.get"]
+[debug] [2019-10-30T19:23:56.546Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/itec-websession:testIamPermissions  
+
+[debug] [2019-10-30T19:23:58.022Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-30T19:23:58.025Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/itec-websession  
+ 
+[debug] [2019-10-30T19:23:58.630Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "11"
+[info] +  functions: Emulator started at http://localhost:5001
+[info] i  functions: Watching "C:\Users\Tanawat Chanhom\Desktop\Work\QuizTime\functions" for Cloud Functions...
+[debug] [2019-10-30T19:24:01.901Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[debug] [2019-10-30T19:24:01.901Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-30T19:24:01.907Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-30T19:24:01.911Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:24:01.912Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] +  functions[spellingBee]: http function initialized (http://localhost:5001/itec-websession/us-central1/spellingBee).
+[debug] [2019-10-30T19:29:03.461Z] Accepted request OPTIONS /itec-websession/us-central1/spellingBee/record --> spellingBee
+[debug] [2019-10-30T19:29:04.252Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "spellingBee"
+[debug] [2019-10-30T19:29:04.288Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-30T19:29:04.288Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-30T19:29:04.288Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:29:04.288Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:29:04.938Z] [runtime-status] Trigger "spellingBee" has been found, beginning invocation! {}
+[debug] [2019-10-30T19:29:04.938Z] [runtime-status]  {"httpsTrigger":{},"name":"spellingBee","entryPoint":"spellingBee"}
+[debug] [2019-10-30T19:29:04.938Z] [runtime-status] Running spellingBee in mode HTTPS {}
+[debug] [2019-10-30T19:29:04.952Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\16320"}
+[debug] [2019-10-30T19:29:04.956Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\16320"}
+[debug] [2019-10-30T19:29:04.978Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-30T19:29:04.988Z] [runtime-status] Ephemeral server survived. {}
+[debug] [2019-10-30T19:29:04.992Z] Accepted request POST /itec-websession/us-central1/spellingBee/record --> spellingBee
+[info] i  functions: Finished "spellingBee" in ~1s
+[debug] [2019-10-30T19:29:05.705Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "spellingBee"
+[debug] [2019-10-30T19:29:05.706Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-30T19:29:05.712Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-30T19:29:05.721Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:29:05.723Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:29:06.648Z] [runtime-status] Trigger "spellingBee" has been found, beginning invocation! {}
+[debug] [2019-10-30T19:29:06.649Z] [runtime-status]  {"httpsTrigger":{},"name":"spellingBee","entryPoint":"spellingBee"}
+[debug] [2019-10-30T19:29:06.649Z] [runtime-status] Running spellingBee in mode HTTPS {}
+[debug] [2019-10-30T19:29:06.669Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\13280"}
+[debug] [2019-10-30T19:29:06.671Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\13280"}
+[debug] [2019-10-30T19:29:06.703Z] [runtime-status] Ephemeral server used! {}
+[info] >  tae 6000 animal
+[debug] [2019-10-30T19:29:06.719Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "spellingBee" in ~1s
+[debug] [2019-10-30T19:31:13.227Z] Accepted request OPTIONS /itec-websession/us-central1/spellingBee/record --> spellingBee
+[debug] [2019-10-30T19:31:13.742Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "spellingBee"
+[debug] [2019-10-30T19:31:13.744Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-30T19:31:13.748Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-30T19:31:13.751Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:31:13.752Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:31:14.181Z] [runtime-status] Trigger "spellingBee" has been found, beginning invocation! {}
+[debug] [2019-10-30T19:31:14.182Z] [runtime-status]  {"httpsTrigger":{},"name":"spellingBee","entryPoint":"spellingBee"}
+[debug] [2019-10-30T19:31:14.182Z] [runtime-status] Running spellingBee in mode HTTPS {}
+[debug] [2019-10-30T19:31:14.190Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\17192"}
+[debug] [2019-10-30T19:31:14.191Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\17192"}
+[debug] [2019-10-30T19:31:14.210Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-30T19:31:14.216Z] [runtime-status] Ephemeral server survived. {}
+[debug] [2019-10-30T19:31:14.219Z] Accepted request POST /itec-websession/us-central1/spellingBee/record --> spellingBee
+[info] i  functions: Finished "spellingBee" in ~1s
+[debug] [2019-10-30T19:31:14.857Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "spellingBee"
+[debug] [2019-10-30T19:31:14.862Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-30T19:31:14.865Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-30T19:31:14.868Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:31:14.870Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:31:15.455Z] [runtime-status] Trigger "spellingBee" has been found, beginning invocation! {}
+[debug] [2019-10-30T19:31:15.455Z] [runtime-status]  {"httpsTrigger":{},"name":"spellingBee","entryPoint":"spellingBee"}
+[debug] [2019-10-30T19:31:15.456Z] [runtime-status] Running spellingBee in mode HTTPS {}
+[debug] [2019-10-30T19:31:15.482Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\16212"}
+[debug] [2019-10-30T19:31:15.483Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\16212"}
+[debug] [2019-10-30T19:31:15.533Z] [runtime-status] Ephemeral server used! {}
+[info] >  tae 6000 animal
+[debug] [2019-10-30T19:31:15.547Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "spellingBee" in ~1s
+[debug] [2019-10-30T19:32:57.081Z] Accepted request OPTIONS /itec-websession/us-central1/spellingBee/record --> spellingBee
+[debug] [2019-10-30T19:32:57.696Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "spellingBee"
+[debug] [2019-10-30T19:32:57.696Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-30T19:32:57.704Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-30T19:32:57.708Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:32:57.710Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:32:58.096Z] [runtime-status] Trigger "spellingBee" has been found, beginning invocation! {}
+[debug] [2019-10-30T19:32:58.096Z] [runtime-status]  {"httpsTrigger":{},"name":"spellingBee","entryPoint":"spellingBee"}
+[debug] [2019-10-30T19:32:58.096Z] [runtime-status] Running spellingBee in mode HTTPS {}
+[debug] [2019-10-30T19:32:58.106Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\1536"}
+[debug] [2019-10-30T19:32:58.108Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\1536"}
+[debug] [2019-10-30T19:32:58.125Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-30T19:32:58.134Z] [runtime-status] Ephemeral server survived. {}
+[debug] [2019-10-30T19:32:58.138Z] Accepted request POST /itec-websession/us-central1/spellingBee/record --> spellingBee
+[info] i  functions: Finished "spellingBee" in ~1s
+[debug] [2019-10-30T19:32:58.664Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "spellingBee"
+[debug] [2019-10-30T19:32:58.665Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-30T19:32:58.670Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-30T19:32:58.673Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:32:58.675Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:32:59.069Z] [runtime-status] Trigger "spellingBee" has been found, beginning invocation! {}
+[debug] [2019-10-30T19:32:59.069Z] [runtime-status]  {"httpsTrigger":{},"name":"spellingBee","entryPoint":"spellingBee"}
+[debug] [2019-10-30T19:32:59.069Z] [runtime-status] Running spellingBee in mode HTTPS {}
+[debug] [2019-10-30T19:32:59.078Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\2912"}
+[debug] [2019-10-30T19:32:59.080Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\2912"}
+[debug] [2019-10-30T19:32:59.117Z] [runtime-status] Ephemeral server used! {}
+[info] >  tae2test 0 Animal
+[debug] [2019-10-30T19:32:59.127Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "spellingBee" in ~1s
+[debug] [2019-10-30T19:33:37.854Z] Accepted request OPTIONS /itec-websession/us-central1/spellingBee/records --> spellingBee
+[debug] [2019-10-30T19:33:38.403Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "spellingBee"
+[debug] [2019-10-30T19:33:38.404Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-30T19:33:38.411Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-30T19:33:38.415Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:33:38.416Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:33:38.925Z] [runtime-status] Trigger "spellingBee" has been found, beginning invocation! {}
+[debug] [2019-10-30T19:33:38.925Z] [runtime-status]  {"httpsTrigger":{},"name":"spellingBee","entryPoint":"spellingBee"}
+[debug] [2019-10-30T19:33:38.925Z] [runtime-status] Running spellingBee in mode HTTPS {}
+[debug] [2019-10-30T19:33:38.936Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\18036"}
+[debug] [2019-10-30T19:33:38.937Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\18036"}
+[debug] [2019-10-30T19:33:38.955Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-30T19:33:38.962Z] [runtime-status] Ephemeral server survived. {}
+[debug] [2019-10-30T19:33:38.965Z] Accepted request POST /itec-websession/us-central1/spellingBee/records --> spellingBee
+[info] i  functions: Finished "spellingBee" in ~1s
+[debug] [2019-10-30T19:33:39.528Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "spellingBee"
+[debug] [2019-10-30T19:33:39.529Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-30T19:33:39.535Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-30T19:33:39.537Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:33:39.538Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:33:39.934Z] [runtime-status] Trigger "spellingBee" has been found, beginning invocation! {}
+[debug] [2019-10-30T19:33:39.934Z] [runtime-status]  {"httpsTrigger":{},"name":"spellingBee","entryPoint":"spellingBee"}
+[debug] [2019-10-30T19:33:39.934Z] [runtime-status] Running spellingBee in mode HTTPS {}
+[debug] [2019-10-30T19:33:39.945Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\11608"}
+[debug] [2019-10-30T19:33:39.947Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\11608"}
+[debug] [2019-10-30T19:33:39.983Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-30T19:33:39.997Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "spellingBee" in ~1s
+[debug] [2019-10-30T19:35:56.784Z] Accepted request OPTIONS /itec-websession/us-central1/spellingBee/records --> spellingBee
+[debug] [2019-10-30T19:35:57.400Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "spellingBee"
+[debug] [2019-10-30T19:35:57.400Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-30T19:35:57.407Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-30T19:35:57.409Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:35:57.410Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:35:57.800Z] [runtime-status] Trigger "spellingBee" has been found, beginning invocation! {}
+[debug] [2019-10-30T19:35:57.800Z] [runtime-status]  {"httpsTrigger":{},"name":"spellingBee","entryPoint":"spellingBee"}
+[debug] [2019-10-30T19:35:57.800Z] [runtime-status] Running spellingBee in mode HTTPS {}
+[debug] [2019-10-30T19:35:57.809Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\13832"}
+[debug] [2019-10-30T19:35:57.810Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\13832"}
+[debug] [2019-10-30T19:35:57.825Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-30T19:35:57.830Z] [runtime-status] Ephemeral server survived. {}
+[debug] [2019-10-30T19:35:57.834Z] Accepted request POST /itec-websession/us-central1/spellingBee/records --> spellingBee
+[info] i  functions: Finished "spellingBee" in ~1s
+[debug] [2019-10-30T19:35:58.410Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "spellingBee"
+[debug] [2019-10-30T19:35:58.412Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-30T19:35:58.418Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-30T19:35:58.421Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:35:58.422Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:35:58.917Z] [runtime-status] Trigger "spellingBee" has been found, beginning invocation! {}
+[debug] [2019-10-30T19:35:58.917Z] [runtime-status]  {"httpsTrigger":{},"name":"spellingBee","entryPoint":"spellingBee"}
+[debug] [2019-10-30T19:35:58.917Z] [runtime-status] Running spellingBee in mode HTTPS {}
+[debug] [2019-10-30T19:35:58.927Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\16000"}
+[debug] [2019-10-30T19:35:58.928Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\16000"}
+[debug] [2019-10-30T19:35:58.967Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-30T19:35:58.979Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "spellingBee" in ~1s
+[debug] [2019-10-30T19:50:01.476Z] Accepted request OPTIONS /itec-websession/us-central1/spellingBee/record --> spellingBee
+[debug] [2019-10-30T19:50:02.206Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "spellingBee"
+[debug] [2019-10-30T19:50:02.208Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-30T19:50:02.213Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-30T19:50:02.216Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:50:02.218Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:50:02.765Z] [runtime-status] Trigger "spellingBee" has been found, beginning invocation! {}
+[debug] [2019-10-30T19:50:02.765Z] [runtime-status]  {"httpsTrigger":{},"name":"spellingBee","entryPoint":"spellingBee"}
+[debug] [2019-10-30T19:50:02.765Z] [runtime-status] Running spellingBee in mode HTTPS {}
+[debug] [2019-10-30T19:50:02.779Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\8484"}
+[debug] [2019-10-30T19:50:02.781Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\8484"}
+[debug] [2019-10-30T19:50:02.805Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-30T19:50:02.811Z] [runtime-status] Ephemeral server survived. {}
+[debug] [2019-10-30T19:50:02.813Z] Accepted request POST /itec-websession/us-central1/spellingBee/record --> spellingBee
+[info] i  functions: Finished "spellingBee" in ~1s
+[debug] [2019-10-30T19:50:03.598Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "spellingBee"
+[debug] [2019-10-30T19:50:03.599Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-30T19:50:03.607Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-30T19:50:03.611Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:50:03.613Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:50:04.122Z] [runtime-status] Trigger "spellingBee" has been found, beginning invocation! {}
+[debug] [2019-10-30T19:50:04.123Z] [runtime-status]  {"httpsTrigger":{},"name":"spellingBee","entryPoint":"spellingBee"}
+[debug] [2019-10-30T19:50:04.123Z] [runtime-status] Running spellingBee in mode HTTPS {}
+[debug] [2019-10-30T19:50:04.133Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\10028"}
+[debug] [2019-10-30T19:50:04.134Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\10028"}
+[debug] [2019-10-30T19:50:04.171Z] [runtime-status] Ephemeral server used! {}
+[info] >  TAEZA69 0 Animal
+[debug] [2019-10-30T19:50:04.186Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "spellingBee" in ~2s
+[debug] [2019-10-30T19:50:51.418Z] File C:\Users\Tanawat Chanhom\Desktop\Work\QuizTime\functions\src\controller\SpellingBeeController.js changed, reloading triggers
+[debug] [2019-10-30T19:50:51.586Z] File C:\Users\Tanawat Chanhom\Desktop\Work\QuizTime\functions\src\controller\SpellingBeeController.js changed, reloading triggers
+[debug] [2019-10-30T19:50:51.740Z] File C:\Users\Tanawat Chanhom\Desktop\Work\QuizTime\functions\src\controller\SpellingBeeController.js changed, reloading triggers
+[debug] [2019-10-30T19:50:53.612Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[debug] [2019-10-30T19:50:53.612Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-30T19:50:53.617Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-30T19:50:53.619Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:50:53.620Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:51:21.629Z] Accepted request OPTIONS /itec-websession/us-central1/spellingBee/record --> spellingBee
+[debug] [2019-10-30T19:51:22.172Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "spellingBee"
+[debug] [2019-10-30T19:51:22.173Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-30T19:51:22.178Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-30T19:51:22.181Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:51:22.182Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:51:22.599Z] [runtime-status] Trigger "spellingBee" has been found, beginning invocation! {}
+[debug] [2019-10-30T19:51:22.599Z] [runtime-status]  {"httpsTrigger":{},"name":"spellingBee","entryPoint":"spellingBee"}
+[debug] [2019-10-30T19:51:22.599Z] [runtime-status] Running spellingBee in mode HTTPS {}
+[debug] [2019-10-30T19:51:22.612Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\1076"}
+[debug] [2019-10-30T19:51:22.614Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\1076"}
+[debug] [2019-10-30T19:51:22.631Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-30T19:51:22.639Z] [runtime-status] Ephemeral server survived. {}
+[debug] [2019-10-30T19:51:22.640Z] Accepted request POST /itec-websession/us-central1/spellingBee/record --> spellingBee
+[info] i  functions: Finished "spellingBee" in ~1s
+[debug] [2019-10-30T19:51:23.168Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "spellingBee"
+[debug] [2019-10-30T19:51:23.169Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-30T19:51:23.175Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-30T19:51:23.177Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:51:23.178Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:51:23.588Z] [runtime-status] Trigger "spellingBee" has been found, beginning invocation! {}
+[debug] [2019-10-30T19:51:23.588Z] [runtime-status]  {"httpsTrigger":{},"name":"spellingBee","entryPoint":"spellingBee"}
+[debug] [2019-10-30T19:51:23.588Z] [runtime-status] Running spellingBee in mode HTTPS {}
+[debug] [2019-10-30T19:51:23.597Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\7672"}
+[debug] [2019-10-30T19:51:23.599Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\7672"}
+[debug] [2019-10-30T19:51:23.638Z] [runtime-status] Ephemeral server used! {}
+[info] >  taeza69 100 Animal
+[debug] [2019-10-30T19:51:23.650Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "spellingBee" in ~1s
+[debug] [2019-10-30T19:51:46.740Z] File C:\Users\Tanawat Chanhom\Desktop\Work\QuizTime\functions\src\controller\SpellingBeeController.js changed, reloading triggers
+[debug] [2019-10-30T19:51:46.904Z] File C:\Users\Tanawat Chanhom\Desktop\Work\QuizTime\functions\src\controller\SpellingBeeController.js changed, reloading triggers
+[debug] [2019-10-30T19:51:48.673Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[debug] [2019-10-30T19:51:48.673Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-30T19:51:48.678Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-10-30T19:51:48.680Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-10-30T19:51:48.681Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}

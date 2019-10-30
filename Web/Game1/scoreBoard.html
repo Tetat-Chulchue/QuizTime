@@ -173,19 +173,26 @@
             })
             .then(data => {
                 leader = data.data;
-                console.log(leader);
                 render(categoryName)
 
             })
             .catch(err => {
                 console.log(err);
+                error_text.innerHTML = err;
             });
         }
 
         function render(categoryName) {
             if (table.rows.length > 1 && leader != [] && table.rows.length != 2 ) {
-                for (let i = 1; i <= table.rows.length+1; i++) {
+                refresh()
+                function refresh() {
                     table.deleteRow(1);
+                    if (table.rows.length >= 2 && refresh() != false) {
+                        console.log('tse');
+                        refresh()
+                    } else {
+                        return false;
+                    }
                 }
                 counter = 1;
             } else if (table.rows.length == 2 && leader != []) {
