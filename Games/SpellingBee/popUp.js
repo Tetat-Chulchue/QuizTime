@@ -2,7 +2,7 @@ function pushData(name, score, category) {
     console.log(name, score, category);
     axios({
         method: 'POST',
-        url: 'http://localhost:5001/itec-websession/us-central1/spellingBee/record',
+        url: 'https://us-central1-itec-websession.cloudfunctions.net/spellingBee/record',
         data: {
             user: name,
             score: score,
