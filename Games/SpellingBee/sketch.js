@@ -24,6 +24,8 @@ let category;               // for testing purpose, pls remove this line when im
 let correctSound;           // Store correct sfx
 let wrongSound;             // Store worng sfx
 let path;
+let font;
+let stack = 0;
 
 // ------------- P5's Function ---------------
 
@@ -36,6 +38,7 @@ function preload() {
     vocabularyObj = loadJSON(url);
     correctSound = loadSound('./asset/correct.wav')
     wrongSound = loadSound('./asset/wrong.wav')
+    font = loadFont('./asset/Kanit-ExtraLight.ttf');
 }
 
 function setup() {
@@ -44,22 +47,24 @@ function setup() {
     vocabulary = Object.values(vocabularyObj);
     vocabularyKey = Object.keys(vocabularyObj);
     vocabularyLength = vocabulary.length - 1;
-    textStyle(BOLD);
     randomWord();
     createCanvas(windowWidth, windowHeight);
-}
 
+}
+'Life : ' + life
 function draw() {
-    background(color(150, 100, 255));
-    fill(255, 255, 0);
+    background(color(0,212,255));
+    fill(255,255,255);
     textSize(50);
     textAlign(RIGHT);
     text('Score: ' + score, 0, 0, windowWidth, windowHeight * (1 / 12));
+    text('Life : ' + life, 0, 50, windowWidth, windowHeight * (1 / 12));
     textSize(128);
     textAlign(CENTER, CENTER);
     text(word, 0, 0, windowWidth, windowHeight / 2); // word display
+    textSize(110);
+    textFont(font);
     text(placeholder, 0, windowHeight / 2, windowWidth, windowHeight / 2); // display answer
-
 }
 
 function keyPressed() {
@@ -104,9 +109,12 @@ function answerPlaceholder() {
 function submit() {
     if (checkAnswer === ans) {
         correctSound.play();
+        score += stack * 100;
         score += 100;
+        stack += 1
     } else {
         wrongSound.play();
+        stack = 0;
         life -= 1
         if (life <= 0) {
             endGame()
