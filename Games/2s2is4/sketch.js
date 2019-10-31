@@ -12,7 +12,7 @@ let wrongSound;
 
 // ------------- P5's Function ---------------
 function preload() {
-    let url = 'Question.json';
+    let url = './Question/set_1.json';
     questionObj = loadJSON(url);
     correctSound = loadSound('./asset/correct.wav');
     wrongSound = loadSound('./asset/wrong.wav');
