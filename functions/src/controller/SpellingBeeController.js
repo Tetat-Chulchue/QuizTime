@@ -43,7 +43,7 @@ spellingBee.get('/scoreboard/:category', async (req,res) => {
         () => {
             res.sendStatus(404);
         });
-        _.mapValues(_.invert(_.invert(scoreboard)),parseInt); // sort object by values
+        // TODO: Sort Object
         res.send(scoreboard);
     } catch (e) {
         console.log(e);

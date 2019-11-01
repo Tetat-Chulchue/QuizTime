@@ -8,27 +8,16 @@ const _ = require('lodash');
 // setup
 
 const firestore = admin.firestore();
-const speedtyping = express();
+const speedTyping = express();
+const batch = firestore.batch();
 
-speedtyping.use(cors({ origin: true}));
+speedTyping.use(cors({ origin: true}));
 
-speedtyping.post('/record', async (req, res) => {
+speedTyping.post('/record', async (req, res) => {
     try {
-        let {user01, wordPM} = req.body;
-        let wpmDoc = firestore.collection('speedtyping').doc('wordPerMinute');
-        let {user02, accuracy} = req.body;//ระเบิดแน่ๆ
-        let accDoc = firestore.collection('speedtyping').doc('Accuracy');
-        let payloadPM = {};
-        let payloadAC = {};
-        payloadPM[user01.toLowerCase()] = wordPM;
-        payloadAC[user02.toLowerCase()] = accuracy;
-        await wpmDoc.set(payloadPM, {merge: true}).then(() => {
-            res.sendStatus(200);
-        },
-        () => {
-            res.sendStatus(400);
-        });
-        await accDoc.set(payloadAC, {merge: true}).then(() => {
+        let {user, wpm, accuracy} = req.body;
+        let wpmRef = firestore.collection('SpeedTyping').doc(user.toLowerCase());
+        wpmRef.set({ 'wpm': wpm, 'accuracy': accuracy}, {merge: true}).then(() => {
             res.sendStatus(200);
         },
         () => {
@@ -42,38 +31,32 @@ speedtyping.post('/record', async (req, res) => {
 
 })
 
-speedtyping.get('/scoreboard/wordperminute', async (req,res) => {
+speedTyping.get('/scoreboard/wordperminute', async (req,res) => {
     try {
-        let reference = firestore.collection('speedtyping').doc('wordPerMinute');
-        let scoreboard = await reference.get().then((snapshot) => {
-            return snapshot.data();
-        },
-        () => {
-            res.sendStatus(404);
-        });
-        _.mapValues(_.invert(_.invert(scoreboard)),parseInt);
-        res.send(scoreboard);
+        let dataArray = [];
+        let reference = firestore.collection('SpeedTyping').orderBy('wpm').limit(10);
+        reference.get().then((snapshot) => {
+            snapshot.forEach((doc) => {
+                let data = doc.data();
+                console.log(doc.data());
+                dataArray.push(data['wpm']);
+            })
+        })
+        res.send(dataArray);
     } catch (e) {
         console.log(e);
         res.sendStatus(500)
     }
 })
 
-speedtyping.get('/scoreboard/accuracy', async (req,res) => {
+speedTyping.get('/scoreboard/accuracy', async (req,res) => {
     try {
-        let reference = firestore.collection('speedtyping').doc('Accuracy');
-        let scoreboard = await reference.get().then((snapshot) => {
-            return snapshot.data();
-        },
-        () => {
-            res.sendStatus(404);
-        });
-        _.mapValues(_.invert(_.invert(scoreboard)),parseInt);
-        res.send(scoreboard);
+        let reference = firestore.collection('SpeedTyping').orderBy('accuracy').limit(10);
+
     } catch (e) {
         console.log(e);
         res.sendStatus(500)
     }
 })
 
-module.exports = speedtyping;
+module.exports = speedTyping;

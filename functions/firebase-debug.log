@@ -1,0 +1,124 @@
+[debug] [2019-11-01T03:18:45.083Z] ----------------------------------------------------------------------
+[debug] [2019-11-01T03:18:45.093Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js serve --port 5001 --only functions
+[debug] [2019-11-01T03:18:45.093Z] CLI Version:   7.6.1
+[debug] [2019-11-01T03:18:45.093Z] Platform:      win32
+[debug] [2019-11-01T03:18:45.093Z] Node Version:  v12.9.1
+[debug] [2019-11-01T03:18:45.111Z] Time:          Fri Nov 01 2019 10:18:45 GMT+0700 (Indochina Time)
+[debug] [2019-11-01T03:18:45.111Z] ----------------------------------------------------------------------
+[debug] [2019-11-01T03:18:45.111Z] 
+[debug] [2019-11-01T03:18:45.169Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-01T03:18:45.170Z] > authorizing via signed-in user
+[debug] [2019-11-01T03:18:45.170Z] [iam] checking project itec-websession for permissions ["firebase.projects.get"]
+[debug] [2019-11-01T03:18:45.174Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/itec-websession:testIamPermissions  
+
+[debug] [2019-11-01T03:18:46.613Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-01T03:18:46.618Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/itec-websession  
+ 
+[debug] [2019-11-01T03:18:47.094Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "12"
+[info] +  functions: Emulator started at http://localhost:5001
+[info] i  functions: Watching "C:\Users\JOBJAB\Desktop\Project\QuizTime\functions" for Cloud Functions...
+[debug] [2019-11-01T03:18:50.399Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions","node_version":"12.9.1"}
+[debug] [2019-11-01T03:18:50.399Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-01T03:18:50.406Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-01T03:18:50.424Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-01T03:18:50.426Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] +  functions[spellingBee]: http function initialized (http://localhost:5001/itec-websession/us-central1/spellingBee).
+[info] +  functions[speedTyping]: http function initialized (http://localhost:5001/itec-websession/us-central1/speedTyping).
+[debug] [2019-11-01T03:19:27.736Z] File C:\Users\JOBJAB\Desktop\Project\QuizTime\functions\src\controller\SpeedTypingController.js changed, reloading triggers
+[debug] [2019-11-01T03:19:29.735Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions","node_version":"12.9.1"}
+[debug] [2019-11-01T03:19:29.735Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-01T03:19:29.740Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-01T03:19:29.744Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-01T03:19:29.745Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-01T03:19:53.389Z] File C:\Users\JOBJAB\Desktop\Project\QuizTime\functions\src\controller\SpeedTypingController.js changed, reloading triggers
+[debug] [2019-11-01T03:19:55.528Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions","node_version":"12.9.1"}
+[debug] [2019-11-01T03:19:55.528Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-01T03:19:55.536Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-01T03:19:55.541Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-01T03:19:55.543Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-01T03:19:57.590Z] Accepted request GET /itec-websession/us-central1/speedTyping/scoreboard/wordperminute --> speedTyping
+[debug] [2019-11-01T03:19:58.163Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions","node_version":"12.9.1"}
+[info] i  functions: Beginning execution of "speedTyping"
+[debug] [2019-11-01T03:19:58.169Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-01T03:19:58.169Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-01T03:19:58.172Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-01T03:19:58.174Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-01T03:19:58.577Z] [runtime-status] Trigger "speedTyping" has been found, beginning invocation! {}
+[debug] [2019-11-01T03:19:58.577Z] [runtime-status]  {"httpsTrigger":{},"name":"speedTyping","entryPoint":"speedTyping"}
+[debug] [2019-11-01T03:19:58.577Z] [runtime-status] Running speedTyping in mode HTTPS {}
+[debug] [2019-11-01T03:19:58.589Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\8200"}
+[debug] [2019-11-01T03:19:58.596Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\8200"}
+[debug] [2019-11-01T03:19:58.614Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-01T03:19:59.434Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "speedTyping" in ~1s
+[debug] [2019-11-01T03:20:18.818Z] File C:\Users\JOBJAB\Desktop\Project\QuizTime\functions\src\controller\SpeedTypingController.js changed, reloading triggers
+[debug] [2019-11-01T03:20:20.642Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions","node_version":"12.9.1"}
+[debug] [2019-11-01T03:20:20.642Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-01T03:20:20.649Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-01T03:20:20.662Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-01T03:20:20.664Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-01T03:20:23.145Z] Accepted request GET /itec-websession/us-central1/speedTyping/scoreboard/wordperminute --> speedTyping
+[debug] [2019-11-01T03:20:23.608Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions","node_version":"12.9.1"}
+[info] i  functions: Beginning execution of "speedTyping"
+[debug] [2019-11-01T03:20:23.608Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-01T03:20:23.612Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-01T03:20:23.615Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-01T03:20:23.617Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-01T03:20:24.007Z] [runtime-status] Trigger "speedTyping" has been found, beginning invocation! {}
+[debug] [2019-11-01T03:20:24.007Z] [runtime-status]  {"httpsTrigger":{},"name":"speedTyping","entryPoint":"speedTyping"}
+[debug] [2019-11-01T03:20:24.007Z] [runtime-status] Running speedTyping in mode HTTPS {}
+[debug] [2019-11-01T03:20:24.019Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\1140"}
+[debug] [2019-11-01T03:20:24.021Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\1140"}
+[debug] [2019-11-01T03:20:24.036Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-01T03:20:24.713Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "speedTyping" in ~1s
+[debug] [2019-11-01T03:20:30.256Z] File C:\Users\JOBJAB\Desktop\Project\QuizTime\functions\src\controller\SpeedTypingController.js changed, reloading triggers
+[debug] [2019-11-01T03:20:30.343Z] File C:\Users\JOBJAB\Desktop\Project\QuizTime\functions\src\controller\SpeedTypingController.js changed, reloading triggers
+[debug] [2019-11-01T03:20:32.215Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions","node_version":"12.9.1"}
+[debug] [2019-11-01T03:20:32.215Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-01T03:20:32.220Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-01T03:20:32.222Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-01T03:20:32.225Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-01T03:20:33.741Z] Accepted request GET /itec-websession/us-central1/speedTyping/scoreboard/wordperminute --> speedTyping
+[debug] [2019-11-01T03:20:34.392Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions","node_version":"12.9.1"}
+[info] i  functions: Beginning execution of "speedTyping"
+[debug] [2019-11-01T03:20:34.393Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-01T03:20:34.397Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-01T03:20:34.400Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-01T03:20:34.402Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-01T03:20:34.769Z] [runtime-status] Trigger "speedTyping" has been found, beginning invocation! {}
+[debug] [2019-11-01T03:20:34.769Z] [runtime-status]  {"httpsTrigger":{},"name":"speedTyping","entryPoint":"speedTyping"}
+[debug] [2019-11-01T03:20:34.769Z] [runtime-status] Running speedTyping in mode HTTPS {}
+[debug] [2019-11-01T03:20:34.779Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\13920"}
+[debug] [2019-11-01T03:20:34.780Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\13920"}
+[debug] [2019-11-01T03:20:34.795Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-01T03:20:35.381Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "speedTyping" in ~1s
+[debug] [2019-11-01T03:21:00.528Z] File C:\Users\JOBJAB\Desktop\Project\QuizTime\functions\src\controller\SpeedTypingController.js changed, reloading triggers
+[debug] [2019-11-01T03:21:02.262Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions","node_version":"12.9.1"}
+[debug] [2019-11-01T03:21:02.263Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-01T03:21:02.267Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-01T03:21:02.272Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-01T03:21:02.273Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-01T03:21:13.077Z] Accepted request GET /itec-websession/us-central1/speedTyping/scoreboard/wordperminute --> speedTyping
+[debug] [2019-11-01T03:21:13.980Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions","node_version":"12.9.1"}
+[info] i  functions: Beginning execution of "speedTyping"
+[debug] [2019-11-01T03:21:13.981Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-01T03:21:13.984Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-01T03:21:13.988Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-01T03:21:13.991Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-01T03:21:14.361Z] [runtime-status] Trigger "speedTyping" has been found, beginning invocation! {}
+[debug] [2019-11-01T03:21:14.362Z] [runtime-status]  {"httpsTrigger":{},"name":"speedTyping","entryPoint":"speedTyping"}
+[debug] [2019-11-01T03:21:14.362Z] [runtime-status] Running speedTyping in mode HTTPS {}
+[debug] [2019-11-01T03:21:14.385Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\15108"}
+[debug] [2019-11-01T03:21:14.387Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\15108"}
+[debug] [2019-11-01T03:21:14.399Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-01T03:21:15.029Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "speedTyping" in ~1s
+[debug] [2019-11-01T03:21:29.055Z] File C:\Users\JOBJAB\Desktop\Project\QuizTime\functions\src\controller\SpeedTypingController.js changed, reloading triggers
+[debug] [2019-11-01T03:21:31.357Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions","node_version":"12.9.1"}
+[debug] [2019-11-01T03:21:31.357Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-01T03:21:31.363Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-01T03:21:31.372Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-01T03:21:31.374Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\JOBJAB\\Desktop\\Project\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
