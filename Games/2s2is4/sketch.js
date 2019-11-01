@@ -8,14 +8,22 @@ let score = 0;
 let count = 0;
 let correctSound;
 let wrongSound;
+let path;
+let setQuestion;
+let font;
 // -------------------------------------------
 
 // ------------- P5's Function ---------------
 function preload() {
-    let url = './Question/set_1.json';
+    path = window.location.search
+    setQuestion = path.split('=')[1]
+    setQuestion = _.capitalize(setQuestion);
+    console.log(setQuestion)
+    let url = './Question/' + setQuestion + '.json';
     questionObj = loadJSON(url);
     correctSound = loadSound('./asset/correct.wav');
     wrongSound = loadSound('./asset/wrong.wav');
+    font = loadFont('./asset/Kanit-ExtraLight.ttf');
 }
 
 function setup() {
@@ -40,8 +48,8 @@ function setup() {
     button_4 = createButton(questionObj[question][0].choice[3]);
     button_4.mousePressed(check_3);
 
-    fill(0);
-    textStyle(BOLD);
+    fill(255,255,255);
+    textFont(font);
     textAlign(CENTER, CENTER);
 }
 
@@ -68,29 +76,37 @@ function draw() {
         text(question, windowWidth / 2, (windowHeight / 2) / 2);
     }
 
-    button_1.position(0, windowHeight / 2);
-    button_1.style('background-color', '#ff4d4d');
+    button_1.position(10, windowHeight / 2);
+    button_1.style('background-color', '#f0134d');
+    button_1.style('color', '#ffffff');
     button_1.style('font-size', '55px');
-    button_1.style('font-weight', 'bold');
-    button_1.size(windowWidth / 2, (windowHeight / 2) / 2);
+    button_1.style('font-family', 'myFirstFont');
+    button_1.style('border', 'none');
+    button_1.size((windowWidth / 2) - 20, ((windowHeight / 2) / 2) - 10);
 
-    button_2.position(windowWidth / 2, windowHeight / 2);
-    button_2.style('background-color', '#00ff00');
+    button_2.position((windowWidth / 2) + 10, windowHeight / 2);
+    button_2.style('background-color', '#3e64ff');
+    button_2.style('color', '#ffffff');
     button_2.style('font-size', '55px');
-    button_2.style('font-weight', 'bold');
-    button_2.size(windowWidth / 2, (windowHeight / 2) / 2);
+    button_2.style('font-family', 'myFirstFont');
+    button_2.style('border', 'none');
+    button_2.size((windowWidth / 2) - 20, ((windowHeight / 2) / 2) - 10);
 
-    button_3.position(0, (windowHeight * 1.5) / 2);
-    button_3.style('background-color', '#ffff00');
+    button_3.position(10, (windowHeight * 1.5) / 2);
+    button_3.style('background-color', '#ffd369');
+    button_3.style('color', '#ffffff');
     button_3.style('font-size', '55px');
-    button_3.style('font-weight', 'bold');
-    button_3.size(windowWidth / 2, (windowHeight / 2) / 2);
+    button_3.style('font-family', 'myFirstFont');
+    button_3.style('border', 'none');
+    button_3.size((windowWidth / 2) - 20, ((windowHeight / 2) / 2) - 10);
 
-    button_4.position(windowWidth / 2, (windowHeight * 1.5) / 2);
-    button_4.style('background-color', '#6666ff');
+    button_4.position((windowWidth / 2) + 10, (windowHeight * 1.5) / 2);
+    button_4.style('background-color', '#5eb7b7');
+    button_4.style('color', '#ffffff');
     button_4.style('font-size', '55px');
-    button_4.style('font-weight', 'bold');
-    button_4.size(windowWidth / 2, (windowHeight / 2) / 2);
+    button_4.style('font-family', 'myFirstFont');
+    button_4.style('border', 'none');
+    button_4.size((windowWidth / 2) - 20, ((windowHeight / 2) / 2) - 10);
 }
 // -------------------------------------------
 
