@@ -1,5 +1,5 @@
 {
-    "carrer":"อาชีพ",
+    "career":"อาชีพ",
     "doctor":"หมอ",
     "student":"นักเรียน",
     "teacher":"ครู",
@@ -12,7 +12,7 @@
     "actress":"นักแสดงหญิง",
     "writer":"นักเขียน",
     "pilot":"นักบิน",
-    "photographer":"ช่างถ่ายรูป",
+    "photographer":"ช่างภาพ",
     "engineer":"วิศวกร",
     "architect":"สถาปนิก",
     "accountant":"นักบัญชี",

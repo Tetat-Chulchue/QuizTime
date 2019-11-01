@@ -5,7 +5,7 @@
     "bookstore":"ร้านหนังสือ",
     "cinema":"โรงหนัง",
     "college":"วิทยาลัย",
-    "department store":"ห้างสรรพสินค้า",
+    "store":"ร้านค้า",
     "hospital":"โรงพยาบาล",
     "library":"ห้องสมุด",
     "market":"ตลาด",
@@ -17,6 +17,6 @@
     "temple":"วัด",
     "church":"โบสถ์",
     "zoo":"สวนสัตว์",
-    "post office":"ไปรษณีย์",
-    "police station":"สถานีตำรวจ"
+    "office":"สำนักงาน",
+    "station":"สถานี"
 }

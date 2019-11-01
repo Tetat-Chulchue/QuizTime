@@ -12,11 +12,11 @@
     "bus":"รถบัส",
     "car":"รถยนต์",
     "carriage":"รถม้า",
-    "caravan":"รถพ่วง",
-    "racing car":"รถแข่ง",
-    "electric train":"รถไฟฟ้า",
-    "sail boat":"เรือใบ",
-    "fishing boat":"เรือประมง",
+    "trailer":"รถพ่วง",
+    "ambulance":"รถพยาบาล",
+    "tractor":"รถแทรกเตอร์",
+    "submarine":"เรือดำน้ำ",
+    "warship":"เรือรบ",
     "taxi":"แท็กซี่",
     "subway":"รถไฟใต้ดิน"
 }

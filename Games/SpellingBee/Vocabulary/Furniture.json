@@ -7,7 +7,7 @@
     "television":"โทรทัศน์",
     "bed":"เตียงนอน",
     "blanket":"ผ้าห่ม",
-    "curtain":"ผ้าม่าน",
+    "curtain":"ม่าน",
     "pillow":"หมอน",
     "wardrobe":"ตู้เสื้อผ้า",
     "table":"โต๊ะ",
@@ -18,5 +18,5 @@
     "radio":"วิทยุ",
     "carpet":"พรม",
     "washing machine":"เครื่องซักผ้า",
-    "cupboard":"ตู้ถ้วยชาม"
+    "cupboard":"ตู้"
 }

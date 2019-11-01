@@ -17,8 +17,6 @@ let font;
 function preload() {
     path = window.location.search
     setQuestion = path.split('=')[1]
-    setQuestion = _.capitalize(setQuestion);
-    console.log(setQuestion)
     let url = './Question/' + setQuestion + '.json';
     questionObj = loadJSON(url);
     correctSound = loadSound('./asset/correct.wav');
@@ -117,7 +115,7 @@ function randomQuestion() {
 }
 
 function check_0() {
-    if (questionObj[question][0].choice[0] === questionObj[question][1].chack) {
+    if (questionObj[question][0].choice[0] === questionObj[question][1].check) {
         score += 10;
         correctSound.play();
     } else {
@@ -134,7 +132,7 @@ function check_0() {
 }
 
 function check_1() {
-    if (questionObj[question][0].choice[1] === questionObj[question][1].chack) {
+    if (questionObj[question][0].choice[1] === questionObj[question][1].check) {
         score += 10;
         correctSound.play();
     } else {
@@ -151,7 +149,7 @@ function check_1() {
 }
 
 function check_2() {
-    if (questionObj[question][0].choice[2] === questionObj[question][1].chack) {
+    if (questionObj[question][0].choice[2] === questionObj[question][1].check) {
         score += 10;
         correctSound.play();
     } else {
@@ -168,7 +166,7 @@ function check_2() {
 }
 
 function check_3() {
-    if (questionObj[question][0].choice[3] === questionObj[question][1].chack) {
+    if (questionObj[question][0].choice[3] === questionObj[question][1].check) {
         score += 10;
         correctSound.play();
     } else {
