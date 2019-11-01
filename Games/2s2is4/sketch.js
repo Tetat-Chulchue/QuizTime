@@ -76,13 +76,13 @@ function draw() {
         text(question, windowWidth / 2, (windowHeight / 2) / 2);
     }
 
-    button_1.position(10, windowHeight / 2);
+    button_1.position(15, windowHeight / 2);
     button_1.style('background-color', '#f0134d');
     button_1.style('color', '#ffffff');
     button_1.style('font-size', '55px');
     button_1.style('font-family', 'myFirstFont');
     button_1.style('border', 'none');
-    button_1.size((windowWidth / 2) - 20, ((windowHeight / 2) / 2) - 10);
+    button_1.size((windowWidth / 2) - 25, ((windowHeight / 2) / 2) - 15);
 
     button_2.position((windowWidth / 2) + 10, windowHeight / 2);
     button_2.style('background-color', '#3e64ff');
@@ -90,15 +90,15 @@ function draw() {
     button_2.style('font-size', '55px');
     button_2.style('font-family', 'myFirstFont');
     button_2.style('border', 'none');
-    button_2.size((windowWidth / 2) - 20, ((windowHeight / 2) / 2) - 10);
+    button_2.size((windowWidth / 2) - 25, ((windowHeight / 2) / 2) - 15);
 
-    button_3.position(10, (windowHeight * 1.5) / 2);
+    button_3.position(15, (windowHeight * 1.5) / 2);
     button_3.style('background-color', '#ffd369');
     button_3.style('color', '#ffffff');
     button_3.style('font-size', '55px');
     button_3.style('font-family', 'myFirstFont');
     button_3.style('border', 'none');
-    button_3.size((windowWidth / 2) - 20, ((windowHeight / 2) / 2) - 10);
+    button_3.size((windowWidth / 2) - 25, ((windowHeight / 2) / 2) - 15);
 
     button_4.position((windowWidth / 2) + 10, (windowHeight * 1.5) / 2);
     button_4.style('background-color', '#5eb7b7');
@@ -106,7 +106,7 @@ function draw() {
     button_4.style('font-size', '55px');
     button_4.style('font-family', 'myFirstFont');
     button_4.style('border', 'none');
-    button_4.size((windowWidth / 2) - 20, ((windowHeight / 2) / 2) - 10);
+    button_4.size((windowWidth / 2) - 25, ((windowHeight / 2) / 2) - 15);
 }
 // -------------------------------------------
 
