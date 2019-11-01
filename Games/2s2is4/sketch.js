@@ -48,7 +48,7 @@ function setup() {
 function draw() {
     resizeCanvas(windowWidth, windowHeight);
 
-    background(155);
+    background(165, 42, 42);
 
     if (life === 0 || count === 10) {
         button_1.remove();
