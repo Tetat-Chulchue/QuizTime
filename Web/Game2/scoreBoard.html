@@ -108,17 +108,16 @@
                         <p id="res-error"></p>
                     </div>
                     <select id="category" name="category" class="filter-box" style="right: 0; padding-left: 10px;" onchange="preloader()">
-                        <option value="animal">Animal</option>
-                        <option value="food">Food</option>
-                        <option value="furniture">Furniture</option>
-                        <option value="job">Job</option>
-                        <option value="nature">Nature</option>
-                        <option value="place">Place</option>
-                        <option value="sport">Sport</option>
-                        <option value="subject">Subject</option>
-                        <option value="time">Time</option>
-                        <option value="vegetable">Vegetable</option>
-                        <option value="vehicle">Vehicle</option>
+                        <option value="set_1">ชุดที่ 1</option>
+                        <option value="set_2">ชุดที่ 2</option>
+                        <option value="set_3">ชุดที่ 3</option>
+                        <option value="set_4">ชุดที่ 4</option>
+                        <option value="set_5">ชุดที่ 5</option>
+                        <option value="set_6">ชุดที่ 6</option>
+                        <option value="set_7">ชุดที่ 7</option>
+                        <option value="set_8">ชุดที่ 8</option>
+                        <option value="set_9">ชุดที่ 9</option>
+                        <option value="set_10">ชุดที่ 10</option>
                     </select>
                 </div>
                 <table id="mytable" >
@@ -164,16 +163,16 @@
         let tbody = document.createElement('tbody');
 
         function preloader() {
-            categoryName = document.getElementById('category').value;
+            quizNumber = document.getElementById('category').value;
             document.getElementById("fliterImgLoader").style.visibility = "unset";
             error_text.innerHTML = "";
             axios({
                 method: "GET",
-                url: "https://us-central1-itec-websession.cloudfunctions.net/spellingBee/scoreboard/"+categoryName
+                url: "https://us-central1-itec-websession.cloudfunctions.net/spellingBee/scoreboard/"+quizNumber
             })
             .then(data => {
                 leader = data.data;
-                render(categoryName)
+                render(quizNumber)
 
             })
             .catch(err => {
