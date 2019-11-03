@@ -7,3 +7,30 @@
     font-family: myFirstFont;
     src: url(./asset/Kanit-ExtraLight.ttf);
 }
+
+/* ----------------Sweet alert---------------- */
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    border-color: #dc3545;
+    border-radius: .25em;
+    color: #fff;
+    font-size: 1.0625em;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    font-size: 1.0625em;
+    border: none;
+    color: #fff;
+    border-radius: .25em;
+}
+
+.btn {
+    margin: 10px;
+    padding: 10px;
+}
+
+/* ----------------Sweet alert---------------- */
