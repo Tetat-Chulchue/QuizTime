@@ -1,3 +1,7 @@
+.box-right {
+    display: unset;
+}
+
 .infor-box h2 {
     background-color: rgba(109, 193, 226, 0.562);
     padding: 20px;
@@ -9,7 +13,7 @@
     position: relative;
     width: 100%;
     /* height: 1200px; */
-    margin: 10px;
+    /* margin: 10px; */
     padding: 10px;
     /* background-color: rgba(95, 158, 160, 0.418); */
     border-radius: 0.5em;
@@ -35,9 +39,9 @@
 
 .choice-game-container {
     position: relative;
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
-    background-color: blue;
+    /* background-color: blue; */
     /* display: flex; */
     padding: 10px;
     /* flex-wrap: wrap;
@@ -49,15 +53,21 @@
     width: auto;
     min-width: 200px;
     height: 5%;
-    background-color: chartreuse;
+    background-color: rgb(86, 238, 243);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 10px;
-    padding: 5px;
+    padding: 0px 5px 0px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: 0.5s;
+    border-radius: 100em;
+}
+
+.choice-to-game:hover {
+    height: 7%;
 }
 
 .choice-to-game img {
@@ -68,8 +78,18 @@
     font-size: 2vmin;
 }
 
-.choice-star p {
-    font-size: 2vmin;
+.choice-star {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    /* background-color: black; */
+}
+
+.choice-star img {
+    width: 12%;
+    height: 60%;
 }
 
 .choice-btn {
