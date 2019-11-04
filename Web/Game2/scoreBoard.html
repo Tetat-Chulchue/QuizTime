@@ -107,7 +107,7 @@
                         <img src="../assets/loader.gif" alt="" id="fliterImgLoader">
                         <p id="res-error"></p>
                     </div>
-                    <select id="category" name="category" class="filter-box" style="right: 0; padding-left: 10px;" onchange="preloader()">
+                    <select id="setNumber" name="setNumber" class="filter-box" style="right: 0; padding-left: 10px;" onchange="preloader()">
                         <option value="set_1">ชุดที่ 1</option>
                         <option value="set_2">ชุดที่ 2</option>
                         <option value="set_3">ชุดที่ 3</option>
@@ -163,7 +163,7 @@
         let tbody = document.createElement('tbody');
 
         function preloader() {
-            quizNumber = document.getElementById('category').value;
+            quizNumber = document.getElementById('setNumber').value;
             document.getElementById("fliterImgLoader").style.visibility = "unset";
             error_text.innerHTML = "";
             axios({
@@ -216,7 +216,7 @@
         }
 
         window.onload = async () => {
-            await preloader();
+            // await preloader();
         }
     </script>
 </body>
