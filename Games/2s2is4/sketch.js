@@ -5,7 +5,6 @@ let questionObj;
 let questionIndex;
 let life = 3;
 let score = 0;
-let count = 0;
 let correctSound;
 let wrongSound;
 let path;
@@ -28,23 +27,27 @@ function setup() {
     let cnv = createCanvas(windowWidth, windowHeight);
     cnv.style('display', 'block');
 
-    if (count === 0) {
+    if (life === 3) {
         questionKey = Object.keys(questionObj);
     }
 
     randomQuestion();
 
-    button_1 = createButton(questionObj[question][0].choice[0]);
-    button_1.mousePressed(check_0);
+    button_1 = createButton(questionObj[question][0].choice[0], '0');
+    button_1.id('button_1');
+    button_1.mousePressed(check);
 
-    button_2 = createButton(questionObj[question][0].choice[1]);
-    button_2.mousePressed(check_1);
+    button_2 = createButton(questionObj[question][0].choice[1], '1');
+    button_2.id('button_2');
+    button_2.mousePressed(check);
 
-    button_3 = createButton(questionObj[question][0].choice[2]);
-    button_3.mousePressed(check_2);
+    button_3 = createButton(questionObj[question][0].choice[2], '2');
+    button_3.id('button_3');
+    button_3.mousePressed(check);
 
-    button_4 = createButton(questionObj[question][0].choice[3]);
-    button_4.mousePressed(check_3);
+    button_4 = createButton(questionObj[question][0].choice[3], '3');
+    button_4.id('button_4');
+    button_4.mousePressed(check);
 
     fill(255,255,255);
     textFont(font);
@@ -56,7 +59,7 @@ function draw() {
 
     background(0,212,255);
 
-    if (life === 0 || count === 10) {
+    if (life <= 0 || questionKey.length === 0) {
         button_1.remove();
         button_2.remove();
         button_3.remove();
@@ -65,10 +68,14 @@ function draw() {
         textSize(60);
         text("Congratulations!", windowWidth / 2, (windowHeight / 2) - 100);
         text("Your score is : " + score, windowWidth / 2, (windowHeight / 2) + 100);
+        if (life === 0) {
+            life = -1;
+            sweetUI(score, setQuestion);
+        }
     } else {
         textSize(40);
-        text("Life : " + life, 90, 50);
-        text("Score : " + score, windowWidth - 120, 50);
+        text("Life : " + life, windowWidth - 90, 80);
+        text("Score : " + score, windowWidth - 110, 30);
 
         textSize(60);
         text(question, windowWidth / 2, (windowHeight / 2) / 2);
@@ -78,7 +85,7 @@ function draw() {
     button_1.style('background-color', '#f0134d');
     button_1.style('color', '#ffffff');
     button_1.style('font-size', '55px');
-    button_1.style('font-family', 'myFirstFont');
+    button_1.style('font-family', 'btn_Kanit-ExtraLight');
     button_1.style('border', 'none');
     button_1.size((windowWidth / 2) - 25, ((windowHeight / 2) / 2) - 15);
 
@@ -86,7 +93,7 @@ function draw() {
     button_2.style('background-color', '#3e64ff');
     button_2.style('color', '#ffffff');
     button_2.style('font-size', '55px');
-    button_2.style('font-family', 'myFirstFont');
+    button_2.style('font-family', 'btn_Kanit-ExtraLight');
     button_2.style('border', 'none');
     button_2.size((windowWidth / 2) - 25, ((windowHeight / 2) / 2) - 15);
 
@@ -94,7 +101,7 @@ function draw() {
     button_3.style('background-color', '#ffd369');
     button_3.style('color', '#ffffff');
     button_3.style('font-size', '55px');
-    button_3.style('font-family', 'myFirstFont');
+    button_3.style('font-family', 'btn_Kanit-ExtraLight');
     button_3.style('border', 'none');
     button_3.size((windowWidth / 2) - 25, ((windowHeight / 2) / 2) - 15);
 
@@ -102,7 +109,7 @@ function draw() {
     button_4.style('background-color', '#5eb7b7');
     button_4.style('color', '#ffffff');
     button_4.style('font-size', '55px');
-    button_4.style('font-family', 'myFirstFont');
+    button_4.style('font-family', 'btn_Kanit-ExtraLight');
     button_4.style('border', 'none');
     button_4.size((windowWidth / 2) - 25, ((windowHeight / 2) / 2) - 15);
 }
@@ -114,7 +121,7 @@ function randomQuestion() {
     question = questionKey[questionIndex];
 }
 
-function check_0() {
+function check() {
     if (questionObj[question][0].choice[0] === questionObj[question][1].check) {
         score += 10;
         correctSound.play();
@@ -122,13 +129,8 @@ function check_0() {
         life -= 1;
         wrongSound.play();
     }
-    count += 1;
-    questionKey.splice(questionIndex, 1);
-    button_1.remove();
-    button_2.remove();
-    button_3.remove();
-    button_4.remove();
-    setup();
+
+    del();
 }
 
 function check_1() {
@@ -137,15 +139,9 @@ function check_1() {
         correctSound.play();
     } else {
         life -= 1;
-        wrongSound.play();
+         wrongSound.play();
     }
-    count += 1;
-    questionKey.splice(questionIndex, 1);
-    button_1.remove();
-    button_2.remove();
-    button_3.remove();
-    button_4.remove();
-    setup();
+    del();
 }
 
 function check_2() {
@@ -156,13 +152,7 @@ function check_2() {
         life -= 1;
         wrongSound.play();
     }
-    count += 1;
-    questionKey.splice(questionIndex, 1);
-    button_1.remove();
-    button_2.remove();
-    button_3.remove();
-    button_4.remove();
-    setup();
+    del();
 }
 
 function check_3() {
@@ -173,7 +163,10 @@ function check_3() {
         life -= 1;
         wrongSound.play();
     }
-    count += 1;
+    del();
+}
+
+function del() {
     questionKey.splice(questionIndex, 1);
     button_1.remove();
     button_2.remove();
