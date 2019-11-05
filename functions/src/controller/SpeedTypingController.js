@@ -31,32 +31,19 @@ speedTyping.post('/record', async (req, res) => {
 
 })
 
-speedTyping.get('/scoreboard/wordperminute', async (req,res) => {
+speedTyping.get('/scoreboard', async (req,res) => {
     try {
-        let dataArray = [];
+        let dataOBJ = {};
         let reference = firestore.collection('SpeedTyping').orderBy('wpm').limit(10);
         reference.get().then((snapshot) => {
             snapshot.forEach((doc) => {
                 let data = doc.data();
-                console.log(doc.data());
-                dataArray.push(data['wpm']);
+                dataOBJ[doc.id] = data;
             })
         })
-        res.send(dataArray);
+        res.send(dataOBJ);
     } catch (e) {
         console.log(e);
         res.sendStatus(500)
     }
 })
-
-speedTyping.get('/scoreboard/accuracy', async (req,res) => {
-    try {
-        let reference = firestore.collection('SpeedTyping').orderBy('accuracy').limit(10);
-
-    } catch (e) {
-        console.log(e);
-        res.sendStatus(500)
-    }
-})
-
-module.exports = speedTyping;
