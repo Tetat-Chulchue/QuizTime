@@ -115,4 +115,5 @@ function endGame() {
     if(wordPM != 'It Time to STOP!!'){
         container2 = nf(wordPM, 1, 2);
     }
+    sweetUI(container2, container1);
 }
