@@ -1,12 +1,13 @@
 html {
     scroll-behavior: smooth;
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Kanit', sans-serif;
 }
 
 body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    user-select: none;
 }
 
 .case {
@@ -20,7 +21,7 @@ body {
 
 .sector {
     width: 100%;
-    height: 3000px;
+    height: 3490px;
 }
 
 .page {
@@ -71,6 +72,12 @@ body {
     animation-delay: 1s;
 }
 
+.link-page a img {
+    border: rgb(121, 121, 121) 2px solid;
+    border-radius: 100em;
+    padding: 5px;
+}
+
 @keyframes boxArrow {
     0% {
         right: -100px;
@@ -102,6 +109,10 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 1em;
+}
+
+.img-page:hover {
+    cursor: pointer;
 }
 
 .link-page a img {
