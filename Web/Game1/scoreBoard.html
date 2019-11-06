@@ -125,9 +125,9 @@
                     <thead>
                         <tr>
                             <th>No.</th>
-                            <th>ชื่อ</th>
-                            <th>หมวด</th>
-                            <th>คะแนน</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Score</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -173,6 +173,7 @@
             })
             .then(data => {
                 leader = data.data;
+                console.log(leader);
                 render(categoryName)
 
             })
@@ -188,7 +189,6 @@
                 function refresh() {
                     table.deleteRow(1);
                     if (table.rows.length >= 2 && refresh() != false) {
-                        console.log('tse');
                         refresh()
                     } else {
                         return false;
@@ -210,7 +210,7 @@
                 cell0.innerHTML = `<p>${counter++}</p>`;
                 cell1.innerHTML = `<p>${i}</p>`;
                 cell2.innerHTML = `<p>${categoryName}</p>`;
-                cell3.innerHTML = `<p>${leader[i]}</p>`;
+                cell3.innerHTML = `<p>${leader[i].score}</p>`;
                 table.append(tbody);
             }
             document.getElementById("fliterImgLoader").style.visibility = "hidden";

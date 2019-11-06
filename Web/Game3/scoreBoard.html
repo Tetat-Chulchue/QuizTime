@@ -169,7 +169,7 @@
             error_text.innerHTML = "";
             axios({
                 method: "GET",
-                url: "http://localhost:5001/itec-websession/us-central1/speedTyping/scoreboard"
+                url: "https://us-central1-itec-websession.cloudfunctions.net/speedTyping/scoreboard"
             })
             .then(data => {
                 keys = Object.keys(data.data);
@@ -185,7 +185,7 @@
         }
 
         function render() {
-            if (table.rows.length > 1 && keys != [] && table.rows.length != 2 ) {
+            if (table.rows.length > 1 && keys != {} && table.rows.length != 2 ) {
                 refresh()
                 function refresh() {
                     table.deleteRow(1);
@@ -196,10 +196,10 @@
                     }
                 }
                 counter = 1;
-            } else if (table.rows.length == 2 && keys != []) {
+            } else if (table.rows.length == 2 && keys != {}) {
                 table.deleteRow(-1);
                 counter = 1;
-            } else if (keys == []) {
+            } else if (keys == {}) {
                 error_text.innerHTML = "Not found!!";
             }
             for (const i in keys) {

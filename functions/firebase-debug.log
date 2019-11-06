@@ -1,0 +1,302 @@
+[debug] [2019-11-06T10:25:17.556Z] ----------------------------------------------------------------------
+[debug] [2019-11-06T10:25:17.563Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js serve --port 5001 --only functions
+[debug] [2019-11-06T10:25:17.564Z] CLI Version:   7.6.1
+[debug] [2019-11-06T10:25:17.564Z] Platform:      win32
+[debug] [2019-11-06T10:25:17.564Z] Node Version:  v11.7.0
+[debug] [2019-11-06T10:25:17.606Z] Time:          Wed Nov 06 2019 17:25:17 GMT+0700 (Indochina Time)
+[debug] [2019-11-06T10:25:17.607Z] ----------------------------------------------------------------------
+[debug] [2019-11-06T10:25:17.607Z] 
+[debug] [2019-11-06T10:25:17.663Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-06T10:25:17.664Z] > authorizing via signed-in user
+[debug] [2019-11-06T10:25:17.664Z] [iam] checking project itec-websession for permissions ["firebase.projects.get"]
+[debug] [2019-11-06T10:25:17.667Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-11-06T10:25:17.667Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-11-06T10:25:18.621Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-06T10:25:18.640Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/itec-websession:testIamPermissions  
+
+[debug] [2019-11-06T10:25:20.182Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-06T10:25:20.183Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/itec-websession  
+ 
+[debug] [2019-11-06T10:25:21.145Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "11"
+[info] +  functions: Emulator started at http://localhost:5001
+[info] i  functions: Watching "C:\Users\Tanawat Chanhom\Desktop\Work\QuizTime\functions" for Cloud Functions...
+[debug] [2019-11-06T10:25:25.002Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[debug] [2019-11-06T10:25:25.003Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-06T10:25:25.019Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-06T10:25:25.034Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:25:25.036Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] +  functions[spellingBee]: http function initialized (http://localhost:5001/itec-websession/us-central1/spellingBee).
+[info] +  functions[speedTyping]: http function initialized (http://localhost:5001/itec-websession/us-central1/speedTyping).
+[info] +  functions[MathGame]: http function initialized (http://localhost:5001/itec-websession/us-central1/MathGame).
+[debug] [2019-11-06T10:29:39.548Z] Accepted request GET /itec-websession/us-central1/MathGame/scoreboard/set_1 --> MathGame
+[debug] [2019-11-06T10:29:40.157Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "MathGame"
+[debug] [2019-11-06T10:29:40.158Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-06T10:29:40.165Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-06T10:29:40.167Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:29:40.169Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:29:40.644Z] [runtime-status] Trigger "MathGame" has been found, beginning invocation! {}
+[debug] [2019-11-06T10:29:40.644Z] [runtime-status]  {"httpsTrigger":{},"name":"MathGame","entryPoint":"MathGame"}
+[debug] [2019-11-06T10:29:40.644Z] [runtime-status] Running MathGame in mode HTTPS {}
+[debug] [2019-11-06T10:29:40.658Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\7456"}
+[debug] [2019-11-06T10:29:40.661Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\7456"}
+[debug] [2019-11-06T10:29:40.678Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-06T10:29:44.227Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "MathGame" in ~4s
+[debug] [2019-11-06T10:31:04.861Z] Accepted request GET /itec-websession/us-central1/MathGame/scoreboard/set1 --> MathGame
+[debug] [2019-11-06T10:31:05.440Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "MathGame"
+[debug] [2019-11-06T10:31:05.441Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-06T10:31:05.447Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-06T10:31:05.450Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:31:05.452Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:31:05.896Z] [runtime-status] Trigger "MathGame" has been found, beginning invocation! {}
+[debug] [2019-11-06T10:31:05.897Z] [runtime-status]  {"httpsTrigger":{},"name":"MathGame","entryPoint":"MathGame"}
+[debug] [2019-11-06T10:31:05.898Z] [runtime-status] Running MathGame in mode HTTPS {}
+[debug] [2019-11-06T10:31:05.909Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\10012"}
+[debug] [2019-11-06T10:31:05.911Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\10012"}
+[debug] [2019-11-06T10:31:05.929Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-06T10:31:06.449Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "MathGame" in ~2s
+[debug] [2019-11-06T10:31:59.312Z] Accepted request GET /itec-websession/us-central1/MathGame/scoreboard/set1 --> MathGame
+[debug] [2019-11-06T10:31:59.826Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "MathGame"
+[debug] [2019-11-06T10:31:59.827Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-06T10:31:59.832Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-06T10:31:59.835Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:31:59.836Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:32:00.246Z] [runtime-status] Trigger "MathGame" has been found, beginning invocation! {}
+[debug] [2019-11-06T10:32:00.247Z] [runtime-status]  {"httpsTrigger":{},"name":"MathGame","entryPoint":"MathGame"}
+[debug] [2019-11-06T10:32:00.247Z] [runtime-status] Running MathGame in mode HTTPS {}
+[debug] [2019-11-06T10:32:00.259Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\3124"}
+[debug] [2019-11-06T10:32:00.260Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\3124"}
+[debug] [2019-11-06T10:32:00.272Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-06T10:32:00.829Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "MathGame" in ~4s
+[debug] [2019-11-06T10:32:45.441Z] Accepted request GET /itec-websession/us-central1/MathGame/scoreboard/1 --> MathGame
+[debug] [2019-11-06T10:32:46.116Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "MathGame"
+[debug] [2019-11-06T10:32:46.118Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-06T10:32:46.122Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-06T10:32:46.125Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:32:46.127Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:32:46.551Z] [runtime-status] Trigger "MathGame" has been found, beginning invocation! {}
+[debug] [2019-11-06T10:32:46.551Z] [runtime-status]  {"httpsTrigger":{},"name":"MathGame","entryPoint":"MathGame"}
+[debug] [2019-11-06T10:32:46.551Z] [runtime-status] Running MathGame in mode HTTPS {}
+[debug] [2019-11-06T10:32:46.560Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\14876"}
+[debug] [2019-11-06T10:32:46.562Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\14876"}
+[debug] [2019-11-06T10:32:46.576Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-06T10:32:47.130Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "MathGame" in ~1s
+[debug] [2019-11-06T10:35:16.753Z] Accepted request GET /itec-websession/us-central1/MathGame/scoreboard/1 --> MathGame
+[debug] [2019-11-06T10:35:17.417Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "MathGame"
+[debug] [2019-11-06T10:35:17.418Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-06T10:35:17.427Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-06T10:35:17.429Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:35:17.431Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:35:17.813Z] [runtime-status] Trigger "MathGame" has been found, beginning invocation! {}
+[debug] [2019-11-06T10:35:17.813Z] [runtime-status]  {"httpsTrigger":{},"name":"MathGame","entryPoint":"MathGame"}
+[debug] [2019-11-06T10:35:17.813Z] [runtime-status] Running MathGame in mode HTTPS {}
+[debug] [2019-11-06T10:35:17.821Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\15980"}
+[debug] [2019-11-06T10:35:17.823Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\15980"}
+[debug] [2019-11-06T10:35:17.835Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-06T10:35:18.271Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "MathGame" in ~1s
+[debug] [2019-11-06T10:35:43.361Z] Accepted request GET /itec-websession/us-central1/MathGame/scoreboard/2 --> MathGame
+[debug] [2019-11-06T10:35:43.898Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "MathGame"
+[debug] [2019-11-06T10:35:43.899Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-06T10:35:43.905Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-06T10:35:43.907Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:35:43.909Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:35:44.296Z] [runtime-status] Trigger "MathGame" has been found, beginning invocation! {}
+[debug] [2019-11-06T10:35:44.296Z] [runtime-status]  {"httpsTrigger":{},"name":"MathGame","entryPoint":"MathGame"}
+[debug] [2019-11-06T10:35:44.296Z] [runtime-status] Running MathGame in mode HTTPS {}
+[debug] [2019-11-06T10:35:44.305Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\11752"}
+[debug] [2019-11-06T10:35:44.306Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\11752"}
+[debug] [2019-11-06T10:35:44.319Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-06T10:35:44.780Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "MathGame" in ~1s
+[debug] [2019-11-06T10:35:48.095Z] Accepted request GET /itec-websession/us-central1/MathGame/scoreboard/1 --> MathGame
+[debug] [2019-11-06T10:35:48.851Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "MathGame"
+[debug] [2019-11-06T10:35:48.853Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-06T10:35:48.859Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-06T10:35:48.863Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:35:48.865Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:35:49.261Z] [runtime-status] Trigger "MathGame" has been found, beginning invocation! {}
+[debug] [2019-11-06T10:35:49.261Z] [runtime-status]  {"httpsTrigger":{},"name":"MathGame","entryPoint":"MathGame"}
+[debug] [2019-11-06T10:35:49.262Z] [runtime-status] Running MathGame in mode HTTPS {}
+[debug] [2019-11-06T10:35:49.271Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\10148"}
+[debug] [2019-11-06T10:35:49.273Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\10148"}
+[debug] [2019-11-06T10:35:49.295Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-06T10:35:49.817Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "MathGame" in ~1s
+[debug] [2019-11-06T10:36:19.569Z] Accepted request GET /itec-websession/us-central1/MathGame/scoreboard/1 --> MathGame
+[debug] [2019-11-06T10:36:20.261Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "MathGame"
+[debug] [2019-11-06T10:36:20.262Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-06T10:36:20.268Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-06T10:36:20.270Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:36:20.272Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:36:20.653Z] [runtime-status] Trigger "MathGame" has been found, beginning invocation! {}
+[debug] [2019-11-06T10:36:20.653Z] [runtime-status]  {"httpsTrigger":{},"name":"MathGame","entryPoint":"MathGame"}
+[debug] [2019-11-06T10:36:20.653Z] [runtime-status] Running MathGame in mode HTTPS {}
+[debug] [2019-11-06T10:36:20.662Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\3040"}
+[debug] [2019-11-06T10:36:20.663Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\3040"}
+[debug] [2019-11-06T10:36:20.715Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-06T10:36:21.248Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "MathGame" in ~1s
+[debug] [2019-11-06T10:36:52.012Z] Accepted request GET /itec-websession/us-central1/MathGame/scoreboard/2 --> MathGame
+[debug] [2019-11-06T10:36:52.568Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "MathGame"
+[debug] [2019-11-06T10:36:52.569Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-06T10:36:52.575Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-06T10:36:52.577Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:36:52.579Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:36:53.019Z] [runtime-status] Trigger "MathGame" has been found, beginning invocation! {}
+[debug] [2019-11-06T10:36:53.020Z] [runtime-status]  {"httpsTrigger":{},"name":"MathGame","entryPoint":"MathGame"}
+[debug] [2019-11-06T10:36:53.020Z] [runtime-status] Running MathGame in mode HTTPS {}
+[debug] [2019-11-06T10:36:53.030Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\7680"}
+[debug] [2019-11-06T10:36:53.032Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\7680"}
+[debug] [2019-11-06T10:36:53.065Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-06T10:36:53.561Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "MathGame" in ~1s
+[debug] [2019-11-06T10:36:56.020Z] Accepted request GET /itec-websession/us-central1/MathGame/scoreboard/1 --> MathGame
+[debug] [2019-11-06T10:36:56.641Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "MathGame"
+[debug] [2019-11-06T10:36:56.641Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-06T10:36:56.648Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-06T10:36:56.650Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:36:56.651Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:36:57.015Z] [runtime-status] Trigger "MathGame" has been found, beginning invocation! {}
+[debug] [2019-11-06T10:36:57.015Z] [runtime-status]  {"httpsTrigger":{},"name":"MathGame","entryPoint":"MathGame"}
+[debug] [2019-11-06T10:36:57.015Z] [runtime-status] Running MathGame in mode HTTPS {}
+[debug] [2019-11-06T10:36:57.024Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\14836"}
+[debug] [2019-11-06T10:36:57.025Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\14836"}
+[debug] [2019-11-06T10:36:57.037Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-06T10:36:57.473Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "MathGame" in ~1s
+[debug] [2019-11-06T10:37:10.367Z] Accepted request GET /itec-websession/us-central1/MathGame/scoreboard/2 --> MathGame
+[debug] [2019-11-06T10:37:10.989Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "MathGame"
+[debug] [2019-11-06T10:37:10.990Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-06T10:37:10.994Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-06T10:37:10.996Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:37:10.997Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:37:11.359Z] [runtime-status] Trigger "MathGame" has been found, beginning invocation! {}
+[debug] [2019-11-06T10:37:11.359Z] [runtime-status]  {"httpsTrigger":{},"name":"MathGame","entryPoint":"MathGame"}
+[debug] [2019-11-06T10:37:11.359Z] [runtime-status] Running MathGame in mode HTTPS {}
+[debug] [2019-11-06T10:37:11.379Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\14484"}
+[debug] [2019-11-06T10:37:11.380Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\14484"}
+[debug] [2019-11-06T10:37:11.392Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-06T10:37:11.826Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "MathGame" in ~1s
+[debug] [2019-11-06T10:37:13.766Z] Accepted request GET /itec-websession/us-central1/MathGame/scoreboard/1 --> MathGame
+[debug] [2019-11-06T10:37:14.358Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "MathGame"
+[debug] [2019-11-06T10:37:14.361Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-06T10:37:14.365Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-06T10:37:14.367Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:37:14.368Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:37:14.736Z] [runtime-status] Trigger "MathGame" has been found, beginning invocation! {}
+[debug] [2019-11-06T10:37:14.737Z] [runtime-status]  {"httpsTrigger":{},"name":"MathGame","entryPoint":"MathGame"}
+[debug] [2019-11-06T10:37:14.737Z] [runtime-status] Running MathGame in mode HTTPS {}
+[debug] [2019-11-06T10:37:14.744Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\10396"}
+[debug] [2019-11-06T10:37:14.745Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\10396"}
+[debug] [2019-11-06T10:37:14.759Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-06T10:37:15.214Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "MathGame" in ~1s
+[debug] [2019-11-06T10:37:18.761Z] Accepted request GET /itec-websession/us-central1/MathGame/scoreboard/1 --> MathGame
+[debug] [2019-11-06T10:37:19.437Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "MathGame"
+[debug] [2019-11-06T10:37:19.438Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-06T10:37:19.444Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-06T10:37:19.448Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:37:19.449Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:37:19.840Z] [runtime-status] Trigger "MathGame" has been found, beginning invocation! {}
+[debug] [2019-11-06T10:37:19.840Z] [runtime-status]  {"httpsTrigger":{},"name":"MathGame","entryPoint":"MathGame"}
+[debug] [2019-11-06T10:37:19.841Z] [runtime-status] Running MathGame in mode HTTPS {}
+[debug] [2019-11-06T10:37:19.851Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\10556"}
+[debug] [2019-11-06T10:37:19.852Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\10556"}
+[debug] [2019-11-06T10:37:19.867Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-06T10:37:20.321Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "MathGame" in ~1s
+[debug] [2019-11-06T10:37:22.515Z] Accepted request GET /itec-websession/us-central1/MathGame/scoreboard/2 --> MathGame
+[debug] [2019-11-06T10:37:23.147Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "MathGame"
+[debug] [2019-11-06T10:37:23.148Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-06T10:37:23.156Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-06T10:37:23.159Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:37:23.161Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:37:23.542Z] [runtime-status] Trigger "MathGame" has been found, beginning invocation! {}
+[debug] [2019-11-06T10:37:23.542Z] [runtime-status]  {"httpsTrigger":{},"name":"MathGame","entryPoint":"MathGame"}
+[debug] [2019-11-06T10:37:23.543Z] [runtime-status] Running MathGame in mode HTTPS {}
+[debug] [2019-11-06T10:37:23.551Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\11068"}
+[debug] [2019-11-06T10:37:23.552Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\11068"}
+[debug] [2019-11-06T10:37:23.564Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-06T10:37:24.041Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "MathGame" in ~1s
+[debug] [2019-11-06T10:37:25.497Z] Accepted request GET /itec-websession/us-central1/MathGame/scoreboard/2 --> MathGame
+[debug] [2019-11-06T10:37:25.982Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "MathGame"
+[debug] [2019-11-06T10:37:25.983Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-06T10:37:25.988Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-06T10:37:25.990Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:37:25.992Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:37:26.349Z] [runtime-status] Trigger "MathGame" has been found, beginning invocation! {}
+[debug] [2019-11-06T10:37:26.349Z] [runtime-status]  {"httpsTrigger":{},"name":"MathGame","entryPoint":"MathGame"}
+[debug] [2019-11-06T10:37:26.350Z] [runtime-status] Running MathGame in mode HTTPS {}
+[debug] [2019-11-06T10:37:26.359Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\13056"}
+[debug] [2019-11-06T10:37:26.360Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\13056"}
+[debug] [2019-11-06T10:37:26.374Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-06T10:37:26.809Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "MathGame" in ~1s
+[debug] [2019-11-06T10:37:57.405Z] Accepted request GET /itec-websession/us-central1/speedTyping/scoreboard --> speedTyping
+[debug] [2019-11-06T10:37:57.983Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "speedTyping"
+[debug] [2019-11-06T10:37:57.984Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-06T10:37:57.989Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-06T10:37:57.992Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:37:57.994Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:37:58.385Z] [runtime-status] Trigger "speedTyping" has been found, beginning invocation! {}
+[debug] [2019-11-06T10:37:58.385Z] [runtime-status]  {"httpsTrigger":{},"name":"speedTyping","entryPoint":"speedTyping"}
+[debug] [2019-11-06T10:37:58.385Z] [runtime-status] Running speedTyping in mode HTTPS {}
+[debug] [2019-11-06T10:37:58.394Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\2336"}
+[debug] [2019-11-06T10:37:58.395Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\2336"}
+[debug] [2019-11-06T10:37:58.408Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-06T10:37:58.868Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "speedTyping" in ~1s
+[debug] [2019-11-06T10:39:05.328Z] Accepted request GET /itec-websession/us-central1/speedTyping/scoreboard --> speedTyping
+[debug] [2019-11-06T10:39:06.134Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "speedTyping"
+[debug] [2019-11-06T10:39:06.135Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-06T10:39:06.142Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-06T10:39:06.145Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:39:06.147Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:39:06.716Z] [runtime-status] Trigger "speedTyping" has been found, beginning invocation! {}
+[debug] [2019-11-06T10:39:06.717Z] [runtime-status]  {"httpsTrigger":{},"name":"speedTyping","entryPoint":"speedTyping"}
+[debug] [2019-11-06T10:39:06.717Z] [runtime-status] Running speedTyping in mode HTTPS {}
+[debug] [2019-11-06T10:39:06.737Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\15488"}
+[debug] [2019-11-06T10:39:06.739Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\15488"}
+[debug] [2019-11-06T10:39:06.773Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-06T10:39:07.845Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "speedTyping" in ~5s
+[debug] [2019-11-06T10:39:36.622Z] Accepted request GET /itec-websession/us-central1/speedTyping/scoreboard --> speedTyping
+[debug] [2019-11-06T10:39:37.320Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions","node_version":"11.7.0"}
+[info] i  functions: Beginning execution of "speedTyping"
+[debug] [2019-11-06T10:39:37.320Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-11-06T10:39:37.328Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.1","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-11-06T10:39:37.333Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:39:37.336Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-11-06T10:39:37.834Z] [runtime-status] Trigger "speedTyping" has been found, beginning invocation! {}
+[debug] [2019-11-06T10:39:37.834Z] [runtime-status]  {"httpsTrigger":{},"name":"speedTyping","entryPoint":"speedTyping"}
+[debug] [2019-11-06T10:39:37.835Z] [runtime-status] Running speedTyping in mode HTTPS {}
+[debug] [2019-11-06T10:39:37.842Z] {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\9068"}
+[debug] [2019-11-06T10:39:37.843Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\C:\\Users\\Tanawat Chanhom\\Desktop\\Work\\QuizTime\\functions\\9068"}
+[debug] [2019-11-06T10:39:37.856Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-11-06T10:39:38.356Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "speedTyping" in ~1s
