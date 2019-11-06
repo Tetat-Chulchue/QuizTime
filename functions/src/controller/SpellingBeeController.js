@@ -14,21 +14,23 @@ spellingBee.use(cors({ origin: true}));
 
 spellingBee.post('/record', async (req, res) => {
     try {
-        let {user, score, category} = req.body;
-        console.log(user, score, category);
-        let reference = firestore.collection('SpellingBee').doc(category.toLowerCase());
-        let payload = {};
-        payload[user.toLowerCase()] = score;
-        await reference.set(payload, {merge: true}).then(() => {
+        let {user, category, score} = req.body;
+        let reference = firestore.collection('SpellingBee')
+                                .doc('Score')
+                                .collection(category.toLowerCase())
+                                .doc(user.toLowerCase());
+        await reference.set({'score': score}, {merge: true}).then((resolve) => {
             res.sendStatus(200);
         },
-        () => {
+        (reject) => {
             res.sendStatus(400);
+        }).catch(e => {
+            console.log(e);
+            res.sendStatus(500)
         });
-
     } catch (e) {
         console.log(e);
-        res.sendStatus(500);
+        res.sendStatus(500)
     }
 
 })
@@ -36,15 +38,27 @@ spellingBee.post('/record', async (req, res) => {
 spellingBee.get('/scoreboard/:category', async (req,res) => {
     try {
         let {category} = req.params;
-        let reference = firestore.collection('SpellingBee').doc(category);
-        let scoreboard = await reference.get().then((snapshot) => {
-            return snapshot.data();
+        let dataOBJ = {}
+        let reference = firestore.collection('SpellingBee')
+                                .doc('Score')
+                                .collection(category.toLowerCase())
+                                .orderBy('score', 'desc');
+        await reference.get().then((snapshot) => {
+            if (snapshot.empty) {
+                res.sendStatus(404);
+            } else {
+                snapshot.forEach(doc => {
+                    dataOBJ[doc.id] = doc.data();
+                })
+                res.send(dataOBJ);
+            }
         },
-        () => {
-            res.sendStatus(404);
-        });
-        // TODO: Sort Object
-        res.send(scoreboard);
+        (reject) => {
+            res.sendStatus(400);
+        }).catch(e => {
+            console.log(e);
+            res.sendStatus(500);
+        })
     } catch (e) {
         console.log(e);
         res.sendStatus(500)
