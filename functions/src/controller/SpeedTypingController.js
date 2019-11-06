@@ -34,7 +34,7 @@ speedTyping.post('/record', async (req, res) => {
 speedTyping.get('/scoreboard', async (req,res) => {
     try {
         let dataOBJ = {};
-        let reference = firestore.collection('SpeedTyping').orderBy('accuracy');
+        let reference = firestore.collection('SpeedTyping').orderBy('accuracy', 'desc');
         await reference.get().then(snapshot => {
             if (snapshot.empty) {
                 res.sendStatus(404);
