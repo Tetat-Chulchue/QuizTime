@@ -16,7 +16,7 @@
     height: 100vmin;
     top: 100%;
     left: 0%;
-    background: linear-gradient(18deg, rgb(1, 36, 0) 0%, rgb(51, 145, 38) 50%, rgb(0, 255, 55) 100%);
+    background: linear-gradient(18deg, rgb(0, 36, 24) 0%, rgb(38, 145, 92) 50%, rgb(0, 255, 149) 100%);
     opacity: 0.7;
     /* animation-name: cc-1; */
     animation-iteration-count: infinite;
@@ -45,7 +45,7 @@
     height: 70vmin;
     top: 0%;
     left: 100%;
-    background: linear-gradient(18deg, rgb(1, 36, 0) 0%, rgb(51, 145, 38) 50%, rgb(0, 255, 55) 100%);
+    background: linear-gradient(18deg, rgb(0, 36, 24) 0%, rgb(38, 145, 92) 50%, rgb(0, 255, 149) 100%);
     opacity: 0.6;
 }
 
@@ -54,7 +54,7 @@
     height: 110vmin;
     top: 100%;
     left: 0%;
-    background: linear-gradient(18deg, rgb(1, 36, 0) 0%, rgb(51, 145, 38) 50%, rgb(0, 255, 55) 100%);
+    background: linear-gradient(18deg, rgb(0, 36, 24) 0%, rgb(38, 145, 92) 50%, rgb(0, 255, 149) 100%);
     opacity: 0.6;
     /* animation-name: cc-3; */
     animation-iteration-count: infinite;
@@ -83,7 +83,7 @@
     height: 120vmin;
     top: 100%;
     left: 0%;
-    background: linear-gradient(18deg, rgb(1, 36, 0) 0%, rgb(51, 145, 38) 50%, rgb(0, 255, 55) 100%);
+    background: linear-gradient(18deg, rgb(0, 36, 24) 0%, rgb(38, 145, 92) 50%, rgb(0, 255, 149) 100%);
     opacity: 0.3;
     /* animation-name: cc-4; */
     animation-iteration-count: infinite;
@@ -112,7 +112,7 @@
     height: 10vmin;
     top: 40%;
     left: 90%;
-    background: linear-gradient(18deg, rgb(1, 36, 0) 0%, rgb(51, 145, 38) 50%, rgb(0, 255, 55) 100%);
+    background: linear-gradient(18deg, rgb(0, 36, 24) 0%, rgb(38, 145, 92) 50%, rgb(0, 255, 149) 100%);
     opacity: 0.6;
     animation-name: cc-6;
     animation-iteration-count: infinite;
@@ -141,7 +141,7 @@
     height: 8vmin;
     top: 50%;
     left: 95%;
-    background: linear-gradient(18deg, rgb(1, 36, 0) 0%, rgb(51, 145, 38) 50%, rgb(0, 255, 55) 100%);
+    background: linear-gradient(18deg, rgb(0, 36, 24) 0%, rgb(38, 145, 92) 50%, rgb(0, 255, 149) 100%);
     opacity: 0.6;
     animation-name: cc-7;
     animation-iteration-count: infinite;
@@ -170,7 +170,7 @@
     height: 5vmin;
     top: 55%;
     left: 90%;
-    background: linear-gradient(18deg, rgb(1, 36, 0) 0%, rgb(51, 145, 38) 50%, rgb(0, 255, 55) 100%);
+    background: linear-gradient(18deg, rgb(0, 36, 24) 0%, rgb(38, 145, 92) 50%, rgb(0, 255, 149) 100%);
     opacity: 0.6;
     animation-name: cc-8;
     animation-iteration-count: infinite;
