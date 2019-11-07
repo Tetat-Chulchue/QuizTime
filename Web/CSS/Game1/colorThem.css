@@ -1,0 +1,76 @@
+.box-left-container {
+    background-image: linear-gradient(to top, #053378, #00569d, #007bc1, #00a1e1, #00c8ff);
+}
+
+.logo img {
+    background-color:rgba(247, 247, 247, 0.35);
+}
+
+.hardder-text {
+    color: aqua;
+}
+
+.link-page {
+    background-color: #053378;
+}
+
+.link-page a {
+    color: aqua;
+}
+
+.link-page a:hover {
+    color: rgb(53, 142, 165);
+}
+
+.left-footer {
+    background-color: rgba(136, 136, 136, 0.452);
+    color: rgba(235, 235, 235, 0.473);
+}
+
+/* ------ Container right ------- */
+
+.right2-container {
+    background-color: #adadad66;
+}
+
+.right2-underline {
+    background-color: gray;
+}
+
+.right2-box-container a {
+    color: moccasin;
+}
+
+.rigth2-box {
+    background-color: lightslategray;
+}
+
+/* ------ Container right ------- */
+
+/* ------ Hyper link [Label] ------- */
+
+.bar-label2 {
+    background-color: rgb(143, 143, 143);
+}
+
+#chk2:checked ~ .bar-label2 {
+    background-color: crimson;
+}
+
+/* ------ Hyper link [Label] ------- */
+
+/* ------ navigation bar ------- */
+
+.span-bar {
+    background-color: #2196F3;
+}
+
+.navigation-bar {
+    background-color: rgba(160, 142, 142, 0.781);
+}
+
+.navi-link-page a {
+    color: aqua;
+}
+
+/* ------ navigation bar ------- */
