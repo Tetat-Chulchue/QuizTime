@@ -1,3 +1,12 @@
+.center-haeder-text {
+    width: 100%;
+    height: 10vh;
+    background-color: rgba(0, 255, 255, 0.479);
+    margin-top: 2vh;
+    /* margin-bottom: 5vh; */
+    border-radius: 0.5em;
+    text-align: center;
+}
 .box-left-container {
     background-image: linear-gradient(to top, #053378, #00569d, #007bc1, #00a1e1, #00c8ff);
 }
