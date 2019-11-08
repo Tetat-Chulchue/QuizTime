@@ -4,8 +4,8 @@ function pushData(name, wpm, accuracy) {
         url: 'https://us-central1-itec-websession.cloudfunctions.net/speedTyping/record',
         data: {
             user: name,
-            wpm: wpm,
-            accuracy: accuracy
+            wpm: Number(wpm),
+            accuracy: Number(accuracy)
         }
     })
     .then(function (response) {

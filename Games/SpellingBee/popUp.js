@@ -5,7 +5,7 @@ function pushData(name, score, category) {
         url: 'https://us-central1-itec-websession.cloudfunctions.net/spellingBee/record',
         data: {
             user: name,
-            score: score,
+            score: Number(score),
             category: category
         }
     })

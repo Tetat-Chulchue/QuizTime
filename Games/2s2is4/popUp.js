@@ -5,7 +5,7 @@ function pushData(name, score, category) {
         url: 'https://us-central1-itec-websession.cloudfunctions.net/2s2is4/record',
         data: {
             user: name,
-            score: score,
+            score: Number(score),
             set: category
         }
     })
