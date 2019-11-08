@@ -152,5 +152,5 @@ String.prototype.replaceAt = function (index, replacement) {
 }
 
 function back() {
-    window.location.href = "../../Web/Game2/gameManu.html";
+    window.location.href = "../../Web/Game1/gameManu.html";
 }
