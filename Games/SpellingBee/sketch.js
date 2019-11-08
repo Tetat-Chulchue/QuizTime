@@ -69,6 +69,8 @@ function draw() {
     textSize(110);
     textFont(font);
     text(placeholder, 0, windowHeight / 2, windowWidth, windowHeight / 2); // display answer
+
+    button_back.position(10, 10);
 }
 
 function keyPressed() {
