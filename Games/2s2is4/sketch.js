@@ -5,6 +5,7 @@ let questionObj;
 let questionIndex;
 let life = 4;
 let score = 0;
+let count = 0;
 let correctSound;
 let wrongSound;
 let path;
@@ -34,6 +35,73 @@ function setup() {
 
     randomQuestion();
 
+    button_back = createButton('', 'back');
+    button_back.id('button_back');
+    button_back.class('button');
+    button_back.mousePressed(back);
+
+    fill(255,255,255);
+    textFont(font);
+    textAlign(CENTER, CENTER);
+}
+
+function draw() {
+    background(0,212,255);
+
+    if (count === 3) {
+        score += 15;
+        count = 0;
+    }
+
+    if (life <= 0 || questionKey.length === 0) {
+        button_1.remove();
+        button_2.remove();
+        button_3.remove();
+        button_4.remove();
+
+        textSize(65);
+        
+        text("Congratulations!", windowWidth / 2, (windowHeight / 2) - 100);
+        text("Your score is : " + score, windowWidth / 2, (windowHeight / 2) + 100);
+        
+        if (life === 0) {
+            life = -1;
+            sweetUI(score, setQuestion);
+        }
+    } else {
+        textSize(45);
+        text("Life : " + life, windowWidth - 90, 80);
+        text("Score : " + score, windowWidth - 110, 30);
+
+        textSize(65);
+        text(question, windowWidth / 2, (windowHeight / 2) / 2);
+    }
+
+    button_1.position(15, windowHeight / 2);
+    button_1.size((windowWidth / 2) - 25, (windowHeight / 4) - 15);
+
+    button_2.position((windowWidth / 2) + 10, windowHeight / 2);
+    button_2.size((windowWidth / 2) - 25, (windowHeight / 4) - 15);
+
+    button_3.position(15, (windowHeight * 1.5) / 2);
+    button_3.size((windowWidth / 2) - 25, (windowHeight / 4) - 15);
+
+    button_4.position((windowWidth / 2) + 10, (windowHeight * 1.5) / 2);
+    button_4.size((windowWidth / 2) - 25, (windowHeight / 4) - 15);
+
+    button_back.position(10, 10);
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+}
+// -------------------------------------------
+
+// -------------- My Function ----------------
+function randomQuestion() {
+    questionIndex = Math.floor(Math.random() * questionKey.length);
+    question = questionKey[questionIndex];
+    
     button_1 = createButton(questionObj[question][0].choice[0], '0');
     button_1.id('button_1');
     button_1.class('button');
@@ -53,57 +121,6 @@ function setup() {
     button_4.id('button_4');
     button_4.class('button');
     button_4.mousePressed(check);
-
-    fill(255,255,255);
-    textFont(font);
-    textAlign(CENTER, CENTER);
-}
-
-function draw() {
-    resizeCanvas(windowWidth, windowHeight);
-
-    background(0,212,255);
-
-    if (life <= 0 || questionKey.length === 0) {
-        button_1.remove();
-        button_2.remove();
-        button_3.remove();
-        button_4.remove();
-
-        textSize(60);
-        text("Congratulations!", windowWidth / 2, (windowHeight / 2) - 100);
-        text("Your score is : " + score, windowWidth / 2, (windowHeight / 2) + 100);
-        if (life === 0) {
-            life = -1;
-            sweetUI(score, setQuestion);
-        }
-    } else {
-        textSize(40);
-        text("Life : " + life, windowWidth - 90, 80);
-        text("Score : " + score, windowWidth - 110, 30);
-
-        textSize(60);
-        text(question, windowWidth / 2, (windowHeight / 2) / 2);
-    }
-
-    button_1.position(15, windowHeight / 2);
-    button_1.size((windowWidth / 2) - 25, ((windowHeight / 2) / 2) - 15);
-
-    button_2.position((windowWidth / 2) + 10, windowHeight / 2);
-    button_2.size((windowWidth / 2) - 25, ((windowHeight / 2) / 2) - 15);
-
-    button_3.position(15, (windowHeight * 1.5) / 2);
-    button_3.size((windowWidth / 2) - 25, ((windowHeight / 2) / 2) - 15);
-
-    button_4.position((windowWidth / 2) + 10, (windowHeight * 1.5) / 2);
-    button_4.size((windowWidth / 2) - 25, ((windowHeight / 2) / 2) - 15);
-}
-// -------------------------------------------
-
-// -------------- My Function ----------------
-function randomQuestion() {
-    questionIndex = Math.floor(Math.random() * questionKey.length);
-    question = questionKey[questionIndex];
 }
 
 function check() {
@@ -113,12 +130,14 @@ function check() {
     document.getElementById("button_2").click(num = this.value());
     document.getElementById("button_3").click(num = this.value());
     document.getElementById("button_4").click(num = this.value());
-    
+
     if (questionObj[question][0].choice[num] === questionObj[question][1].check) {
-        score += 10;
+        score += 15;
+        count += 1;
         correctSound.play();
     } else {
         life -= 1;
+        count = 0;
         wrongSound.play();
     }
 
@@ -127,6 +146,10 @@ function check() {
     button_2.remove();
     button_3.remove();
     button_4.remove();
-    setup();
+    randomQuestion();
+}
+
+function back() {
+    window.location.href = "../../Web/Game2/gameManu.html";
 }
 // -------------------------------------------
