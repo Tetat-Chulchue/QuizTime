@@ -8,44 +8,45 @@ const _ = require('lodash');
 // setup
 
 const firestore = admin.firestore();
-const spellingBee = express();
+const MathGame = express();
+const batch = firestore.batch();
 
-spellingBee.use(cors({ origin: true}));
+MathGame.use(cors({ origin: true}));
 
-spellingBee.post('/record', async (req, res) => {
+MathGame.post('/record', async (req, res) => {
     try {
-        let {user, category, score} = req.body;
-        let reference = firestore.collection('SpellingBee')
+        let { user, score, set } = req.body;
+        let reference = firestore.collection('MathGame')
                                 .doc('Score')
-                                .collection(category.toLowerCase())
+                                .collection('set' + set)
                                 .doc(user.toLowerCase());
         await reference.set({'score': score}, {merge: true}).then((resolve) => {
             res.sendStatus(200);
         },
         (reject) => {
+            console.log(reject);
             res.sendStatus(400);
         }).catch(e => {
             console.log(e);
-            res.sendStatus(500)
-        });
+            res.sendStatus(500);
+        })
     } catch (e) {
         console.log(e);
-        res.sendStatus(500)
+        res.sendStatus(500);
     }
+});
 
-})
-
-spellingBee.get('/scoreboard/:category', async (req,res) => {
+MathGame.get('/scoreboard/:set', async (req, res) => {
     try {
-        let {category} = req.params;
-        let dataOBJ = {}
-        let reference = firestore.collection('SpellingBee')
+        let { set } = req.params;
+        let dataOBJ = {};
+        let reference = firestore.collection('MathGame')
                                 .doc('Score')
-                                .collection(category.toLowerCase())
+                                .collection('set' + set)
                                 .orderBy('score', 'desc');
-        await reference.get().then((snapshot) => {
+        await reference.get().then(snapshot => {
             if (snapshot.empty) {
-                res.sendStatus(404);
+                res.sendStatus(404)
             } else {
                 snapshot.forEach(doc => {
                     dataOBJ[doc.id] = doc.data();
@@ -54,15 +55,17 @@ spellingBee.get('/scoreboard/:category', async (req,res) => {
             }
         },
         (reject) => {
+            console.log(reject);
             res.sendStatus(400);
-        }).catch(e => {
+        }).catch((e) => {
             console.log(e);
-            res.sendStatus(500);
-        })
+            res.sendStatus(500)
+        });
     } catch (e) {
         console.log(e);
-        res.sendStatus(500)
+        res.sendStatus(500);
     }
-})
 
-module.exports = spellingBee;
+});
+
+module.exports = MathGame;

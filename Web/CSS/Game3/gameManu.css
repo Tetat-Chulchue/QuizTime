@@ -3,7 +3,7 @@
 }
 
 .infor-box h2 {
-    background-color: rgba(109, 193, 226, 0.562);
+    background-color: rgba(109, 226, 158, 0.562);
     padding: 20px;
     border-radius: 0.5em;
     font-size: 4vmin;
@@ -32,7 +32,7 @@
     position: relative;
     height: 40vmin;
     width: 100%;
-    background-color: indigo;
+    background-color: rgb(0, 130, 80);
 }
 
 /* ------- choice ------- */
@@ -53,7 +53,7 @@
     width: auto;
     min-width: 200px;
     height: 5%;
-    background-color: rgb(86, 238, 243);
+    background-color: rgb(86, 243, 165);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -93,7 +93,7 @@
 }
 
 .choice-btn {
-    background-color: cornflowerblue;
+    background-color: rgb(100, 237, 168);
     border-radius: 100em;
     height: 80%;  
 }

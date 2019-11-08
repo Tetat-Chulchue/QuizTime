@@ -32,7 +32,7 @@
     position: absolute;
     height: 98%;
     width: 33%;
-    background-color: rgb(135, 222, 222);
+    background-color: rgb(222, 135, 135);
     border-radius: 100em;
     text-align: center;
     cursor: pointer;
@@ -86,7 +86,7 @@ table {
 }
 
 table thead {
-    background-color: rgb(80, 255, 226);
+    background-color: rgb(255, 80, 80);
     
 }
 

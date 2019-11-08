@@ -11,37 +11,33 @@ function page() {
     let b = document.body.scrollHeight - document.body.clientHeight;
     let j = document.body.clientHeight;
     let position = -50;
-    let space = 100;
+    let space = 125;
 
-    box( y-(space*0)+position-30 , "page-1");
+    box( y-(space*0)+position-40 , "page-1");
     box( y-(space)+position , "page-1-1");
     box( y-(space)+position , "page-1-2");
-    box( y-(space)+position+15 , "page-1-3");
-    box( y-(space)+position , "page-1-4");
+    box( y-(space)+position+30 , "page-1-3");
+    box( y-(space)+position+20 , "page-1-4");
 
-    box( y-(space*5)+position , "page-2");
-    box( y-(space*6)+position , "page-2-1");
-    box( y-(space*7)+position , "page-2-2");
-    box( y-(space*8)+position , "page-2-3");
-    box( y-(space*9)+position , "page-2-4");
+    box( y-(space*5)+position+15 , "page-2");
+    box( y-(space*6)+position-30 , "page-2-1");
+    box( y-(space*7)+position-15 , "page-2-2");
+    box( y-(space*8)+position-10 , "page-2-3");
+    box( y-(space*9)+position-10 , "page-2-4");
 
-    box( y-(space*10)+position , "page-3");
-    box( y-(space*11)+position , "page-3-1");
-    box( y-(space*12)+position , "page-3-2");
-    box( y-(space*13)+position , "page-3-3");
-    box( y-(space*14)+position , "page-3-4");
+    box( y-(space*10)+position+10 , "page-3");
+    box( y-(space*11)+position-30 , "page-3-1");
+    box( y-(space*12)+position-15 , "page-3-2");
+    box( y-(space*13)+position-10 , "page-3-3");
+    box( y-(space*14)+position-10 , "page-3-4");
 
-    box( y-(space*15)+position , "page-4");
-    box( y-(space*16)+position , "page-4-1");
-    box( y-(space*17)+position , "page-4-2");
-    box( y-(space*18)+position , "page-4-3");
-    box( y-(space*19)+position , "page-4-4");
+    box( y-(space*15)+position+10 , "page-4");
+    box( y-(space*16)+position-30 , "page-4-1");
+    box( y-(space*17)+position-15 , "page-4-2");
+    box( y-(space*18)+position-10 , "page-4-3");
+    box( y-(space*19)+position-10 , "page-4-4");
     
     box( y-(space*20)+position , "page-5-1");
-
-    // console.log( b-(space*20)+position-(j-802) );
-    // document.getElementById("top").style.height = 3000;
-    //470
 
     background( y-(space*3)+position, "background1", "rgb(140, 140, 235)");
     background( y-(space*8)+position, "background2", "rgb(165, 42, 42)");
@@ -58,10 +54,13 @@ function box(value, pageId) {
 
 function opacity(pageId) {
     let value = document.getElementById(pageId).style.transform.slice(45).replace("px)", "");
-    if (value > -400) {
+    if (value > -400 && value < 90) {
         document.getElementById(pageId).style.opacity = ((Number(value)+400))/100;
         document.getElementById(pageId).style.display = "initial";
     } else if (value < -400) {
+        document.getElementById(pageId).style.display = "none";
+    } else if (value > 90 ) {
+        // document.getElementById(pageId).style.opacity = (100-(Number(value)-50))/100;
         document.getElementById(pageId).style.display = "none";
     }
 }
@@ -119,13 +118,14 @@ function background(value, backName, color) {
     }
 }
 
-let scrollZ, top_popUp, left_popUp, positionZ;
+let scrollZ, top_popUp, left_popUp, positionZ, Obj_opacity;
 function popUp(id) {
     if (pageOn == 1) {
         pageOn = 0;
         document.body.scrollTop = scrollZ;
         document.getElementById(id).style.top = top_popUp;
         document.getElementById(id).style.left = left_popUp;
+        document.getElementById(id).style.opacity = Obj_opacity;
         document.getElementById(id).style.transform = "translateX(-50%) translateY(-50%) translateZ("+positionZ+"px)";
         document.body.style.overflow = "initial";
         setTimeout(()=>{document.getElementById(id).style.transition = "transform 0s";},1000);
@@ -133,6 +133,8 @@ function popUp(id) {
     } else if (pageOn == 0) {
         pageOn = 1;
         scrollZ = document.body.scrollTop;
+        Obj_opacity = document.getElementById(id).style.opacity;
+        document.getElementById(id).style.opacity = "1";
         top_popUp = document.getElementById(id).style.top;
         left_popUp = document.getElementById(id).style.left;
         positionZ = document.getElementById(id).style.transform.slice(45).replace("px)", "");

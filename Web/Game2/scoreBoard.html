@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Information</title>
     <link href="https://fonts.googleapis.com/css?family=Kanit:300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/Game1/scoreBoard.css">
-    <link rel="stylesheet" href="../CSS/Game1/bg-animation.css">
+    <link rel="stylesheet" href="../CSS/Game2/scoreBoard.css">
+    <link rel="stylesheet" href="../CSS/Game2/bg-animation.css">
     <link rel="stylesheet" href="../CSS/main_page/loading.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="../../CSS/Game1/bg-animation.css">
     <link rel="stylesheet" href="../CSS/template.css">
+    <link rel="stylesheet" href="../CSS/Game2/colorThemes.css">
     <script src="../JS/Game1/loading.js"></script>
 
     <link rel="icon" href="../assets/logo2.png" type="image/png" sizes="200x200">
@@ -108,16 +109,16 @@
                         <p id="res-error"></p>
                     </div>
                     <select id="setNumber" name="setNumber" class="filter-box" style="right: 0; padding-left: 10px;" onchange="preloader()">
-                        <option value="set_1">ชุดที่ 1</option>
-                        <option value="set_2">ชุดที่ 2</option>
-                        <option value="set_3">ชุดที่ 3</option>
-                        <option value="set_4">ชุดที่ 4</option>
-                        <option value="set_5">ชุดที่ 5</option>
-                        <option value="set_6">ชุดที่ 6</option>
-                        <option value="set_7">ชุดที่ 7</option>
-                        <option value="set_8">ชุดที่ 8</option>
-                        <option value="set_9">ชุดที่ 9</option>
-                        <option value="set_10">ชุดที่ 10</option>
+                        <option value="1">ชุดที่ 1</option>
+                        <option value="2">ชุดที่ 2</option>
+                        <option value="3">ชุดที่ 3</option>
+                        <option value="4">ชุดที่ 4</option>
+                        <option value="5">ชุดที่ 5</option>
+                        <option value="6">ชุดที่ 6</option>
+                        <option value="7">ชุดที่ 7</option>
+                        <option value="8">ชุดที่ 8</option>
+                        <option value="9">ชุดที่ 9</option>
+                        <option value="10">ชุดที่ 10</option>
                     </select>
                 </div>
                 <table id="mytable" >
@@ -125,7 +126,7 @@
                         <tr>
                             <th>No.</th>
                             <th>ชื่อ</th>
-                            <th>หมวด</th>
+                            <th>ชุดที่</th>
                             <th>คะแนน</th>
                         </tr>
                     </thead>
@@ -156,23 +157,24 @@
     <!-- ------------------------ Hyper link zone ------------------------ -->
 
     <script>
-        let leader = {};
+        let dataJSON = {};
         let counter = 1;
         let error_text = document.getElementById("res-error");
         let table = document.getElementById("mytable");
         let tbody = document.createElement('tbody');
 
         function preloader() {
-            quizNumber = document.getElementById('setNumber').value;
+            setNumber = document.getElementById('setNumber').value;
             document.getElementById("fliterImgLoader").style.visibility = "unset";
             error_text.innerHTML = "";
             axios({
                 method: "GET",
-                url: "https://us-central1-itec-websession.cloudfunctions.net/spellingBee/scoreboard/"+quizNumber
+                url: "https://us-central1-itec-websession.cloudfunctions.net/MathGame/scoreboard/"+setNumber
             })
             .then(data => {
-                leader = data.data;
-                render(quizNumber)
+                dataJSON = data.data;
+                console.log(dataJSON);
+                render(setNumber)
 
             })
             .catch(err => {
@@ -181,8 +183,8 @@
             });
         }
 
-        function render(categoryName) {
-            if (table.rows.length > 1 && leader != [] && table.rows.length != 2 ) {
+        function render(setNumber) {
+            if (table.rows.length > 1 && dataJSON != {} && table.rows.length != 2 ) {
                 refresh()
                 function refresh() {
                     table.deleteRow(1);
@@ -194,13 +196,13 @@
                     }
                 }
                 counter = 1;
-            } else if (table.rows.length == 2 && leader != []) {
+            } else if (table.rows.length == 2 && dataJSON != {}) {
                 table.deleteRow(-1);
                 counter = 1;
-            } else if (leader == []) {
+            } else if (dataJSON == {}) {
                 error_text.innerHTML = "Not found!!";
             }
-            for (const i in leader) {
+            for (const i in dataJSON) {
                 let row = tbody.insertRow(-1);
                 let cell0 = row.insertCell(0);
                 let cell1 = row.insertCell(1);
@@ -208,8 +210,8 @@
                 let cell3 = row.insertCell();
                 cell0.innerHTML = `<p>${counter++}</p>`;
                 cell1.innerHTML = `<p>${i}</p>`;
-                cell2.innerHTML = `<p>${categoryName}</p>`;
-                cell3.innerHTML = `<p>${leader[i]}</p>`;
+                cell2.innerHTML = `<p>${setNumber}</p>`;
+                cell3.innerHTML = `<p>${dataJSON[i].score}</p>`;
                 table.append(tbody);
             }
             document.getElementById("fliterImgLoader").style.visibility = "hidden";

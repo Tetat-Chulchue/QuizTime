@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Information</title>
     <link href="https://fonts.googleapis.com/css?family=Kanit:300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/Game1/scoreBoard.css">
-    <link rel="stylesheet" href="../CSS/Game1/bg-animation.css">
+    <link rel="stylesheet" href="../CSS/Game3/scoreBoard.css">
+    <link rel="stylesheet" href="../CSS/Game3/bg-animation.css">
     <link rel="stylesheet" href="../CSS/main_page/loading.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="../../CSS/Game1/bg-animation.css">
     <link rel="stylesheet" href="../CSS/template.css">
+    <link rel="stylesheet" href="../CSS/Game3/colorThemes.css">
     <script src="../JS/Game1/loading.js"></script>
 
     <link rel="icon" href="../assets/logo2.png" type="image/png" sizes="200x200">
@@ -169,7 +170,7 @@
             error_text.innerHTML = "";
             axios({
                 method: "GET",
-                url: "http://localhost:5001/itec-websession/us-central1/speedTyping/scoreboard"
+                url: "https://us-central1-itec-websession.cloudfunctions.net/speedTyping/scoreboard"
             })
             .then(data => {
                 keys = Object.keys(data.data);
@@ -185,7 +186,7 @@
         }
 
         function render() {
-            if (table.rows.length > 1 && keys != [] && table.rows.length != 2 ) {
+            if (table.rows.length > 1 && keys != {} && table.rows.length != 2 ) {
                 refresh()
                 function refresh() {
                     table.deleteRow(1);
@@ -196,10 +197,10 @@
                     }
                 }
                 counter = 1;
-            } else if (table.rows.length == 2 && keys != []) {
+            } else if (table.rows.length == 2 && keys != {}) {
                 table.deleteRow(-1);
                 counter = 1;
-            } else if (keys == []) {
+            } else if (keys == {}) {
                 error_text.innerHTML = "Not found!!";
             }
             for (const i in keys) {
