@@ -1,7 +1,7 @@
 function pushData(name, wpm, accuracy) {
     axios({
         method: 'POST',
-        url: 'http://localhost:5001/itec-websession/us-central1/speedTyping/record',
+        url: 'https://us-central1-itec-websession.cloudfunctions.net/speedTyping/record',
         data: {
             user: name,
             wpm: wpm,
@@ -19,6 +19,8 @@ function pushData(name, wpm, accuracy) {
         Toast.fire({
             type: 'success',
             title: 'Save successfully.'
+        }).then(() => {
+            window.document.location = '../../Web/Game3/gameManu.html';
         })
     })
     .catch(function (error) {
@@ -33,6 +35,8 @@ function pushData(name, wpm, accuracy) {
             type: 'error',
             title: 'Save fail.',
             text: "Error: "+error
+        }).then(() => {
+            window.document.location = '../../Web/Game3/gameManu.html';
         })
     });
 }
@@ -83,7 +87,9 @@ function sweetUI(wpm, accuracy) {
             } else if ( result.dismiss === Swal.DismissReason.cancel ) {
                 swalWithBootstrapButtons.fire(
                 'Thank you'
-                )
+                ).then(() => {
+                    window.document.location = '../../Web/Game3/gameManu.html';
+                })
             }
         })
     },200);

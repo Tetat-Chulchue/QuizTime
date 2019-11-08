@@ -6,7 +6,7 @@ function pushData(name, score, category) {
         data: {
             user: name,
             score: score,
-            category: category
+            set: category
         }
     })
     .then(function (response) {
@@ -20,6 +20,8 @@ function pushData(name, score, category) {
         Toast.fire({
             type: 'success',
             title: 'Save successfully.'
+        }).then(() => {
+            window.document.location = '../../Web/Game2/gameManu.html';
         })
     })
     .catch(function (error) {
@@ -34,6 +36,8 @@ function pushData(name, score, category) {
             type: 'error',
             title: 'Save fail.',
             text: "Error: "+error
+        }).then(() => {
+            window.document.location = '../../Web/Game2/gameManu.html';
         })
     });
 }
@@ -49,7 +53,7 @@ function sweetUI(score, category) {
         })
     
         swalWithBootstrapButtons.fire({
-            title: 'Do you want to save your score.',
+            title: 'Do you want to save your score. Your score is '+score,
             text: "When you save it. Your score will be show on scoreboard.",
             type: 'question',
             showCancelButton: true,
@@ -74,7 +78,7 @@ function sweetUI(score, category) {
                         text: 'Your score: ' + score,
                         showLoaderOnConfirm: true,
                         preConfirm: async () => {
-                            return pushData(name, score, category).then();
+                            return pushData(name, score, category[4]).then();
                         },
                         allowOutsideClick: () => !Swal.isLoading()
                     })
@@ -82,7 +86,7 @@ function sweetUI(score, category) {
             } else if ( result.dismiss === Swal.DismissReason.cancel ) {
                 swalWithBootstrapButtons.fire(
                 'Thank you'
-                )
+                ).then(() => {window.document.location = '../../Web/Game2/gameManu.html';})
             }
         })
     },200);
