@@ -50,6 +50,10 @@ function setup() {
     randomWord();
     createCanvas(windowWidth, windowHeight);
 
+    button_back = createButton('', 'back');
+    button_back.id('button_back');
+    button_back.class('button');
+    button_back.mousePressed(back);
 }
 'Life : ' + life
 function draw() {
@@ -143,4 +147,8 @@ function endGame() {
 
 String.prototype.replaceAt = function (index, replacement) {
     return this.substr(0, index) + replacement + this.substr(index + replacement.length); // Some random function from Stackoverflow, don't bother it.
+}
+
+function back() {
+    window.location.href = "../../Web/Game2/gameManu.html";
 }

@@ -73,3 +73,35 @@ body {
 }
 
 /* ----------------Sweet alert---------------- */
+
+@font-face {
+    font-family: Kanit-ExtraLight;
+    src: url(./asset/Kanit-ExtraLight.ttf);
+}
+
+.button {
+    border: none;
+    border-radius: 8px;
+    font-size: 55px;
+    color: #ffffff;
+    font-family: Kanit-ExtraLight;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+}
+
+#button_back {
+    font-size: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: rgb(0,212,255);
+}
+#button_back:after {
+    content: '\276E \276E';
+}
+#button_back:hover {
+    background-color: rgb(0, 184, 226);
+}
+#button_back:hover:after {
+    content: '\276E \276E \0020 Back to manu';
+}
