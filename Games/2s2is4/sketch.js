@@ -11,6 +11,8 @@ let wrongSound;
 let path;
 let setQuestion;
 let font;
+let countTime = 0;
+let timeLeft = 15;
 // -------------------------------------------
 
 // ------------- P5's Function ---------------
@@ -33,7 +35,12 @@ function setup() {
         questionKey = Object.keys(questionObj);
     }
 
-    randomQuestion();
+    timer = createP('Time : ');
+    timer.class('timer');
+    timer.id('timer');
+    timer = select('#timer');
+    timer.html('Time : ' + (timeLeft - countTime));
+    setInterval(timeIt, 1000);
 
     button_back = createButton('', 'back');
     button_back.id('button_back');
@@ -43,6 +50,8 @@ function setup() {
     fill(255,255,255);
     textFont(font);
     textAlign(CENTER, CENTER);
+
+    randomQuestion();
 }
 
 function draw() {
@@ -58,9 +67,9 @@ function draw() {
         button_2.remove();
         button_3.remove();
         button_4.remove();
+        timer.remove();
 
         textSize(65);
-        
         text("Congratulations!", windowWidth / 2, (windowHeight / 2) - 100);
         text("Your score is : " + score, windowWidth / 2, (windowHeight / 2) + 100);
         
@@ -147,6 +156,25 @@ function check() {
     button_3.remove();
     button_4.remove();
     randomQuestion();
+}
+
+function timeIt() {
+    countTime++;
+    timer.html('Time : ' + (timeLeft - countTime));
+
+    if (countTime === timeLeft) {
+        countTime = 0;
+
+        questionKey.splice(questionIndex, 1);
+        button_1.remove();
+        button_2.remove();
+        button_3.remove();
+        button_4.remove();
+        randomQuestion();
+        
+        timer.html('Time : ' + (timeLeft - countTime));
+        wrongSound.play();
+    }
 }
 
 function back() {

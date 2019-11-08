@@ -9,6 +9,16 @@
     src: url(./asset/Kanit-ExtraLight.ttf);
 }
 
+#timer {
+    font-size: 45px;
+    color: #ffffff;
+    font-family: Kanit-ExtraLight;
+    position: fixed;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, -50%);
+}
+
 .button {
     border: none;
     border-radius: 8px;
