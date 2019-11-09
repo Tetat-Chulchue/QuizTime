@@ -1,0 +1,153 @@
+.box {
+    margin: 5px;
+    width: 100%;
+}
+
+.infor-box h2 {
+    background-color: rgba(226, 109, 109, 0.562);
+    padding: 20px;
+    border-radius: 0.5em;
+    font-size: 4vmin;
+}
+
+.infor-box p {
+    font-size: 2vmin;
+}
+
+li {
+    font-size: 2vmin;
+}
+
+.img-infor-container-L {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+
+.img-infor-container-R {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    max-width: 1000px;
+}
+
+.img-infor-container-R .how-infor-box  {
+    position: relative;
+    width: 49%;
+    background-color: rgba(204, 204, 204, 0.486);
+    border-radius: 0.5em;
+    margin-left: 0%;
+    margin-right: 1%;
+}
+
+.img-infor-container-L .how-infor-box  {
+    position: relative;
+    width: 49%;
+    background-color: rgba(204, 204, 204, 0.486);
+    border-radius: 0.5em;
+    margin-left: 1%;
+    margin-right: 0%;
+}
+
+.how-img-box-L {
+    position: relative;
+    width: 49%;
+}
+
+.how-img-box-R {
+    position: relative;
+    width: 49%;
+}
+
+.how-img-box-L img {
+    position: relative;
+    width: 100%;
+    border-radius: 0.8em;
+}
+
+.how-img-box-R img {
+    position: relative;
+    width: 100%;
+    border-radius: 0.8em;
+}
+
+.how-infor-box {
+    position: relative;
+    width: 49%;
+    background-color: rgba(204, 204, 204, 0.486);
+    margin-left: 1%;
+    border-radius: 0.5em;
+}
+
+.how-infor-box p {
+    font-size: 2vmin;
+    margin: 10px;
+}
+
+@media screen and (max-width: 800px) {
+
+    .infor-box h2 {
+        font-size: 3vmin;
+    }
+    
+    .infor-box p {
+        font-size: 2vmin;
+    }
+
+    .img-infor-container-R .how-infor-box  {
+        position: relative;
+        width: 100%;
+        background-color: rgba(204, 204, 204, 0.486);
+        border-radius: 0.5em;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .img-infor-container-L .how-infor-box  {
+        position: relative;
+        width: 100%;
+        background-color: rgba(204, 204, 204, 0.486);
+        border-radius: 0.5em;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .how-img-box {
+        position: relative;
+        width: 100%;
+    }
+    
+    .how-img-box-L {
+        position: relative;
+        width: 100%;
+        border-radius: 0.5em;
+    }
+
+    .how-img-box-R {
+        position: relative;
+        width: 100%;
+        border-radius: 0.5em;
+    }
+
+    .how-infor-box {
+        position: relative;
+        width: 100%;
+        background-color: rgba(204, 204, 204, 0.486);
+        margin-top: 10px;
+        border-radius: 0.5em;
+        margin-left: 0%;
+    }
+
+    .how-infor-box p {
+        font-size: 2vmin;
+        margin: 10px;
+    }
+}
