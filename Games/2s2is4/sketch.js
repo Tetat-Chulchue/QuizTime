@@ -35,11 +35,11 @@ function setup() {
         questionKey = Object.keys(questionObj);
     }
 
-    timer = createP('Time : ');
+    timer = createP('0');
     timer.class('timer');
     timer.id('timer');
     timer = select('#timer');
-    timer.html('Time : ' + (timeLeft - countTime));
+    timer.html(timeLeft - countTime);
     setInterval(timeIt, 1000);
 
     button_back = createButton('', 'back');
@@ -55,7 +55,7 @@ function setup() {
 }
 
 function draw() {
-    background(0,212,255);
+    background(193,0,0);
 
     if (count === 3) {
         score += 15;
@@ -160,7 +160,7 @@ function check() {
 
 function timeIt() {
     countTime++;
-    timer.html('Time : ' + (timeLeft - countTime));
+    timer.html(timeLeft - countTime);
 
     if (countTime === timeLeft) {
         countTime = 0;
@@ -172,7 +172,7 @@ function timeIt() {
         button_4.remove();
         randomQuestion();
         
-        timer.html('Time : ' + (timeLeft - countTime));
+        timer.html(timeLeft - countTime);
         wrongSound.play();
     }
 }

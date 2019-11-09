@@ -15,8 +15,13 @@
     font-family: Kanit-ExtraLight;
     position: fixed;
     left: 50%;
-    top: 5%;
+    top: 6%;
     transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgb(126, 0, 0);
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
 }
 
 .button {
@@ -31,17 +36,17 @@
 }
 
 #button_1 {
-    background-color: rgb(240, 19, 77);
+    background-color: rgb(255, 66, 101);
 }
 #button_1:hover {
-    background-color: rgb(208, 0, 55);
+    background-color: rgb(240, 19, 77);
 }
 
 #button_2 {
-    background-color: rgb(62, 100, 255);
+    background-color: rgb(136, 151, 255);
 }
 #button_2:hover {
-    background-color: rgb(0, 76, 226);
+    background-color: rgb(102, 125, 255);
 }
 
 #button_3 {
@@ -62,13 +67,13 @@
     font-size: 40px;
     padding-left: 5px;
     padding-right: 5px;
-    background-color: rgb(0,212,255);
+    background-color: rgb(193, 0, 0);
 }
 #button_back:after {
     content: '\276E \276E';
 }
 #button_back:hover {
-    background-color: rgb(0, 184, 226);
+    background-color: rgb(157, 0, 0);
 }
 #button_back:hover:after {
     content: '\276E \276E \0020 Back to manu';
