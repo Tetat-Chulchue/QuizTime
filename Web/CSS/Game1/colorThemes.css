@@ -16,7 +16,7 @@
 }
 
 .hardder-text {
-    color: aqua;
+    color: rgb(255, 255, 255);
 }
 
 .link-page {
@@ -24,7 +24,7 @@
 }
 
 .link-page a {
-    color: aqua;
+    color: rgb(255, 255, 255);
 }
 
 .link-page a:hover {
@@ -63,7 +63,7 @@
 }
 
 #chk2:checked ~ .bar-label2 {
-    background-color: crimson;
+    background-color: rgb(20, 180, 220);
 }
 
 /* ------ Hyper link [Label] ------- */

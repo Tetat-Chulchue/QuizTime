@@ -63,7 +63,7 @@
 }
 
 #chk2:checked ~ .bar-label2 {
-    background-color: crimson;
+    background-color: rgb(220, 20, 60);
 }
 
 /* ------ Hyper link [Label] ------- */
