@@ -39,7 +39,7 @@ li {
     left: 50%;
     transform: translateX(-50%);
     max-width: 800px;
-    border-radius: 5em;
+    border-radius: 0.5em;
 }
 
 .box {
