@@ -4,12 +4,12 @@
     position: relative;
     width: 100%;
     padding: 2vmin 0px;
-    background-color: rgba(95, 160, 138, 0.418);
+    background-color: rgba(95, 158, 160 0.418);
     border-radius: 0.5em;
 }
 
 .infor-box h1 {
-    background-color: rgba(109, 226, 158, 0.562);
+    background-color: rgba(95, 158, 160, 0.562);
     padding: 20px;
     border-radius: 0.5em;
     font-size: 4vmin;
