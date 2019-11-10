@@ -25,14 +25,14 @@ let container3 = 'Time: ';      // Container for general data 06
 // ------------- P5's Function ---------------
 
 function preload() {
-    txt = loadStrings('./test.txt');
+    path = window.location.search
+    loadParagraph = path.split('=')[1]
+    txt = loadStrings('./paragtaph/' + loadParagraph + '.txt');
 }
 
 function setup() {
-    // createCanvas(1500, 775);
     createCanvas(200, 60);
     paragraph = txt[0].toLowerCase();
-    console.log(paragraph);
     write();
     charArray = document.getElementsByTagName('span');
 }
