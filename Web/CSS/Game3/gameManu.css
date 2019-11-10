@@ -53,7 +53,7 @@
     width: auto;
     min-width: 200px;
     height: 5%;
-    background-color: rgb(86, 243, 165);
+    background-color: rgb(136, 197, 199);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -93,7 +93,7 @@
 }
 
 .choice-btn {
-    background-color: rgb(100, 237, 168);
+    background-color: rgb(136, 197, 199);
     border-radius: 100em;
     height: 80%;  
 }

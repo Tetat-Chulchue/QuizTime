@@ -50,6 +50,10 @@ function setup() {
     randomWord();
     createCanvas(windowWidth, windowHeight);
 
+    button_back = createButton('', 'back');
+    button_back.id('button_back');
+    button_back.class('button');
+    button_back.mousePressed(back);
 }
 'Life : ' + life
 function draw() {
@@ -65,6 +69,8 @@ function draw() {
     textSize(110);
     textFont(font);
     text(placeholder, 0, windowHeight / 2, windowWidth, windowHeight / 2); // display answer
+
+    button_back.position(10, 10);
 }
 
 function keyPressed() {
@@ -143,4 +149,8 @@ function endGame() {
 
 String.prototype.replaceAt = function (index, replacement) {
     return this.substr(0, index) + replacement + this.substr(index + replacement.length); // Some random function from Stackoverflow, don't bother it.
+}
+
+function back() {
+    window.location.href = "../../Web/Game1/gameManu.html";
 }

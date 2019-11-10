@@ -5,7 +5,7 @@ function pushData(name, score, category) {
         url: 'https://us-central1-itec-websession.cloudfunctions.net/spellingBee/record',
         data: {
             user: name,
-            score: score,
+            score: Number(score),
             category: category
         }
     })
@@ -20,6 +20,8 @@ function pushData(name, score, category) {
         Toast.fire({
             type: 'success',
             title: 'Save successfully.'
+        }).then(() => {
+            window.document.location = '../../Web/Game1/gameManu.html';
         })
     })
     .catch(function (error) {
@@ -34,6 +36,8 @@ function pushData(name, score, category) {
             type: 'error',
             title: 'Save fail.',
             text: "Error: "+error
+        }).then(() => {
+            window.document.location = '../../Web/Game1/gameManu.html';
         })
     });
 }
@@ -82,7 +86,9 @@ function sweetUI(score, category) {
             } else if ( result.dismiss === Swal.DismissReason.cancel ) {
                 swalWithBootstrapButtons.fire(
                 'Thank you'
-                )
+                ).then(() => {
+                    window.document.location = '../../Web/Game1/gameManu.html';
+                })
             }
         })
     },200);

@@ -1,11 +1,27 @@
 * {
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 
 @font-face {
     font-family: Kanit-ExtraLight;
     src: url(./asset/Kanit-ExtraLight.ttf);
+}
+
+#timer {
+    font-size: 45px;
+    color: #ffffff;
+    font-family: Kanit-ExtraLight;
+    position: fixed;
+    left: 50%;
+    top: 6%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgb(126, 0, 0);
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
 }
 
 .button {
@@ -15,20 +31,22 @@
     color: #ffffff;
     font-family: Kanit-ExtraLight;
     cursor: pointer;
+    text-align: center;
+    outline: none;
 }
 
 #button_1 {
-    background-color: rgb(240, 19, 77);
+    background-color: rgb(255, 66, 101);
 }
 #button_1:hover {
-    background-color: rgb(208, 0, 55);
+    background-color: rgb(240, 19, 77);
 }
 
 #button_2 {
-    background-color: rgb(62, 100, 255);
+    background-color: rgb(136, 151, 255);
 }
 #button_2:hover {
-    background-color: rgb(0, 76, 226);
+    background-color: rgb(102, 125, 255);
 }
 
 #button_3 {
@@ -43,6 +61,22 @@
 }
 #button_4:hover {
     background-color: rgb(65, 156, 156);
+}
+
+#button_back {
+    font-size: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: rgb(193, 0, 0);
+}
+#button_back:after {
+    content: '\276E \276E';
+}
+#button_back:hover {
+    background-color: rgb(157, 0, 0);
+}
+#button_back:hover:after {
+    content: '\276E \276E \0020 Back to manu';
 }
 
 /* ----------------Sweet alert---------------- */
@@ -72,7 +106,7 @@
 
 /* ----------------Sweet alert---------------- */
 
-.game-container {
+/* .game-container {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -107,4 +141,4 @@
     left: 45%;
     width: 80%;
     height: 80%;
-}
+} */
