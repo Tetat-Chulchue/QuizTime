@@ -21,18 +21,18 @@ let txt2 = '';                  // Container for general data 03
 let container1;                 // Container for general data 04
 let container2;                 // Container for general data 05
 let container3 = 'Time: ';      // Container for general data 06
+let path;
 
 // ------------- P5's Function ---------------
 
 function preload() {
     path = window.location.search;
-    numParagraph = path.split('=set_')[1];
-    loadParagraph = 'paragraph_' + numParagraph + '.txt';
+    let numParagraph = path.split('=set_')[1];
+    let loadParagraph = 'paragraph_' + numParagraph + '.txt';
     txt = loadStrings('./paragtaph/' + loadParagraph);
 }
 
 function setup() {
-    console.log(loadParagraph)
     createCanvas(200, 60);
     paragraph = txt[0].toLowerCase();
     write();
