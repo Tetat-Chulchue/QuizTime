@@ -114,3 +114,38 @@
 
 
 /* ------- choice ------- */
+
+
+/* ------- Play Game  ------- */
+.container-play-game {
+    position: relative;
+    width: 100%;
+}
+
+.play-game {
+    position: relative;
+    width: 28%;
+    height: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(5, 120, 91);
+    border-radius: 0.5em;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.play-game:hover {
+    width: 29%;
+    height: 7%;
+}
+
+.play-game p {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2vmin;
+    cursor: pointer;
+    color: #fdfefd;
+}
+/* ------- Play Game  ------- */
