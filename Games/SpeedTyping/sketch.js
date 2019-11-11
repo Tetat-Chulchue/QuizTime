@@ -25,12 +25,14 @@ let container3 = 'Time: ';      // Container for general data 06
 // ------------- P5's Function ---------------
 
 function preload() {
-    path = window.location.search
-    loadParagraph = path.split('=')[1]
-    txt = loadStrings('./paragtaph/' + loadParagraph + '.txt');
+    path = window.location.search;
+    numParagraph = path.split('=set_')[1];
+    loadParagraph = 'paragraph_' + numParagraph + '.txt';
+    txt = loadStrings('./paragtaph/' + loadParagraph);
 }
 
 function setup() {
+    console.log(loadParagraph)
     createCanvas(200, 60);
     paragraph = txt[0].toLowerCase();
     write();
