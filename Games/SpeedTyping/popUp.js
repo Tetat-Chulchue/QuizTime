@@ -54,7 +54,7 @@ function sweetUI(wpm, accuracy) {
         swalWithBootstrapButtons.fire({
             title: 'Do you want to save your score.',
             // text: "When you save it. Your score will be show on scoreboard.",
-            html: 'When you save it. Your score will be show on scoreboard.<br>Your Word per Minute is : ' + wpm + '<br>Your typing accuracy is :' + accuracy,
+            html: 'When you save it. Your score will be show on scoreboard.<br>Your Word per Minute is : ' + wpm + '<br>Your typing Accuracy is : ' + accuracy + '%',
             type: 'question',
             showCancelButton: true,
             confirmButtonText: 'Yes, do it!',

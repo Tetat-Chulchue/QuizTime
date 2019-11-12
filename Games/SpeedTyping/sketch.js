@@ -26,26 +26,29 @@ let path;
 // ------------- P5's Function ---------------
 
 function preload() {
-    path = window.location.search;
-    let numParagraph = path.split('=set_')[1];
-    let loadParagraph = 'paragraph_' + numParagraph + '.txt';
-    txt = loadStrings('./paragtaph/' + loadParagraph);
+    // path = window.location.search;
+    // let numParagraph = path.split('=set_')[1];
+    // let loadParagraph = 'paragraph_' + numParagraph + '.txt';
+    txt = loadStrings('./test.txt');
 }
 
 function setup() {
-    createCanvas(200, 60);
+    let cnv = createCanvas(100, 100);
+    cnv.parent('sketch-holder');
     paragraph = txt[0].toLowerCase();
     write();
     charArray = document.getElementsByTagName('span');
 }
 
 function draw() {
-    background(150);
-    textAlign(RIGHT, CENTER);
-    textSize(30);
-    text(container3, width / 2, height / 2);
-    textAlign(LEFT, CENTER)
-    text(timer, width / 2, height / 2);
+    fill('#61CFBE')
+    circle(50, 50, 100);
+    fill('black');
+    textAlign(CENTER);
+    textSize(50);
+    text(container3, 1050, height / 2);
+    textAlign(CENTER)
+    text(timer, width / 2 , 65);
     if ((frameCount % 60 == 0 && timer > 0) && !end) {
         timer++;
         console.log(timer);
