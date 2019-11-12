@@ -1,6 +1,6 @@
 /* ------ Lib pace.js ------- */
 .pace {
-    position: absolute;
+    position: fixed;
     top: 50%;
     z-index: 9999999;
 }
