@@ -38,11 +38,6 @@ function setup() {
     paragraph = txt[0].toLowerCase();
     write();
     charArray = document.getElementsByTagName('span');
-
-    button_back = createButton('', 'back');
-    button_back.id('button_back');
-    button_back.class('button');
-    button_back.mousePressed(back);
 }
 
 function draw() {
@@ -65,8 +60,6 @@ function draw() {
     text(txt1, 70, 600);
     text(container1, 880, 300);
     text(container2, 910, 600);
-
-    button_back.position(10, 10);
 }
 
 function keyPressed() {

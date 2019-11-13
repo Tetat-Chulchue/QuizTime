@@ -10,6 +10,39 @@ p{
     background-color: lightsalmon;
 }
 
+@font-face {
+    font-family: Kanit-ExtraLight;
+    src: url(./asset/Kanit-ExtraLight.ttf);
+}
+.button {
+    border: none;
+    border-radius: 8px;
+    font-size: 55px;
+    color: #ffffff;
+    font-family: Kanit-ExtraLight;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+#button_back {
+    font-size: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: rgb(64, 142, 153);
+}
+#button_back:after {
+    content: '\276E \276E';
+}
+#button_back:hover {
+    background-color: rgb(32, 116, 127);
+}
+#button_back:hover:after {
+    content: '\276E \276E \0020 Back to manu';
+}
+
 /* ----------------Sweet alert---------------- */
 
 .btn-danger {
@@ -37,7 +70,7 @@ p{
 
 /* ----------------Sweet alert---------------- */
 
-.game-container {
+/* .game-container {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -72,4 +105,4 @@ p{
     left: 45%;
     width: 80%;
     height: 80%;
-}
+} */
