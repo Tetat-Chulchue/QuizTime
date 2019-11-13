@@ -26,9 +26,16 @@ let path;
 // ------------- P5's Function ---------------
 
 function preload() {
-    let numParagraph = Math.floor(Math.random() * 10) + 1;
-    let loadParagraph = 'paragraph_' + numParagraph + '.txt';
-    txt = loadStrings('./paragraph/' + loadParagraph);
+    if (window.location.search != '') {
+        path = window.location.search;
+        let numParagraph = path.split('=set_')[1];
+        let loadParagraph = 'paragraph_' + numParagraph + '.txt';
+        txt = loadStrings('./practice/' + loadParagraph);
+    } else {
+        let numParagraph = Math.floor(Math.random() * 10) + 1;
+        let loadParagraph = 'paragraph_' + numParagraph + '.txt';
+        txt = loadStrings('./paragraph/' + loadParagraph);
+    }
 }
 
 function setup() {
