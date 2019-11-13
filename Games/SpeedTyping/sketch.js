@@ -51,7 +51,9 @@ function setup() {
 
 function draw() {
     fill('#61CFBE');
-    circle(50, 50, 100);
+    if(end == false){
+        let c = circle(50, 50, 100);
+    }
     fill('black');
     textAlign(CENTER);
     textSize(50);
@@ -63,12 +65,15 @@ function draw() {
         console.log(timer);
     }
     textSize(80);
-    text(head, 480, 100);
+    text(head, 750, 100);
     textSize(70);
-    text(txt2, 70, 300);
-    text(txt1, 70, 600);
-    text(container1, 880, 300);
-    text(container2, 910, 600);
+    text(txt2, 500, 300);
+    text(txt1, 500, 600);
+    text(container1, 1170, 300);
+    text(container2, 1200, 600);
+    // if (end == true){
+    //     c.clear();
+    // }
 }
 
 function keyPressed() {
