@@ -12,7 +12,7 @@ let path;
 let setQuestion;
 let font;
 let countTime = 0;
-let timeLeft = 15;
+let timeLeft = 20;
 // -------------------------------------------
 
 // ------------- P5's Function ---------------
