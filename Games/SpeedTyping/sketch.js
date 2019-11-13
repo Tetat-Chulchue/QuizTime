@@ -57,13 +57,22 @@ function draw() {
     fill('black');
     textAlign(CENTER);
     textSize(50);
-    text(container3, 1050, height / 2);
+    text(container3, 10000, 10000);
     textAlign(CENTER)
-    text(timer, width / 2 , 65);
-    if ((frameCount % 60 == 0 && timer > 0) && !end) {
-        timer++;
-        console.log(timer);
+    if(end == false){
+        text(timer, width / 2 , 65);
+        if ((frameCount % 60 == 0 && timer > 0) && !end) {
+            timer++;
+            console.log(timer);
+        }
+    }else{
+        text(timer, 1000000 , 1000000);
+        if ((frameCount % 60 == 0 && timer > 0) && !end) {
+            timer++;
+            console.log(timer);
+        }
     }
+    
     textSize(80);
     text(head, 750, 100);
     textSize(70);
