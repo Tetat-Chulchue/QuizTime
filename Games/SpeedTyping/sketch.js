@@ -41,7 +41,7 @@ function setup() {
 }
 
 function draw() {
-    fill('#61CFBE')
+    fill('#61CFBE');
     circle(50, 50, 100);
     fill('black');
     textAlign(CENTER);
