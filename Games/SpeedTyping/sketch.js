@@ -26,10 +26,10 @@ let path;
 // ------------- P5's Function ---------------
 
 function preload() {
-    // path = window.location.search;
-    // let numParagraph = path.split('=set_')[1];
-    // let loadParagraph = 'paragraph_' + numParagraph + '.txt';
-    txt = loadStrings('./test.txt');
+    path = window.location.search;
+    let numParagraph = path.split('=set_')[1];
+    let loadParagraph = 'paragraph_' + numParagraph + '.txt';
+    txt = loadStrings('./paragraph/' + loadParagraph);
 }
 
 function setup() {
