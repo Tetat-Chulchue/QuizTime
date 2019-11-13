@@ -30,7 +30,7 @@ function preload() {
         path = window.location.search;
         let numParagraph = path.split('?set_=')[1];
         let loadParagraph = 'paragraph_' + numParagraph + '.txt';
-        txt = loadStrings('./practice/' + loadParagraph);
+        txt = loadStrings('./paragraph/' + loadParagraph);
     } else {
         let numParagraph = Math.floor(Math.random() * 10) + 1;
         let loadParagraph = 'paragraph_' + numParagraph + '.txt';
