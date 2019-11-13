@@ -131,7 +131,6 @@ function endGame() {
     if (test_paragraph == 0) {
         sweetUI(container2, container1);
     }
-    sweetUI(container2, container1);
 }
 
 function back() {
