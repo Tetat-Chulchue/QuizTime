@@ -3,5 +3,5 @@ window.addEventListener("load", () => {
         let loadder = document.getElementById("loadder");
         loadder.className += " hidden"
         document.body.style.overflow = "initial";
-    }, 2000);
+    }, 1000);
 });

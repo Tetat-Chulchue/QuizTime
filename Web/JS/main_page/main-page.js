@@ -15,7 +15,7 @@ function page() {
 
     box( y-(space*0)+position-40 , "page-1");
     box( y-(space)+position , "page-1-1");
-    box( y-(space)+position , "page-1-2");
+    box( y-(space)+position-200 , "page-1-2");
     box( y-(space)+position+30 , "page-1-3");
     box( y-(space)+position+20 , "page-1-4");
 
@@ -37,11 +37,17 @@ function page() {
     box( y-(space*18)+position-10 , "page-4-3");
     box( y-(space*19)+position-10 , "page-4-4");
     
-    box( y-(space*20)+position , "page-5-1");
+    box( y-(space*20)+position-50 , "page-5");
+    box( y-(space*22)+position-10 , "page-5-1");
+    box( y-(space*22)+position-10 , "page-5-2");
+    box( y-(space*22)+position-10 , "page-5-3");
+    box( y-(space*22)+position-10 , "page-5-4");
+    box( y-(space*23)+position , "page-6-1");
 
     background( y-(space*3)+position, "background1", "rgb(140, 140, 235)");
     background( y-(space*8)+position, "background2", "rgb(165, 42, 42)");
     background( y-(space*13)+position, "background3", "rgb(95, 158, 160)");
+    background( y-(space*18)+position, "background4", "rgb(95, 50, 160)");
 }
 
 function box(value, pageId) {
@@ -74,7 +80,7 @@ function mouse(e) {
 
     boxMove( movement_translate_X, movement_translate_Y, "page-1", 50, 50);
     boxMove( movement_translate_X, movement_translate_Y, "page-1-1", 25, 25);
-    boxMove( movement_translate_X, movement_translate_Y, "page-1-2", 25, 75);
+    boxMove( movement_translate_X, movement_translate_Y, "page-1-2", 50, 50);
     boxMove( movement_translate_X, movement_translate_Y, "page-1-3", 75, 75);
     boxMove( movement_translate_X, movement_translate_Y, "page-1-4", 50, 50);
 
@@ -97,7 +103,12 @@ function mouse(e) {
     boxMove( movement_translate_X, movement_translate_Y, "page-4-3", 75, 75);
     boxMove( movement_translate_X, movement_translate_Y, "page-4-4", 75, 25);
 
-    boxMove( movement_translate_X, movement_translate_Y, "page-5-1", 50, 50);
+    boxMove( movement_translate_X, movement_translate_Y, "page-5", 50, 50);
+    boxMove( movement_translate_X, movement_translate_Y, "page-5-1", 25, 25);
+    boxMove( movement_translate_X, movement_translate_Y, "page-5-2", 25, 75);
+    boxMove( movement_translate_X, movement_translate_Y, "page-5-3", 75, 75);
+    boxMove( movement_translate_X, movement_translate_Y, "page-5-4", 75, 25);
+    boxMove( movement_translate_X, movement_translate_Y, "page-6-1", 50, 50);
 
 
 }
@@ -145,7 +156,7 @@ function popUp(id) {
         document.body.style.overflow = "hidden";
         for (let i = 1; i <= 12; i++) {document.getElementById("link-page-"+i).style.display = "initial";}
     }
-    for (let i = 1; i < 5; i++) {
+    for (let i = 1; i < 7; i++) {
         for (let j = 1; j < 5; j++) {
             if ("page-"+i+"-"+j != id) {
                 if (pageOn == 1) {
