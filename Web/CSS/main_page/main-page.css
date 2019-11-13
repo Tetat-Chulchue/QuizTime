@@ -29,7 +29,7 @@ body {
 
 .sector {
     width: 100%;
-    height: 3490px;
+    height: 3750px;
 }
 
 .page {
@@ -218,16 +218,13 @@ body {
 /* --------- Back to top --------- */
 .back-to-top {
     position: fixed;
+    width: 80%;
+    height: 70%;
     animation-name: test;
     animation-duration: 1s;
     animation-iteration-count: unset;
     text-align: center;
-}
-
-.back-to-top a img {
-    width: 100px;
-    height: 100px;
-    transform: rotateZ(-90deg);
+    background-color: yellow;
 }
 
 @keyframes test {
