@@ -131,5 +131,5 @@ function endGame() {
 }
 
 function back() {
-    window.location.href = "../../Web/Game2/gameManu.html";
+    window.location.href = "../../Web/Game3/gameManu.html";
 }
