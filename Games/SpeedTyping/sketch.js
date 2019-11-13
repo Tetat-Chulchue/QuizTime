@@ -22,6 +22,7 @@ let container1;                 // Container for general data 04
 let container2;                 // Container for general data 05
 let container3 = 'Time: ';      // Container for general data 06
 let path;
+let test_paragraph;
 
 // ------------- P5's Function ---------------
 
@@ -31,10 +32,12 @@ function preload() {
         let numParagraph = path.split('?set_=')[1];
         let loadParagraph = 'paragraph_' + numParagraph + '.txt';
         txt = loadStrings('./paragraph/' + loadParagraph);
+        test_paragraph = 1;
     } else {
         let numParagraph = Math.floor(Math.random() * 10) + 1;
         let loadParagraph = 'paragraph_' + numParagraph + '.txt';
         txt = loadStrings('./paragraph/' + loadParagraph);
+        test_paragraph = 0;
     }
 }
 
@@ -104,7 +107,6 @@ function endGame() {
     if(wordPM === Infinity){
         wordPM = 'It Time to STOP!!';
     }
-    console.log(wordPM);
     let accuracy = ((charCorrect / paragraph.length) * 100);
     if(accuracy < 0){
         accuracy = 0;
@@ -123,5 +125,7 @@ function endGame() {
     if(wordPM != 'It Time to STOP!!'){
         container2 = nf(wordPM, 1, 2);
     }
-    sweetUI(container2, container1);
+    if (test_paragraph == 0) {
+        sweetUI(container2, container1);
+    }
 }
