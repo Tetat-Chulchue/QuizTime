@@ -8,7 +8,13 @@
 <body>
     <script>
         window.onload = () => {
-            window.location.href = './Web/index.html';
+            const w = window.innerWidth;
+            const h = window.innerHeight;
+            if (w < 601 || h < 600) {
+                window.location.href = './Web/Game1/information.html';
+            } else {
+                window.location.href = './Web/index.html';
+            }
         }
     </script>
 </body>
