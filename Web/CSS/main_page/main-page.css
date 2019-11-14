@@ -270,7 +270,7 @@ body {
     height: 80px;
     width: 30%;
     background-color: rgba(172, 172, 172, 0.61);
-    box-shadow: black 5px 5px 26px -11px;
+    /* box-shadow: black 5px 5px 26px -11px; */
     opacity: 0;
     animation-name: social;
     animation-duration: 0.8s;
