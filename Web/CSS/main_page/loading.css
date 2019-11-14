@@ -39,7 +39,7 @@
     width: 30vw;
     /* animation-name: img; */
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
 }
 
