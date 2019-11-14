@@ -141,6 +141,7 @@ function popUp(id) {
         document.body.style.overflow = "initial";
         setTimeout(()=>{document.getElementById(id).style.transition = "transform 0s";},1000);
         for (let i = 1; i <= 12; i++) {document.getElementById("link-page-"+i).style.display = "none";}
+        for (let i = 1; i <= 15; i++) {document.getElementById("social-img-"+i).style.display = "none";}
     } else if (pageOn == 0) {
         pageOn = 1;
         scrollZ = document.body.scrollTop;
@@ -155,6 +156,7 @@ function popUp(id) {
         document.getElementById(id).style.transform = "translateZ(0px) translateX(-50%) translateY(-50%)";
         document.body.style.overflow = "hidden";
         for (let i = 1; i <= 12; i++) {document.getElementById("link-page-"+i).style.display = "initial";}
+        for (let i = 1; i <= 15; i++) {document.getElementById("social-img-"+i).style.display = "initial";}
     }
     for (let i = 1; i < 7; i++) {
         for (let j = 1; j < 5; j++) {
