@@ -150,6 +150,7 @@ body {
     top: 0;
     right: -100%;
     width: 20%;
+    /* min-width: 200px; */
     height: 100vh;
     /* border-left: gray 2px solid; */
     transition: 0.8s;
@@ -240,8 +241,8 @@ body {
 
 .bar-label2 {
     background-color: rgb(143, 143, 143);
-    /* width: 100px;
-    height: 100px; */
+    /* max-height: 80px; */
+    /* s */
     position: fixed;
     right: -45px;
     top: 40%;
@@ -291,35 +292,34 @@ body {
 
 .span-bar {
     position: relative;
-    width: 90%;
+    width: 80%;
     background-color: #2196F3;
-    margin: 3 0 3 0;
+    margin: 4 0 4 0;
     border-radius: 0.1em;
 }
 
 .bar-label {
-    /* background-color: cadetblue; */
+    /* background-color: rgba(95, 158, 160, 0.356); */
     position: fixed;
     top: 20px;
     left: 20px;
     width: 40px;
     height: 40px;
-    /* position: fixed;
-    width: 100%;
-    height: 100%; */
     z-index: 3000;
     cursor: pointer;
     display: none;
 }
 
 .navigation-bar {
-    border-radius: 0px 0% 0% 0px;
+    border-radius: 0.5em;
     position: fixed;
-    width: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48%;
     left: -70%;
     /* left: 0; */
-    height: 100vh;
-    background-color: rgba(160, 142, 142, 0.781);
+    height: 97%;
+    background-image: linear-gradient(to top, #053378, #00569d, #007bc1, #00a1e1, #00c8ff);
     z-index: 899;
     opacity: 100;
     transition: all 0.3s ease-in-out;
@@ -331,8 +331,8 @@ body {
 }
 
 #chk1:checked ~ .case .navigation-bar {
-    left: 0;
-    border-radius: 0px 35% 50% 0px;
+    left: 3%;
+    /* border-radius: 0px 35% 50% 0px; */
 }
 
 #chk1:checked ~ .case .box-right {
@@ -343,7 +343,7 @@ body {
     /* background-color: rgb(71, 165, 42); */
     position: relative;
     width: 100%;
-    top: 20%;
+    top: 10vh;
     text-align: center;
     opacity: 0;
     transition: 0.8s ease-in-out;
@@ -355,7 +355,8 @@ body {
 
 .title-text h1 {
     margin: 0;
-    font-size: 7vmin;
+    font-size: 4vh;
+    color: rgb(255, 255, 255);
 }
 
 .navi-link-page {
@@ -369,16 +370,22 @@ body {
 }
 
 .navi-link-page a {
-    width: 100%;
-    /* background-color: blueviolet; */
-    color: aqua;
+    width: 60%;
+    background-color: #053378;
+    border-radius: 100em;
+    color: rgb(255, 255, 255);
     text-align: center;
     text-decoration: none;
-    margin: 10 0 10 0;
-    font-size: 5vmin;
+    margin: 2vh 0 2vh 0;
+    font-size: 4vmin;
     opacity: 0;
     transition: all 0.1s ease-in-out;
     transform: translateY(-20px);
+}
+
+.navi-link-page a:hover {
+    width: 62%;
+    margin: 16 0 16 0;
 }
 
 #chk1:checked ~ .case .navigation-bar .navi-link-page a {
@@ -399,6 +406,13 @@ body {
     transition-delay: 0.7s;
 }
 
+.navi-link-page a:nth-child(5) {
+    transition-delay: 0.8s;
+}
+
+.navi-link-page a:nth-child(6) {
+    transition-delay: 0.9s;
+}
 /* ------ navigation bar ------- */
 
 /* ------ End point ------- */
@@ -410,6 +424,10 @@ body {
 
     .bar-label {
         display: inline;
+    }
+
+    .bar-label2 {
+        font-size: 4vmin;
     }
 
     .navigation-box {
@@ -425,12 +443,16 @@ body {
     }
 
     .box-right2 {
-        visibility: hidden;
+        width: 48%;
     }
 
-    .bar-label2 {
+    /* .box-right2 {
+        visibility: hidden;
+    } */
+
+    /* .bar-label2 {
         display: none;
-    }
+    } */
 }
 
 /* ------ End point ------- */

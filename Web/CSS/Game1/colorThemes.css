@@ -75,11 +75,12 @@
 }
 
 .navigation-bar {
-    background-color: rgba(160, 142, 142, 0.781);
+    background-image: linear-gradient(to top, #053378, #00569d, #007bc1, #00a1e1, #00c8ff);
 }
 
 .navi-link-page a {
-    color: aqua;
+    color: rgb(255, 255, 255);
+    background-color: #053378;
 }
 
 /* ------ navigation bar ------- */
