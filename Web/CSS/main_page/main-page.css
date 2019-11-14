@@ -9,6 +9,7 @@
 html {
     scroll-behavior: smooth;
     font-family: 'Kanit', sans-serif;
+    cursor: url(../../assets/icon2.png), auto !important;
 }
 
 body {
