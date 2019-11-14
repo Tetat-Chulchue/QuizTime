@@ -61,7 +61,7 @@
     left: -50%;
     background-color: rgb(194, 194, 194);
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
 }
 
@@ -82,7 +82,7 @@
     left: 50%;
     background-color: rgb(194, 194, 194);
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
 }
 
@@ -102,7 +102,7 @@
     top: 50%;
     z-index: 9999999;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
 }
 

@@ -10,9 +10,9 @@ window.addEventListener("load", (test) => {
     pace.style.display = "initial";
     setTimeout(()=>{
         let loadder = document.getElementById("loadder");
-        loadder.className += " hidden"
         document.body.style.overflow = "initial";
         loader_img.style.display = "none";
         pace.style.display = "none";
+        loadder.className += " hidden"
     }, 2000);
 });
